@@ -14,7 +14,7 @@ If you have created a mod that you wish to submit to the repository, follow thes
 1. [Create a Gitlab account, or sign in to your existing one.](https://gitlab.com/users/sign_in)
 2. [Fork the repository.](https://gitlab.com/frangiclave/frangiclave-mod-repository/forks/new) As a best practice, you should keep this repository up-to-date with the main one, to avoid potential conflicts.
 3. Clone the newly-created repository to your machine.
-4. Add your mod's files in a folder at the root level of the repository, taking care to pick a unique name for your mod's folder.
+4. Add your mod's files in a new folder in the `mods/` directory, taking care to pick a unique name for your mod's folder.
 5. Push your changes to your repository (either on the master branch or another branch of your choosing).
 6. [Submit a merge request](https://gitlab.com/frangiclave/frangiclave-mod-repository/merge_requests/new) which adds your mod's files to the repository and wait for it to be reviewed.
    * Each merge request should only ever add or update a single mod, and should only affect files of a mod you own.

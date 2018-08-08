@@ -1,0 +1,49 @@
+encoding: utf-8
+title: Frangiclave Mod Repository
+description: >-
+  The Frangiclave Mod Repository hosts several mods for the game Cultist Simulator.
+logo: "/assets/logo.png"
+lang: en-GB
+url: "https://mods.thefansus.com"
+baseurl: ""
+repo: "https://gitlab.com/frangiclave/frangiclave-mod-repository"
+css_inline: true
+
+sass:
+  style: compressed
+permalink: pretty
+excerpt_separator: <!-- more -->
+timezone: Europe/London
+
+markdown: kramdown
+theme: alembic-jekyll-theme
+plugins:
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-default-layout
+  - jekyll-feed
+  - jemoji
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .idea/
+  - .gitignore
+
+navigation_header:
+  Home: /
+  Tools: /tools/
+  Mods: /mods/
+  Submit: /submit/
+
+navigation_footer:
+  View Repository: https://gitlab.com/frangiclave/frangiclave-mod-repository
