@@ -7,7 +7,7 @@ lang: en-GB
 url: "https://mods.thefansus.com"
 baseurl: ""
 repo: "https://gitlab.com/frangiclave/frangiclave-mod-repository"
-css_inline: true
+css_inline: false
 
 sass:
   style: compressed
@@ -17,15 +17,6 @@ timezone: Europe/London
 
 markdown: kramdown
 theme: alembic-jekyll-theme
-plugins:
-  - jekyll-sitemap
-  - jekyll-mentions
-  - jekyll-paginate
-  - jekyll-seo-tag
-  - jekyll-redirect-from
-  - jekyll-default-layout
-  - jekyll-feed
-  - jemoji
 
 exclude:
   - README.md
@@ -38,12 +29,20 @@ exclude:
   - vendor/ruby/
   - .idea/
   - .gitignore
+  - _plugins/
 
 navigation_header:
   Home: /
   Tools: /tools/
   Mods: /mods/
   Submit: /submit/
+  Help: /help/
 
 navigation_footer:
   View Repository: https://gitlab.com/frangiclave/frangiclave-mod-repository
+
+frangiclave:
+  mod_manager:
+    downloads:
+      windows: https://gitlab.com/frangiclave/frangiclave-mod-manager/uploads/4fc620f928566cd7f9955399d3fb8410/frangiclave-mod-manager.exe
+    version: 0.1.0

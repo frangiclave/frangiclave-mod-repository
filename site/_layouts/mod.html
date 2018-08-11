@@ -1,0 +1,22 @@
+---
+layout: page
+---
+
+<div class="mod">
+    <div class="mod-description">{{ page.mod.description | xml_escape}}</div>
+
+    <div class="mod-details">
+        <div class="mod-detail mod-author"><strong>Author:</strong> {{ page.mod.author | xml_escape }}</div>
+
+        <div class="mod-detail mod-version"><strong>Latest Version:</strong> {{ page.mod.version | xml_escape }}</div>
+
+        <div class="mod-detail mod-install">
+            <strong>Install:</strong> Open the Frangiclave Mod Manager and type:<br/>
+            <pre>i {{ page.mod.id | xml_escape }}</pre>
+        </div>
+
+        <div class="mod-detail mod-download"><strong>Download (Manual):</strong> <a href="/downloads/{{ page.mod.id | escape }}.zip">{{ page.mod.id | xml_escape }}.zip</a></div>
+    </div>
+
+    <div class="mod-description_long">{{ page.mod.description_long | xml_escape | markdownify }}</div>
+</div>
