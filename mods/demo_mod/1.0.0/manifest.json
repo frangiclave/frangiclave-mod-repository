@@ -4,7 +4,7 @@
     "version": "1.0.0",
     
     "description": "A simple demo mod.",
-    "description_long": "A simple demo mod, for the purposes of illustrating what Frangiclave is capable of.\n\n**Warning:** May contains trace amounts of Neville.",
+    "description_long": "A simple demo mod, for the purposes of illustrating what Frangiclave is capable of.",
 
     "dependencies": [
         "demo_mod==1.0.0"

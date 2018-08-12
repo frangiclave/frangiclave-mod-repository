@@ -15,7 +15,7 @@ layout: page
             <pre>i {{ page.mod.id | xml_escape }}</pre>
         </div>
 
-        <div class="mod-detail mod-download"><strong>Download (Manual):</strong> <a href="/downloads/{{ page.mod.id | escape }}.zip">{{ page.mod.id | xml_escape }}.zip</a></div>
+        <div class="mod-detail mod-download"><strong>Download (Manual):</strong> <a href="/downloads/{{ page.mod.id | escape }}/{{ page.mod.id | escape }}-{{ page.mod.version | escape }}.zip">{{ page.mod.id | xml_escape }}-{{ page.mod.version | xml_escape }}.zip</a></div>
     </div>
 
     <div class="mod-description_long">{{ page.mod.description_long | xml_escape | markdownify }}</div>

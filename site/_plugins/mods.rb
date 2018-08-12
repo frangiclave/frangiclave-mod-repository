@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'semantic'
 require 'zip'
 
 module Jekyll
@@ -21,14 +22,29 @@ module Jekyll
       manifests = []
 
       # Load all the mod definitions
-      Dir.glob '../mods/*/manifest.json' do |manifest_path|
+      Dir.glob '../mods/*/' do |versions_path|
+        # Use the data from the latest version as the authoritative source
+        mod_id = File.basename(versions_path)
+        latest_version = nil
+        Dir.glob File.join(versions_path, '*.*.*') do |version_path|
+          version = Semantic::Version.new File.basename(version_path)
+          if latest_version.nil? || latest_version < version
+            latest_version = version
+          end
+        end
+        next if latest_version.nil?
+
         # Parse the manifest
-        manifest = JSON.parse(File.read(manifest_path))
-        manifest['id'] = File.basename(File.dirname(manifest_path))
+        manifest = JSON.parse(
+          File.read(
+            File.join(versions_path, latest_version.to_s, 'manifest.json')
+          )
+        )
+        manifest['id'] = mod_id
         manifests << manifest
 
         # Add a page with the mod details
-        mod_dir = File.join('/mods/', manifest['id'])
+        mod_dir = File.join('/mods/', mod_id)
         page = ModPage.new(site, site.source, mod_dir, manifest)
         site.pages << page
       end
@@ -46,11 +62,11 @@ module Jekyll
     end
 
     def write
-      entries = Dir.entries(@input_dir) - %w(. ..)
+      entries = Dir.entries(@input_dir) - %w[. ..]
 
       File.delete(@output_file) if File.exist?(@output_file)
       ::Zip::File.open(@output_file, ::Zip::File::CREATE) do |zipfile|
-        zipfile.mkdir File.basename(@input_dir)
+        zipfile.mkdir File.basename(File.dirname(@input_dir))
         write_entries entries, '', zipfile
       end
     end
@@ -71,29 +87,32 @@ module Jekyll
     end
 
     def recursively_deflate_directory(disk_file_path, zipfile, zipfile_path)
-      zipfile.mkdir File.join(File.basename(@input_dir), zipfile_path)
-      subdir = Dir.entries(disk_file_path) - %w(. ..)
+      zipfile.mkdir File.join(File.basename(File.dirname(@input_dir)), zipfile_path)
+      subdir = Dir.entries(disk_file_path) - %w[. ..]
       write_entries subdir, zipfile_path, zipfile
     end
 
     def put_into_archive(disk_file_path, zipfile, zipfile_path)
-      zipfile.get_output_stream(File.join(File.basename(@input_dir), zipfile_path)) do |f|
+      zipfile.get_output_stream(File.join(File.basename(File.dirname(@input_dir)), zipfile_path)) do |f|
         f.write(File.open(disk_file_path, 'rb').read)
       end
     end
   end
 
   Jekyll::Hooks.register :site, :post_write do |site, _|
-    # Create a ZIP archive for every mod
+    # Create a ZIP archive for every mod's version
     Dir.glob '../mods/*' do |mod_path|
-      manifest_id = File.basename(mod_path)
-      zip_dir = site.in_dest_dir('downloads')
+      mod_id = File.basename(mod_path)
+      zip_dir = site.in_dest_dir(File.join('downloads', mod_id))
       FileUtils.mkdir_p(zip_dir) unless File.directory?(zip_dir)
-      zf = ZipFileGenerator.new(
-          mod_path,
-          File.join(zip_dir, manifest_id + '.zip')
-      )
-      zf.write
+      Dir.glob File.join(mod_path, '*.*.*') do |version_path|
+        version = File.basename version_path
+        zf = ZipFileGenerator.new(
+          version_path,
+          File.join(zip_dir, "#{mod_id}-#{version}.zip")
+        )
+        zf.write
+      end
     end
   end
 end
