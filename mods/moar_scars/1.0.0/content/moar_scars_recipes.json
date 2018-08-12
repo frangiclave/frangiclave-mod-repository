@@ -1,0 +1,157 @@
+{
+"recipes": [
+
+
+
+
+{id:"talktofollower_heal",
+label:"Complete the healing of a Follower",
+startdescription:"Perhaps, now, they'll survive. But there are limits to what the human body can sustain.",
+actionId:"talk",
+requirements:{funds:1},
+deckeffect:{"scar_random":1},
+mutations:[{filterOnAspectId:mortal,mutateAspectId:follower_wound,mutationLevel:0,additive:false},
+{filterOnAspectId:mortal,mutateAspectId:follower,mutationLevel:0,additive:false}],
+effects:{funds:-1},
+linked:[{id:"givescar_edge",chance:100},
+{id:"givescar_knock",chance:100},
+{id:"givescar_winter",chance:100},
+{id:"givescar_heart",chance:100},
+{id:"givescar_forge",chance:100},
+{id:"givescar_lantern",chance:100},
+{id:"givescar_moth",chance:100},
+{id:"givescar_grail",chance:100}
+]
+},{id:"givescar_edge",
+actionId:"talk",
+label:"The Lessons of Experience",
+description:"The wound is healed. The scar remains. But each scar, as the scholar Shulga once observed, is a lesson.",
+requirements: {venerationedge:1},
+effects: {venerationedge:-1},
+mutations:[{filterOnAspectId:follower,mutateAspectId:follower_scar_edge,mutationLevel:1,additive:true},
+{filterOnAspectId:follower,mutateAspectId:edge,mutationLevel:2,additive:true}],
+linked:[{id:"deathscar_edge",chance:100}]
+},
+{id:"givescar_knock",
+label:"Pain's Gate",
+actionId:"talk",
+description:"The wound is healed - as much as it will ever be. A gate of pain and possibility remains",
+requirements: {venerationknock:1},
+effects: {venerationknock:-1},
+mutations:[{filterOnAspectId:follower,mutateAspectId:follower_scar_knock,mutationLevel:1,additive:true},
+{filterOnAspectId:follower,mutateAspectId:knock,mutationLevel:2,additive:true}],
+linked:[{id:"deathscar_knock",chance:100}]
+},
+{id:"givescar_winter",
+actionId:"talk",
+label:"The Beginning of an Ending",
+description:"The wound is healed, but this one came very close to death. Silence has touched them, like snow.",
+requirements: {venerationwinter:1},
+effects: {venerationwinter:-1},
+mutations:[{filterOnAspectId:follower,mutateAspectId:follower_scar_winter,mutationLevel:1,additive:true},
+{filterOnAspectId:follower,mutateAspectId:winter,mutationLevel:2,additive:true}],
+linked:[{id:"deathscar_winter",chance:100}]
+},
+
+
+
+
+
+
+{id:"givescar_lantern",
+actionId:"talk",
+label:"Divine Warning",
+description:"The wound is healed. The scar remains, like a star, or a brand. This one learned to fear the forces beyond their control.",
+requirements: {venerationlantern:1},
+effects: {venerationlantern:-1},
+mutations:[{filterOnAspectId:follower,mutateAspectId:follower_scar_lantern,mutationLevel:1,additive:true},
+{filterOnAspectId:follower,mutateAspectId:lantern,mutationLevel:2,additive:true}],
+linked:[{id:"deathscar_lantern",chance:100}]
+},
+{id:"givescar_moth",
+label:"Night's Circle",
+actionId:"talk",
+description:"The wound is healed, but something had to be lost. This one remains unfettered by the loss.",
+requirements: {venerationmoth:1},
+effects: {venerationmoth:-1},
+mutations:[{filterOnAspectId:follower,mutateAspectId:follower_scar_moth,mutationLevel:1,additive:true},
+{filterOnAspectId:follower,mutateAspectId:moth,mutationLevel:2,additive:true}],
+linked:[{id:"deathscar_moth",chance:100}]
+},
+{id:"givescar_forge",
+actionId:"talk",
+label:"Watching the Fire",
+description:"The wound is seared close. One day, some day, this one's skin will peel.",
+requirements: {venerationforge:1},
+effects: {venerationforge:-1},
+mutations:[{filterOnAspectId:follower,mutateAspectId:follower_scar_forge,mutationLevel:1,additive:true},
+{filterOnAspectId:follower,mutateAspectId:forge,mutationLevel:2,additive:true}],
+linked:[{id:"deathscar_forge",chance:100}]
+},
+{id:"givescar_heart",
+actionId:"talk",
+label:"The Blood of St Januarius",
+description:"The wound is healed, but this one's blood continues dancing to the frenzied rhythm of conflict.",
+requirements: {venerationheart:1},
+effects: {venerationheart:-1},
+mutations:[{filterOnAspectId:follower,mutateAspectId:follower_scar_heart,mutationLevel:1,additive:true},
+{filterOnAspectId:follower,mutateAspectId:heart,mutationLevel:2,additive:true}],
+linked:[{id:"deathscar_heart",chance:100}]
+},
+{id:"givescar_grail",
+actionId:"talk",
+label:"The Birth of a New Desire",
+description:"The wound is healed, but this one keeps picking at the scab, aching for the pain to return.",
+requirements: {venerationgrail:1},
+effects: {venerationgrail:-1},
+mutations:[{filterOnAspectId:follower,mutateAspectId:follower_scar_grail,mutationLevel:1,additive:true},
+{filterOnAspectId:follower,mutateAspectId:grail,mutationLevel:2,additive:true}],
+linked:[{id:"deathscar_grail",chance:100}]
+},
+
+
+
+{id:"deathscar_moth",
+actionId:"talk",
+label:"Death: an Eventuality",
+requirements:{follower_scar_moth:3},
+description:"The Ecdysiast's Riddle is 'What may be lost?' This one had lost too much. [Your Follower acquired three Moth-Scars, and died.]",
+aspects:{killmortal:1}
+},
+{id:"deathscar_lantern",
+actionId:"talk",
+label:"Death: a Punishment",
+requirements:{follower_scar_lantern:3},
+description:"This one's hands were clasped in prayer, in those final moments. [Your Follower acquired three Lantern-Scars, and died.]",
+aspects:{killmortal:1}
+},
+{id:"deathscar_forge",
+actionId:"talk",
+label:"Death: a Change",
+requirements:{follower_scar_forge:3},
+description:"The Change had come, and this one sanctified it. What remains is no longer functional. [Your Follower acquired three Forge-Scars, and died.]",
+aspects:{killmortal:1}
+},
+{id:"deathscar_heart",
+actionId:"talk",
+label:"Death: a Cessation",
+requirements:{follower_scar_heart:3},
+description:"A bursting thunderclap, and then, nothing. [Your Follower acquired three Heart-Scars, and died.]",
+aspects:{killmortal:1}
+},
+{id:"deathscar_grail",
+actionId:"talk",
+label:"Death: a Torment",
+requirements:{follower_scar_grail:3},
+description:"We find this one in a veritable puddle of their own blood, smiling. [Your Follower acquired three Grail-Scars, and died.]",
+aspects:{killmortal:1}
+},
+
+
+
+
+
+
+
+]
+}

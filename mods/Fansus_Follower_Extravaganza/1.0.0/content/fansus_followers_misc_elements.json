@@ -1,0 +1,17 @@
+{"elements":
+    [ 
+	{
+    id: "followerpub",
+    label: "Medusa's Hair",
+	icon:"guardian_serpent",
+    aspects:{location:1},
+	slots: [{id:"Price of Admission", required: {funds: 1}, description: "Drinks don't come cheap."}],
+    description: "Grimy, dirty. Smells like loathing and Nowhere. But it has an unrivaled occult reputation, and a beneficial position across the Histories. The most interesting people end up here sometimes.",
+	unique:true
+    }
+	
+	
+	
+	
+]
+}

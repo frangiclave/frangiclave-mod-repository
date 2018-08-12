@@ -1,0 +1,89 @@
+ {"recipes":
+ [
+    {
+	id: "fancyhq",
+	label: "Find an unusual location in the city",
+	actionId: "fancy",
+	requirements: {society:1},
+	effects: {culthydrae_1:1},
+	warmup:10,
+	startdescription: "Something interesting remains hidden from me in this History.",
+	description: "Here is a cult for the most unusual things.",
+	craftable: true,
+	},
+ 
+ 
+ 
+ 
+
+	{
+        id: "recruitindependenthydrae",
+        label: "Recruit a Troublemaker, by invoking a great power of Hydrae",
+        actionId: "talk",
+        requirements: {venerationhydrae: 1, independent:1, mortal:1,secrethistories:21},
+        effects: {ingredient:-1,influence:-1},
+		aspects: {recruiting:1},
+        startdescription: "This one is ready to join me.",
+    description: "Gawain would be proud.",
+        warmup: 30,
+        craftable: true,
+		burnimage: freemasons
+    },
+	{
+        id: "recruitacquaintancehydrae",
+        label: "Recruit an Acquaintance, by invoking Hydrae",
+        actionId: "talk",
+        requirements: {venerationhydrae: 1,acquaintance:1, follower:-1, mortal:1,secrethistories:1},
+        effects: {ingredient:-1,influence:-1},
+		aspects: {recruiting:1},
+        startdescription: "This one is ready.",
+    description: "They carve their name into the walls. History won't forget us.",
+        warmup: 30,
+        craftable: true,
+		burnimage: freemasons
+    },
+		  	{
+        id: "promotetodisciplehydrae",
+        label: "Promote a Believer by invoking Hydrae",
+        actionId: "talk",
+        requirements: {venerationhydrae: 1,follower:1, disciple:-1, independent:-1,mortal:1,secrethistories:7},
+        effects: {ingredient:-1,influence:-1},
+		aspects: {promotiontodisciple:1},
+        startdescription: "My follower will kneel as a novice, and rise as an initiate. I will administer the necessary oaths myself.",
+        description: "'The hydra is a million million heads, and each word is another cut upon the neck. There are no promises, except the one: We will carve our names into History.'",
+        warmup: 60,
+        craftable: true
+    },
+			{
+        id: "promoteto_d_hydrae",
+        label: "Attempt to Exalt a Disciple to a Grimoire",
+        actionId: "talk",
+        requirements: {culthydrae_1: 1,follower:1,secrethistories:21,exalted:-1,potential:1},
+        effects: {ingredient:-1,influence:-1},
+		aspects: {promotionto_d_secrethistories:1},
+        startdescription: "Only a rare few - those most suited to service in our mysteries - may achieve this rank.",
+        description: "'Bloodshed divides history, war draws the Hours like fine wine. I pledge myself to be their finest executioner, though I bear no axe and no sword. My knowledge is my only weapon, my body, the Grimoire, my mind, the pages.'",
+        warmup: 60,
+        craftable: true
+    },
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+]
+}

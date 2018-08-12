@@ -1,0 +1,99 @@
+{"decks":
+[
+	{id: "fansus_followerdraw",
+	label:"New Acquaintances",
+	description:"Every day, I meet the strangest people.",
+	spec:
+	["belinda_a",
+	"frederick_a",
+	"james_a",
+	"miriam_a",
+	
+	"aine_a",
+	"arkady_a",
+	"cassandra_a",
+	"mitchell_a",
+	
+	"basil_a",
+	"connor_a",
+	"patrick_a",
+	"stefan_a",
+	
+	"baishan_a",
+	"rhonda_a",
+	"sigismund_a",
+	"brooklyn_a",
+	
+	"anfisa_a",
+	"constance_a",
+	"david_a",
+	"harriet_a",
+	
+	"anton_a",
+	"julian_a",
+	"rashmi_a",
+	"roger_a",
+	
+	"bora_a",
+	"camille_a",
+	"kathie_a",
+	"margaret_a",
+	
+	"avery_a",
+	"chenwei_a",
+	"meghan_a",
+	"rupa_a",
+	"sule_a",
+	
+	"eli_a",
+	"william_a",
+	"wilson_a",],
+defaultcard: "general_a",
+resetonexhaustion:false	
+	},
+
+	
+		{id: "fansus_divisionlorehigh",
+	label:"A Deep Incision",
+	description:"Something controversially obscure.",
+	spec:
+	["fragmentsecrethistoriesg",
+	"fragmentsecrethistoriesf",
+	"fragmentsecrethistoriese",
+	"fragmentsecrethistoriesf",
+	"fragmentsecrethistoriesg",
+	"fragmentsecrethistoriese",
+	],
+defaultcard: "erudition",
+resetonexhaustion:true	
+	},
+		{id: "fansus_divisionloremid",
+	label:"An Incision",
+	description:"Something controversially obscure.",
+	spec:
+	["fragmentsecrethistoriese",
+	"fragmentsecrethistoriesd",
+	"fragmentsecrethistoriesc",
+	"fragmentsecrethistoriese",
+	"fragmentsecrethistoriesd",
+	"fragmentsecrethistoriesc",
+	],
+defaultcard: "erudition",
+resetonexhaustion:true	
+	},
+		{id: "fansus_divisionlorelow",
+	label:"A Surface Incision",
+	description:"Something controversially obscure.",
+	spec:
+	["fragmentsecrethistories",
+	"fragmentsecrethistoriesb",
+	"fragmentsecrethistoriesc",
+	"fragmentsecrethistories",
+	"fragmentsecrethistoriesb",
+	"fragmentsecrethistoriesc",
+	],
+defaultcard: "erudition",
+resetonexhaustion:true	
+	},
+]
+}

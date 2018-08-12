@@ -1,0 +1,16 @@
+{"elements":
+[
+	{id: "introjob_blossom",
+	label: "An Oppressive Tutelage",
+	description: "My current mentor is bothersome, tasteless, and absolutely convinced that I am his most talented student.",
+	aspects: {job:1}
+	},
+	
+	{id: "job_blossom",
+	label: "A Tutelage Of My Own",
+	description: "I get few students, but they are willing to pay for whatever inspiration I may provide them. [Work to convert Glimmerings into Funds.]",
+	aspects: {job:1}
+	},
+	
+]
+};

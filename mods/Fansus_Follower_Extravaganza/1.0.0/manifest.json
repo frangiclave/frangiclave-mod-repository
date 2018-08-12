@@ -1,0 +1,12 @@
+{
+    "name": "Follower Extravaganza",
+    "author": "Amets Estibariz",
+    "version": "1.0.0",
+    
+    "description": "Adds 36 new Followers, based off of the First Fansus.",
+    "description_long": "Adds 36 new Followers, including 3 Secret Histories followers with unique Cult Business, as well as a new location to acquire the new followers in bulk. Fancy your Headquarters to get access to the followers.",
+
+    "dependencies": [
+		"Fancy_Verb==1.0.0"
+    ]
+}

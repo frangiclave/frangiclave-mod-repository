@@ -1,0 +1,30 @@
+{"elements":
+    [ 
+	
+	{
+    id: "promotionto_d_secrethistories",
+    label: "Exaltation: Hydrae",
+	description: "These are the true mysteries of our veneration.",
+    isAspect: true,
+	comments: "Recipe aspect",
+	noartneeded: true
+    },
+	{id: "venerationhydrae",
+	label: "Veneration: Hydrae",
+	icon: "secrethistories",
+	description: "This organisation venerates the principle called Secret Histories, which we call upon in the name of the Bellus Murorum, and the War of the Roads.",
+	isAspect: true
+	},
+	{
+    id: "culthydrae_1",
+    label: "Library of Babel",
+	icon:"cultsecrethistories_1",
+    aspects:{society:1,venerationhydrae:1},
+	slots: [{id:"Associate", actionId:"talk", required: {mortal: 1},forbidden: {hunter:1,hireling:1,prisoner:1},description: "A new recruit, or a hardened disciple."},
+	{id:"Ceremony", actionId:"talk",  required: {lore:1},description: "For the higher mysteries, deeper oaths are needed."},
+	{id:"Trappings", actionId:"talk", required: {tool: 1,ingredient:1,influence:1,summoned:1},description: "For a proper sense of occasion. Consumes Ingredients and Influences; uses, but does not consume, Summonings and Tools."}],
+    description: "An occult society dedicated to the study of the thousand demi-real branches of History. [You can use Cults with the Talk verb to recruit or promote followers, and to send them out on errands to gather resources. A Believer can be promoted to a Disciple; a few gifted Disciples can be exalted even higher, to Grimoires.]",
+	unique:true
+    },
+]
+}

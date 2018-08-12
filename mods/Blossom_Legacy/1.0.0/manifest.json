@@ -1,0 +1,10 @@
+{
+    "name": "Blossom Legacy",
+    "author": "Amets Estibariz",
+    "version": "1.0.0",
+    
+    "description": "Adds a new painting-based legacy.",
+    "description_long": "Adds a new Blossom legacy, based off of the Physician legacy and designed to focus on the painting system. May be unbalanced.",
+
+    "dependencies": []
+}

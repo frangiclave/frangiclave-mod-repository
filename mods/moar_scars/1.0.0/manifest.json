@@ -1,0 +1,10 @@
+{
+    "name": "Moar Scars",
+    "author": "Amets Estibariz",
+    "version": "1.0.0",
+    
+    "description": "Adds scars for the main principles.",
+    "description_long": "Adds scars for Forge, Heart, Grail, Moth and Lantern, as well as a more equitable deck-based scarring system. Followers are likely to be much harder to kill.",
+
+    "dependencies": []
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Fansus - Clarity Ascension",
+    "author": "Amets Estibariz",
+    "version": "1.0.0",
+    
+    "description": "Adds a Beauty/Clarity Ascension, based off of the First Fansus.",
+    "description_long": "Adds a new Beauty/Clarity ascension involving the Apple-of-the-Eye, one of the Hours of the First Fansus. Begin your ascent by Fancying your Passion, or return to the base ambitions by Fancying Temptation/Dedication/Ascension: Beauty.",
+
+    "dependencies": [
+		"Fancy_Verb==1.0.0"
+    ]
+}

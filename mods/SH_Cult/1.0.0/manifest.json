@@ -1,0 +1,10 @@
+{
+    "name": "Secret Histories Cult",
+    "author": "Amets Estibariz",
+    "version": "1.0.0",
+    
+    "description": "Adds a new cult, capable of upgrading followers via Secret Histories.",
+    "description_long": "Adds a new cult, capable of upgrading followers via Secret Histories. Best paired with Follower Extravaganza or another mod that introduces Secret Histories Followers. Fancy your Cult to unlock the cult.",
+
+    "dependencies": ["Fancy_Verb==1.0.0"]
+}

@@ -1,0 +1,2089 @@
+{"elements":
+    [ 
+	
+	
+	
+	///Knock 1 - Belinda
+		{
+        id: "belinda_r",
+        label: "Belinda, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, knock:5},
+        description: "Belinda has never left a shred of evidence behind her.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:auclair_d},
+		uniquenessgroup:"belinda"
+        },
+		{
+        id: "belinda_a",
+        label: "Belinda, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Belinda is as sophisticated as a member of the royal family. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: belinda_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"belinda"
+        },
+		{
+        id: "belinda_b",
+        label: "Belinda, a believer",
+        aspects:{mortal: 1, follower: 1, knock: 2},
+		description: "Belinda can never be convicted of anything.",
+		xtriggers: {promotiontodisciple: belinda_c,killmortal:corpse,derangemortal:lunatic,capturefollower:belinda_p},
+		uniquenessgroup:"belinda"
+        },
+		{
+        id: "belinda_c",
+        label: "Belinda, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,knock:5},
+        description: "Belinda only needs to touch a lock, now.",
+		xtriggers: {promotionto_d_knock: belinda_d,killmortal:corpse,derangemortal:lunatic,capturefollower:belinda_p},
+		uniquenessgroup:"belinda"
+        },
+		{
+        id: "belinda_d",
+        label: "Belinda, an Ophede",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,knock:10},
+        description: "Belinda has never been seen anywhere that she does not belong.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:belinda_p,,rebellion:belinda_r},
+		uniquenessgroup:"belinda"
+        },
+		{
+        id: "belinda_p",
+        label: "Belinda, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, knock:5},
+        description: "It is devastatingly hard to keep Belinda locked away.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"belinda"
+        },
+	
+	
+	
+	
+	
+	
+	///Knock 2 - Frederick
+		{
+        id: "frederick_r",
+        label: "Frederick, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, knock:5},
+        description: "Frederick is responsible for many a tunnel into a bank vault and hole in art gallery, among stranger crimes.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:frederick_d},
+		uniquenessgroup:"frederick"
+        },
+		{
+        id: "frederick_a",
+        label: "Frederick, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Frederick's gaze lingers on walls and doors with a vestigial smile on his face. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: frederick_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"frederick"
+        },
+		{
+        id: "frederick_b",
+        label: "Frederick, a believer",
+        aspects:{mortal: 1, follower: 1, knock: 2},
+		description: "Frederick has lost the key to his house. It is of no trouble.",
+		xtriggers: {promotiontodisciple: frederick_c,killmortal:corpse,derangemortal:lunatic,capturefollower:frederick_p},
+		uniquenessgroup:"frederick"
+        },
+		{
+        id: "frederick_c",
+        label: "Frederick, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,knock:5},
+        description: "Burglary or siegecraft, Frederick is ready. He can get through impenetrable walls with a mere shovel, hammer, and chisel.",
+		xtriggers: {promotionto_d_knock: frederick_d,killmortal:corpse,derangemortal:lunatic,capturefollower:frederick_p},
+		uniquenessgroup:"frederick"
+        },
+		{
+        id: "frederick_d",
+        label: "Frederick, an Ophede",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,knock:10},
+        description: "Frederick understands that walls, floors, ceilings, with the right equipment are less impediment than thin air.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:frederick_p,,rebellion:frederick_r},
+		uniquenessgroup:"frederick"
+        },
+		{
+        id: "frederick_p",
+        label: "Frederick, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, knock:5},
+        description: "Seal Frederick in a room of concrete, not brick, patrol the perimeter, and check the floor every few hours.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"frederick"
+        },
+	
+	
+	
+	
+	
+	
+	///Knock 3 - James
+		{
+        id: "james_r",
+        label: "James, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, knock:5},
+        description: "James is turning breaking and entering into an art form, one building at a time.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:james_d},
+		uniquenessgroup:"james"
+        },
+		{
+        id: "james_a",
+        label: "James, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "James never hesitates to enter. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: james_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"james"
+        },
+		{
+        id: "james_b",
+        label: "James, a believer",
+        aspects:{mortal: 1, follower: 1, knock: 2},
+		description: "James plies his trade with a hacksaw rather than a lockpick.",
+		xtriggers: {promotiontodisciple: james_c,killmortal:corpse,derangemortal:lunatic,capturefollower:james_p},
+		uniquenessgroup:"james"
+        },
+		{
+        id: "james_c",
+        label: "James, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,knock:5},
+        description: "James only entertains the idea of doors as a thought exercise.",
+		xtriggers: {promotionto_d_knock: james_d,killmortal:corpse,derangemortal:lunatic,capturefollower:james_p},
+		uniquenessgroup:"james"
+        },
+		{
+        id: "james_d",
+        label: "James, an Ophede",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,knock:10},
+        description: "James' disregard for walls, doors and windows permits us into the most unexpected places.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:james_p,,rebellion:james_r},
+		uniquenessgroup:"james"
+        },
+		{
+        id: "james_p",
+        label: "James, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, knock:5},
+        description: "James would escape his cuffs the way water escapes a broken cup. We know better than that.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"james"
+        },
+	
+	
+	
+	
+	
+	
+	///Knock 4 - Miriam/miriam
+		{
+        id: "miriam_r",
+        label: "Miriam, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, knock:5},
+        description: "Miriam goes wherever the snakes lead her, and merrily hisses at passerby.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:miriam_d},
+		uniquenessgroup:"miriam"
+        },
+		{
+        id: "miriam_a",
+        label: "Miriam, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Miriam is a friend to serpents, and a curious sort besides. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: miriam_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"miriam"
+        },
+		{
+        id: "miriam_b",
+        label: "Miriam, a believer",
+        aspects:{mortal: 1, follower: 1, knock: 2},
+		description: "Miriam's pets are as pampered as princes. They may never be denied.",
+		xtriggers: {promotiontodisciple: miriam_c,killmortal:corpse,derangemortal:lunatic,capturefollower:miriam_p},
+		uniquenessgroup:"miriam"
+        },
+		{
+        id: "miriam_c",
+        label: "Miriam, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,knock:5},
+        description: "Her arms are often wound with friends, and they whisper the most curious things to her.",
+		xtriggers: {promotionto_d_knock: miriam_d,killmortal:corpse,derangemortal:lunatic,capturefollower:miriam_p},
+		uniquenessgroup:"miriam"
+        },
+		{
+        id: "miriam_d",
+        label: "Miriam, an Ophede",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,knock:10},
+        description: "Miriam's family line is as complex as serpent-coils.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:miriam_p,,rebellion:miriam_r},
+		uniquenessgroup:"miriam"
+        },
+		{
+        id: "miriam_p",
+        label: "Miriam, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, knock:5},
+        description: "Miriam is alone now.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"miriam"
+        },
+	
+	
+	
+	
+	
+	
+	///Moth 1 - Aine/aine
+		{
+        id: "aine_r",
+        label: "Aine, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, moth:5},
+        description: "Miss Aine has a hundred thousand vocations, none of them real.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:aine_d},
+		uniquenessgroup:"aine"
+        },
+		{
+        id: "aine_a",
+        label: "Aine, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "A mysterious lady whose finances never seem to run dry. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: aine_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"aine"
+        },
+		{
+        id: "aine_b",
+        label: "Aine, a believer",
+        aspects:{mortal: 1, follower: 1, moth: 2},
+		description: "Aine knows a hundred thousand little bits of trivia. These, at least, are true.",
+		xtriggers: {promotiontodisciple: aine_c,killmortal:corpse,derangemortal:lunatic,capturefollower:aine_p},
+		uniquenessgroup:"aine"
+        },
+		{
+        id: "aine_c",
+        label: "Aine, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,moth:5},
+        description: "Aine is irreproachable, and always ready with a new gift.",
+		xtriggers: {promotionto_d_moth: aine_d,killmortal:corpse,derangemortal:lunatic,capturefollower:aine_p},
+		uniquenessgroup:"aine"
+        },
+		{
+        id: "aine_d",
+        label: "Aine, a Guest",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,moth:10},
+        description: "Her works are better than reality, now.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:aine_p,,rebellion:aine_r},
+		uniquenessgroup:"aine"
+        },
+		{
+        id: "aine_p",
+        label: "Aine, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, moth:5},
+        description: "We all know that Aine's promises are as real as a mirage.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"aine"
+        },
+	
+	
+	
+	
+	
+	
+	///Moth 2 - Arkady/arkady
+		{
+        id: "arkady_r",
+        label: "Arkady, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, moth:5},
+        description: "Arkady had collected stamps, then bugs, then rare skins. What he collects now is not to be discussed in polite company.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:arkady_d},
+		uniquenessgroup:"arkady"
+        },
+		{
+        id: "arkady_a",
+        label: "Arkady, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Arkady believes you have something interesting to say. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: arkady_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"arkady"
+        },
+		{
+        id: "arkady_b",
+        label: "Arkady, a believer",
+        aspects:{mortal: 1, follower: 1, moth: 2},
+		description: "Arkady's mind is the graveyard where we bury our words.",
+		xtriggers: {promotiontodisciple: arkady_c,killmortal:corpse,derangemortal:lunatic,capturefollower:arkady_p},
+		uniquenessgroup:"arkady"
+        },
+		{
+        id: "arkady_c",
+        label: "Arkady, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,moth:5},
+        description: "Arkady collects beautiful things and beautifully ugly things. He doesn't make that distinction.",
+		xtriggers: {promotionto_d_moth: arkady_d,killmortal:corpse,derangemortal:lunatic,capturefollower:arkady_p},
+		uniquenessgroup:"arkady"
+        },
+		{
+        id: "arkady_d",
+        label: "Arkady, a Guest",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,moth:10},
+        description: "Arkady's compliments are a bad omen.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:arkady_p,,rebellion:arkady_r},
+		uniquenessgroup:"arkady"
+        },
+		{
+        id: "arkady_p",
+        label: "Arkady, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, moth:5},
+        description: "He revels in the last thing he has - guilt.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"arkady"
+        },
+	
+	
+	
+	
+	
+	
+	///Moth 3 - Cassandra/cassandra - The Occupant of Office 12
+		{
+        id: "cassandra_r",
+        label: "Cassandra, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, moth:5},
+        description: "Suspicion did not alight on such a high member of government easily. It rests there even less easily.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:cassandra_d},
+		uniquenessgroup:"cassandra"
+        },
+		{
+        id: "cassandra_a",
+        label: "Cassandra, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Cassandra has held her job for decades. Now she is little more than that. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: cassandra_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"cassandra"
+        },
+		{
+        id: "cassandra_b",
+        label: "Cassandra, a believer",
+        aspects:{mortal: 1, follower: 1, moth: 2},
+		description: "Law is a labyrinth, and it is thickest around Cassandra.",
+		xtriggers: {promotiontodisciple: cassandra_c,killmortal:corpse,derangemortal:lunatic,capturefollower:cassandra_p},
+		uniquenessgroup:"cassandra"
+        },
+		{
+        id: "cassandra_c",
+        label: "Cassandra, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,moth:5},
+        description: "Cassandra possibly is not a person anymore, but whatever speaks in her name drips mystery using her tongue.",
+		xtriggers: {promotionto_d_moth: cassandra_d,killmortal:corpse,derangemortal:lunatic,capturefollower:cassandra_p},
+		uniquenessgroup:"cassandra"
+        },
+		{
+        id: "cassandra_d",
+        label: "The Occupant of Office 12",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,moth:10},
+        description: "Nobody has seen Cassandra for months. We send her letters and occasionally find letters slipped under our doors.",
+		xtriggers: {killmortal:fleeting,derangemortal:lunatic,capturefollower:cassandra_p,rebellion:cassandra_r},
+		uniquenessgroup:"cassandra"
+        },
+		{
+        id: "cassandra_p",
+        label: "Cassandra, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, moth:5},
+        description: "The state of the government concerns her far more than her own imprisonment.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"cassandra"
+        },
+	
+	
+	
+	
+	
+	
+	///Moth 4 - Mitchell/mitchell
+		{
+        id: "mitchell_r",
+        label: "Mitchell, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, moth:5},
+        description: "He's a confusing sort, if pleasant.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:mitchell_d},
+		uniquenessgroup:"mitchell"
+        },
+		{
+        id: "mitchell_a",
+        label: "Mitchell, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "A gentleman of unclear nationality, housing and profession. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: mitchell_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"mitchell"
+        },
+		{
+        id: "mitchell_b",
+        label: "Mitchell, a believer",
+        aspects:{mortal: 1, follower: 1, moth: 2},
+		description: "Mitchell's habit of leaving most of the conversation unsaid is rather endearing.",
+		xtriggers: {promotiontodisciple: mitchell_c,killmortal:corpse,derangemortal:lunatic,capturefollower:mitchell_p},
+		uniquenessgroup:"mitchell"
+        },
+		{
+        id: "mitchell_c",
+        label: "Mitchell, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,moth:5},
+        description: "Mitchell believes he will run out of stories to tell if he tells everything to everyone at once.",
+		xtriggers: {promotionto_d_moth: mitchell_d,killmortal:corpse,derangemortal:lunatic,capturefollower:mitchell_p},
+		uniquenessgroup:"mitchell"
+        },
+		{
+        id: "mitchell_d",
+        label: "Mitchell, a Guest",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,moth:10},
+        description: "Everybody knows Mitchell. Nobody knows Mitchell.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:mitchell_p,rebellion:mitchell_r},
+		uniquenessgroup:"mitchell"
+        },
+		{
+        id: "mitchell_p",
+        label: "Mitchell, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, moth:5},
+        description: "He is imprisoned according to protocol.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"mitchell"
+        },
+	
+	
+	
+	
+	
+	
+	///Lantern 1 - Basil/basil
+		{
+        id: "basil_r",
+        label: "Basil, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, lantern:5},
+        description: "Basil wrangles the occult onto the canvas as inspiration dims.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:basil_d},
+		uniquenessgroup:"basil"
+        },
+		{
+        id: "basil_a",
+        label: "Basil, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "The most influential people have posed for Basil's brush and palette, but his hands have grown tired of faces. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: basil_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"basil"
+        },
+		{
+        id: "basil_b",
+        label: "Basil, a believer",
+        aspects:{mortal: 1, follower: 1, lantern: 2},
+		description: "Basil spends long days in contemplation, and longer nights with the paints. His muse is a comet, but we have granted him a telescope.",
+		xtriggers: {promotiontodisciple: basil_c,killmortal:corpse,derangemortal:lunatic,capturefollower:basil_p},
+		uniquenessgroup:"basil"
+        },
+		{
+        id: "basil_c",
+        label: "Basil, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,lantern:5},
+        description: "No self-respecting gallery will showcase Basil's works. He is only happy to draw what he had always wanted to.",
+		xtriggers: {promotionto_d_lantern: basil_d,killmortal:corpse,derangemortal:lunatic,capturefollower:basil_p},
+		uniquenessgroup:"basil"
+        },
+		{
+        id: "basil_d",
+        label: "Basil, an Astrologer",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,lantern:10},
+        description: "Basil keeps his eyes to the sun during the day, to the stars at night. Every week or so, he will come to us carrying what he had seen in the sky.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:basil_p,rebellion:basil_r},
+		uniquenessgroup:"basil"
+        },
+		{
+        id: "basil_p",
+        label: "Basil, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:5, grail:3, heart:3},
+        description: "Basil sits silently, occasionally tracing lines in the air.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"basil"
+        },
+	
+	
+	
+	
+	
+	
+	///Lantern 2 - Connor/connor
+		{
+        id: "connor_r",
+        label: "Connor, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, lantern:5},
+        description: "A trail of unpaid library fines and dinner bills lead us to Connor.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:connor_d},
+		uniquenessgroup:"connor"
+        },
+		{
+        id: "connor_a",
+        label: "Connor, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Connor has read the most interesting books, and he cannot wait to tell you about them. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: connor_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"connor"
+        },
+		{
+        id: "connor_b",
+        label: "Connor, a believer",
+        aspects:{mortal: 1, follower: 1, lantern: 2},
+		description: "Connor has begun a bit of writing on his own. He is humble and insists he isn't good at it, but his works brim with powerful truths.",
+		xtriggers: {promotiontodisciple: connor_c,killmortal:corpse,derangemortal:lunatic,capturefollower:connor_p},
+		uniquenessgroup:"connor"
+        },
+		{
+        id: "connor_c",
+        label: "Connor, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,lantern:5},
+        description: "Connor's works have been turned down by all but the most esoteric of publishers, and cannot be found in stores. His hands do not stop writing, and he rarely looks up from the page.",
+		xtriggers: {promotionto_d_lantern: connor_d,killmortal:corpse,derangemortal:lunatic,capturefollower:connor_p},
+		uniquenessgroup:"connor"
+        },
+		{
+        id: "connor_d",
+        label: "Connor, an Astrologer",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,lantern:10},
+        description: "Connor is able to tell a person's entire future based on an analysis of the spelling of their name. We are unsure as to whether he simply foretells the events, or makes them so.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:connor_p,rebellion:connor_r},
+		uniquenessgroup:"connor"
+        },
+		{
+        id: "connor_p",
+        label: "Connor, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:5, grail:3, heart:3},
+        description: "Connor begs, almost sobbing, for a pen, pencil, anything, please.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"connor"
+        },
+	
+	
+	
+	
+	
+	
+	///Lantern 3 - Patrick/patrick
+		{
+        id: "patrick_r",
+        label: "Patrick, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, lantern:5},
+        description: "There are no records of Patrick's crimes, but there is no doubt they exist. This many suspensions do not happen without a reason.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:patrick_d},
+		uniquenessgroup:"patrick"
+        },
+		{
+        id: "patrick_a",
+        label: "Patrick, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Patrick has spent 20 years on the force, and has seen the most gruesome of crimes. He is often the first to volunteer to investigate them. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: patrick_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"patrick"
+        },
+		{
+        id: "patrick_b",
+        label: "Patrick, a believer",
+        aspects:{mortal: 1, follower: 1, lantern: 2},
+		description: "Patrick has begun reading case files at home, and then burning them. His memory is an impeccable record. ",
+		xtriggers: {promotiontodisciple: patrick_c,killmortal:corpse,derangemortal:lunatic,capturefollower:patrick_p},
+		uniquenessgroup:"patrick"
+        },
+		{
+        id: "patrick_c",
+        label: "Patrick, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,lantern:5},
+        description: "The lines between innocent and guilty have begun to blur in Patrick's mind. He claims we are all complicit in centuries-old crimes, breaking Laws far beyond humanity's grasp.",
+		xtriggers: {promotionto_d_lantern: patrick_d,killmortal:corpse,derangemortal:lunatic,capturefollower:patrick_p},
+		uniquenessgroup:"patrick"
+        },
+		{
+        id: "patrick_d",
+        label: "Patrick, an Astrologer",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,lantern:10},
+        description: "Crimes happen, and Patrick is there. Patrick is there, and crimes happen. In his eyes, we are all guilty, but he can instantly tell the more guilty from the ones less so.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:patrick_p,rebellion:patrick_r},
+		uniquenessgroup:"patrick"
+        },
+		{
+        id: "patrick_p",
+        label: "Patrick, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:5, grail:3, heart:3},
+        description: "Patrick seems to find this ironic. If his cell is opened, we suspect he will refuse to leave.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"patrick"
+        },
+	
+	
+	
+	
+	
+	
+	///Lantern 4 - Stefan/stefan
+		{
+        id: "stefan_r",
+        label: "Stefan, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, lantern:5},
+        description: "He has filled his place in the asylum a thousand times over.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:stefan_d},
+		uniquenessgroup:"stefan"
+        },
+		{
+        id: "stefan_a",
+        label: "Stefan, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Stefan was let out of the asylum when he learned how to lie. He doesn't lie now. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: stefan_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"stefan"
+        },
+		{
+        id: "stefan_b",
+        label: "Stefan, a believer",
+        aspects:{mortal: 1, follower: 1, lantern: 2},
+		description: "Stefan sometimes mistakes dreams from reality. Sometimes, we mistake reality for his dreams.",
+		xtriggers: {promotiontodisciple: stefan_c,killmortal:corpse,derangemortal:lunatic,capturefollower:stefan_p},
+		uniquenessgroup:"stefan"
+        },
+		{
+        id: "stefan_c",
+        label: "Stefan, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,lantern:5},
+        description: "Stefan wishes he could tell what he knows to the world, but he has a dreadful track record.",
+		xtriggers: {promotionto_d_lantern: stefan_d,killmortal:corpse,derangemortal:lunatic,capturefollower:stefan_p},
+		uniquenessgroup:"stefan"
+        },
+		{
+        id: "stefan_d",
+        label: "Stefan, an Astrologer",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,lantern:10},
+        description: "Stefan readily explains his decision to go insane. It, he says, helped him very much.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:stefan_p,rebellion:stefan_r},
+		uniquenessgroup:"stefan"
+        },
+		{
+        id: "stefan_p",
+        label: "Stefan, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:5, grail:3, heart:3},
+        description: "Stefan has found refuge in madness. We wear blindfolds when we visit his room.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"stefan"
+        },
+	
+	
+	
+	
+	
+	
+	///Edge 1 - Baishan/baishan
+		{
+        id: "baishan_r",
+        label: "Baishan, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, edge:5},
+        description: "Baishan leaves a trail through the city like a shark through chummed waters.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:baishan_d},
+		uniquenessgroup:"baishan"
+        },
+		{
+        id: "baishan_a",
+        label: "Baishan, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: " Baishan never looks at faces. They aren't important to him. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: baishan_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"baishan"
+        },
+		{
+        id: "baishan_b",
+        label: "Baishan, a believer",
+        aspects:{mortal: 1, follower: 1, edge: 2},
+		description: "Baishan cares little about the mysteries of the occult, but he is ready with the knife when needed.",
+		xtriggers: {promotiontodisciple: baishan_c,killmortal:corpse,derangemortal:lunatic,capturefollower:baishan_p},
+		uniquenessgroup:"baishan"
+        },
+		{
+        id: "baishan_c",
+        label: "Baishan, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,edge:5},
+        description: "Every morning, and every evening, Baishan cleans his weaponry. It's hard to imagine where he finds the time to do anything else.",
+		xtriggers: {promotionto_d_edge: baishan_d,killmortal:corpse,derangemortal:lunatic,capturefollower:baishan_p},
+		uniquenessgroup:"baishan"
+        },
+		{
+        id: "baishan_d",
+        label: "Baishan, an Arquebusier",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,edge:10},
+        description: "No one really knows how many weapons Baishan has on his person.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:baishan_p,rebellion:baishan_r},
+		uniquenessgroup:"baishan"
+        },
+		{
+        id: "baishan_p",
+        label: "Baishan, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, edge:5},
+        description: "Baishan is probably hoarding the cutlery, amongst other things.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"baishan"
+        },
+	
+	
+	
+	
+	
+	
+	///Edge 2 - Rhonda/rhonda
+		{
+        id: "rhonda_r",
+        label: "Rhonda, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, edge:5},
+        description: "Few can believe such a consumptive girl could commit such brutal murders.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:rhoda_d},
+		uniquenessgroup:"rhonda"
+        },
+		{
+        id: "rhonda_a",
+        label: "Rhonda, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Rhonda hasn't yet threatened you. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: rhonda_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"rhonda"
+        },
+		{
+        id: "rhonda_b",
+        label: "Rhonda, a believer",
+        aspects:{mortal: 1, follower: 1, edge: 2},
+		description: "Rhonda's illness devours her body, but it hasn't been able to touch her spirit.",
+		xtriggers: {promotiontodisciple: rhonda_c,killmortal:corpse,derangemortal:lunatic,capturefollower:rhonda_p},
+		uniquenessgroup:"rhonda"
+        },
+		{
+        id: "rhonda_c",
+        label: "Rhonda, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,edge:5},
+        description: "Despite being as wan as a corpse, Rhonda hasn't stopped stabbing people.",
+		xtriggers: {promotionto_d_edge: rhonda_d,killmortal:corpse,derangemortal:lunatic,capturefollower:rhonda_p},
+		uniquenessgroup:"rhonda"
+        },
+		{
+        id: "rhonda_d",
+        label: "Rhonda, an Arquebusier",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,edge:10},
+        description: "Rhonda is meticulously clean, and never leaves behind any evidence. Not a drop of blood.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:rhonda_p,rebellion:rhonda_r},
+		uniquenessgroup:"rhonda"
+        },
+		{
+        id: "rhonda_p",
+        label: "Rhonda, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, edge:5},
+        description: "We haven't fed Rhonda in days. It's safer, that way.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"rhonda"
+        },
+	
+	
+	
+	
+	
+	
+	///Edge 3 - Sigismund /sigismund
+		{
+        id: "sigismund_r",
+        label: "Sigismund, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, edge:5},
+        description: "Sigismund's body-count in the war is far outstripped by what he has done after it.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:sigismund_d},
+		uniquenessgroup:"sigismund"
+        },
+		{
+        id: "sigismund_a",
+        label: "Sigismund, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Sigismund still does everything with cold military efficiency. But he doesn't fight. Not anymore after what he saw. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: sigismund_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"sigismund"
+        },
+		{
+        id: "sigismund_b",
+        label: "Sigismund, a believer",
+        aspects:{mortal: 1, follower: 1, edge: 2},
+		description: "Every action Sigismund takes is with robotic discipline. Especially how he uses his little pistol.",
+		xtriggers: {promotiontodisciple: sigismund_c,killmortal:corpse,derangemortal:lunatic,capturefollower:sigismund_p},
+		uniquenessgroup:"sigismund"
+        },
+		{
+        id: "sigismund_c",
+        label: "Sigismund, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,edge:5},
+        description: "Nobody knows where Sigismund got that rifle from. But he claims he has still never needed to reload it.",
+		xtriggers: {promotionto_d_edge: sigismund_d,killmortal:corpse,derangemortal:lunatic,capturefollower:sigismund_p},
+		uniquenessgroup:"sigismund"
+        },
+		{
+        id: "sigismund_d",
+        label: "Sigismund, an Arquebusier",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,edge:10},
+        description: "With one stone, Sigismund can kill a man. With that gatling gun he acquired...",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:sigismund_p,rebellion:sigismund_r},
+		uniquenessgroup:"sigismund"
+        },
+		{
+        id: "sigismund_p",
+        label: "Sigismund, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, edge:5},
+        description: "The door is to remain closed at all times. It is the one thing he cannot outfight.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"sigismund"
+        },
+	
+	
+	
+	
+	
+	
+	///Edge 4 - Brooklyn/brooklyn
+		{
+        id: "brooklyn_r",
+        label: "Brooklyn, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, edge:5},
+        description: "Organised assaults; careful killings; the occasional kidnapping; it all links back to her.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:brooklyn_d},
+		uniquenessgroup:"brooklyn"
+        },
+		{
+        id: "brooklyn_a",
+        label: "Brooklyn, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Brooklyn speaks long and often of campaigns fondly remembered - and carefully omits that she sat in a comfortable chair for their duration. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: brooklyn_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"brooklyn"
+        },
+		{
+        id: "brooklyn_b",
+        label: "Brooklyn, a believer",
+        aspects:{mortal: 1, follower: 1, edge: 2},
+		description: "Brooklyn often prefers the company of a pipe to that of a knife, but the job is always done.",
+		xtriggers: {promotiontodisciple: brooklyn_c,killmortal:corpse,derangemortal:lunatic,capturefollower:brooklyn_p},
+		uniquenessgroup:"brooklyn"
+        },
+		{
+        id: "brooklyn_c",
+        label: "Brooklyn, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,edge:5},
+        description: "Brooklyn makes liberal use of chess to illustrate her tactical metaphors. 'Conflict,' she explains, 'is not just about one's ability to thrust a knife.'",
+		xtriggers: {promotionto_d_edge: brooklyn_d,killmortal:corpse,derangemortal:lunatic,capturefollower:brooklyn_p},
+		uniquenessgroup:"brooklyn"
+        },
+		{
+        id: "brooklyn_d",
+        label: "Brooklyn , an Arquebusier",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,edge:10},
+        description: "She arranges the deaths of thousands, from naught but her comfortable position by the hearth.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:brooklyn_p,rebellion:sigismund_r},
+		uniquenessgroup:"brooklyn"
+        },
+		{
+        id: "brooklyn_p",
+        label: "Brooklyn, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, edge:5},
+        description: "The final order has been given: she is to be denied her tobacco and chess privileges.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"brooklyn"
+        },
+	
+	
+	
+	
+	
+	
+	///Grail 1 - Anfisa/anfisa
+		{
+        id: "anfisa_r",
+        label: "Anfisa, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, grail:5},
+        description: "It's dangerous to buy fruits, these days.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:anfisa_d},
+		uniquenessgroup:"anfisa"
+        },
+		{
+        id: "anfisa_a",
+        label: "Anfisa, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Anfisa loves children, especially the ones she teaches. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: anfisa_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"anfisa"
+        },
+		{
+        id: "anfisa_b",
+        label: "Anfisa, a believer",
+        aspects:{mortal: 1, follower: 1, grail: 2},
+		description: "Anfisa has a green thumb, although she's very modest about it.",
+		xtriggers: {promotiontodisciple: anfisa_c,killmortal:corpse,derangemortal:lunatic,capturefollower:anfisa_p},
+		uniquenessgroup:"anfisa"
+        },
+		{
+        id: "anfisa_c",
+        label: "Anfisa, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,grail:5},
+        description: "The plants that entangle Anfisa's hair are her only children now.",
+		xtriggers: {promotionto_d_grail: anfisa_d,killmortal:corpse,derangemortal:lunatic,capturefollower:anfisa_p},
+		uniquenessgroup:"anfisa"
+        },
+		{
+        id: "anfisa_d",
+        label: "Anfisa, a Thorn",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,grail:10},
+        description: "Only the eyes remain visible now. The rest of Anfisa's body is a mass of flora.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:anfisa_p,rebellion:anfisa_r},
+		uniquenessgroup:"anfisa"
+        },
+		{
+        id: "anfisa_p",
+        label: "Anfisa, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:5, heart:3},
+        description: "She was offered a banana last week. What happened is not to be spoken of.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"anfisa"
+        },
+	
+	
+	
+	
+	
+	
+	///Grail 2 - Constance/constance - Merrymaker
+		{
+        id: "constance_r",
+        label: "Constance, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, grail:5},
+        description: "It's not what she has done, it's what she's convinced others to do.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:constance_d},
+		uniquenessgroup:"constance"
+        },
+		{
+        id: "constance_a",
+        label: "Constance, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Constance is a stunning, but dour young woman. She remains sceptical. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: constance_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"constance"
+        },
+		{
+        id: "constance_b",
+        label: "Constance, a believer",
+        aspects:{mortal: 1, follower: 1, grail: 2},
+		description: "Constance has softened considerably. Her smile is constant, and her laugh carries like an orchestra tune.",
+		xtriggers: {promotiontodisciple: constance_c,killmortal:corpse,derangemortal:lunatic,capturefollower:constance_p},
+		uniquenessgroup:"constance"
+        },
+		{
+        id: "constance_c",
+        label: "Constance, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,grail:5},
+        description: "Constance's smile has widened even further, now. She's taken a liking to the feel of sharp edges against her skin.",
+		xtriggers: {promotionto_d_grail: constance_d,killmortal:corpse,derangemortal:lunatic,capturefollower:constance_p},
+		uniquenessgroup:"constance"
+        },
+		{
+        id: "constance_d",
+        label: "Constance, a Merrymaker",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,grail:10},
+        description: "We've bound her hands and mouth. She won't try that again. Hopefully, nobody else will follow her example.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:constance_p,rebellion:constance_r},
+		uniquenessgroup:"constance"
+        },
+		{
+        id: "constance_p",
+        label: "Constance, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:5, heart:3},
+        description: "Constance is still smiling, but she neither blinks nor sleeps.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"constance"
+        },
+	
+	
+	
+	
+	
+	
+	///Grail 3 - David/david
+		{
+        id: "david_r",
+        label: "David, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, grail:5},
+        description: "Despite everything he does, David has admirers.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:david_d},
+		uniquenessgroup:"david"
+        },
+		{
+        id: "david_a",
+        label: "David, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "David is a beautiful lad with a healthy appetite. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: constance_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"constance"
+        },
+		{
+        id: "david_b",
+        label: "David, a believer",
+        aspects:{mortal: 1, follower: 1, grail: 2},
+		description: "Nobody would suspect David's passtimes from the beautiful shape of his lower jaw and his clematis eyes.",
+		xtriggers: {promotiontodisciple: david_c,killmortal:corpse,derangemortal:lunatic,capturefollower:david_p},
+		uniquenessgroup:"david"
+        },
+		{
+        id: "david_c",
+        label: "David, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,grail:5},
+        description: "The bloodstains really bring out the rosy red of his lips and his lotus-coloured skin.",
+		xtriggers: {promotionto_d_grail: david_d,killmortal:corpse,derangemortal:lunatic,capturefollower:david_p},
+		uniquenessgroup:"david"
+        },
+		{
+        id: "david_d",
+        label: "David, a Thorn",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,grail:10},
+        description: "When the casket is dropped into the ground, his corpse will still hunger.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:david_p,rebellion:david_r},
+		uniquenessgroup:"constance"
+        },
+		{
+        id: "david_p",
+        label: "David, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:5, heart:3},
+        description: "He will bite into steel bars if he is not properly fed.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"david"
+        },
+	
+	
+	
+	
+	
+	
+	///Grail 4 - Harriet/harriet
+		{
+        id: "harriet_r",
+        label: "Harriet, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, grail:5},
+        description: "She is a nasty thorn in our side - unfortunately, quite literally.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:harriet_d},
+		uniquenessgroup:"harriet"
+        },
+		{
+        id: "harriet_a",
+        label: "Harriet, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Harriet's eyes are always aglow with enthusiasm, and she is pleasant company, despite her persistently dirty hands. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: harriet_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"harriet"
+        },
+		{
+        id: "harriet_b",
+        label: "Harriet, a believer",
+        aspects:{mortal: 1, follower: 1, grail: 2},
+		description: "There's something malicious to Harriet, but her knowledge of gardening and herbalism never fails us.",
+		xtriggers: {promotiontodisciple: harriet_c,killmortal:corpse,derangemortal:lunatic,capturefollower:harriet_p},
+		uniquenessgroup:"harriet"
+        },
+		{
+        id: "harriet_c",
+        label: "Harriet, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,grail:5},
+        description: "A bit of nightshade here, a well-placed bramble there - Harriet knows precisely where to place her natural deterrents.",
+		xtriggers: {promotionto_d_grail: harriet_d,killmortal:corpse,derangemortal:lunatic,capturefollower:harriet_p},
+		uniquenessgroup:"harriet"
+        },
+		{
+        id: "harriet_d",
+        label: "Harriet, a Thorn",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,grail:10},
+        description: "The garden must be kept orderly if we are to perform our rituals, but Harriet insists that we will work better under thorned supervision.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:harriet_p,rebellion:harriet_r},
+		uniquenessgroup:"harriet"
+        },
+		{
+        id: "harriet_p",
+        label: "Harriet, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:5, heart:3},
+        description: "She keeps growing... things in the cracks of the stonework. We have to stomp them out every time.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"harriet"
+        },
+	
+	
+	
+	
+	
+	
+	///Heart 1 - Anton/anton - Condiment
+		{
+        id: "anton_r",
+        label: "Anton, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, heart:5},
+        description: "Nothing can make Anton stray from his goals.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:anton_d},
+		uniquenessgroup:"anton"
+        },
+		{
+        id: "anton_a",
+        label: "Anton, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Anton is an honest young man. He talks fondly about the lady in red, but his hands tremble. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: anton_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"anton"
+        },
+		{
+        id: "anton_b",
+        label: "Anton, a believer",
+        aspects:{mortal: 1, follower: 1, heart: 2},
+		description: "Anton's chest has three gunshot wounds. He does not remember being shot.",
+		xtriggers: {promotiontodisciple: anton_c,killmortal:corpse,derangemortal:lunatic,capturefollower:anton_p},
+		uniquenessgroup:"anton"
+        },
+		{
+        id: "anton_c",
+        label: "Anton, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,heart:5},
+        description: "Anton goes along with your most daring plans. He will succeed, he insists.",
+		xtriggers: {promotionto_d_heart: anton_d,killmortal:corpse,derangemortal:lunatic,capturefollower:anton_p},
+		uniquenessgroup:"anton"
+        },
+		{
+        id: "anton_d",
+        label: "Anton, a Condiment",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,heart:10},
+        description: "Anton always comes back, like a loyal puppy, or a shiver.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:anton_p,rebellion:anton_r},
+		uniquenessgroup:"anton"
+        },
+		{
+        id: "anton_p",
+        label: "Anton, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:5},
+        description: "This time, Anton has failed.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"anton"
+        },
+	
+	
+	
+	
+	
+	
+	///Heart 2 - Julian/julian
+		{
+        id: "julian_r",
+        label: "Julian, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, heart:5},
+        description: "Julian is only good for the sake of being good.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:julian_d},
+		uniquenessgroup:"julian"
+        },
+		{
+        id: "julian_a",
+        label: "Julian, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Julian is a principled sort, and has taken a liking to what I have to say. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: julian_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"julian"
+        },
+		{
+        id: "julian_b",
+        label: "Julian, a believer",
+        aspects:{mortal: 1, follower: 1, heart: 2},
+		description: "Julian's reputation is spotless.",
+		xtriggers: {promotiontodisciple: julian_c,killmortal:corpse,derangemortal:lunatic,capturefollower:julian_p},
+		uniquenessgroup:"julian"
+        },
+		{
+        id: "julian_c",
+        label: "Julian, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,heart:5},
+        description: "He occasionally permits us to be seen together.",
+		xtriggers: {promotionto_d_heart: julian_d,killmortal:corpse,derangemortal:lunatic,capturefollower:julian_p},
+		uniquenessgroup:"julian"
+        },
+		{
+        id: "julian_d",
+        label: "Julian, a Nrityian",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,heart:10},
+        description: "Any who have known Julian for a week will swear oaths by his name.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:julian_p,rebellion:julian_r},
+		uniquenessgroup:"julian"
+        },
+		{
+        id: "julian_p",
+        label: "Julian, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:5},
+        description: "His plans for after his - assuredly temporary - imprisonment are as sprawling as tree-roots.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"julian"
+        },
+	
+	
+	
+	
+	
+	
+	///Heart 3 - Rashmi/rashmi
+		{
+        id: "rashmi_r",
+        label: "Rashmi, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, heart:5},
+        description: "Nothing that Rashmi has done has been malicious.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:rashmi_d},
+		uniquenessgroup:"rashmi"
+        },
+		{
+        id: "rashmi_a",
+        label: "Rashmi, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Rashmi is well-known at the bar where she sings. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: rashmi_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"rashmi"
+        },
+		{
+        id: "rashmi_b",
+        label: "Rashmi, a believer",
+        aspects:{mortal: 1, follower: 1, heart: 2},
+		description: "Rashmi is friendly and pleasant to everyone, whether they like it or not.",
+		xtriggers: {promotiontodisciple: rashmi_c,killmortal:corpse,derangemortal:lunatic,capturefollower:rashmi_p},
+		uniquenessgroup:"rashmi"
+        },
+		{
+        id: "rashmi_c",
+        label: "Rashmi, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,heart:5},
+        description: "Rashmi has a voice like liquid gold, and a smile like the sun.",
+		xtriggers: {promotionto_d_heart: rashmi_d,killmortal:corpse,derangemortal:lunatic,capturefollower:rashmi_p},
+		uniquenessgroup:"rashmi"
+        },
+		{
+        id: "rashmi_d",
+        label: "Rashmi, a Nrityian",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,heart:10},
+        description: "Rashmi will not, will not, will not stop helping.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:rashmi_p,rebellion:rashmi_r},
+		uniquenessgroup:"rashmi"
+        },
+		{
+        id: "rashmi_p",
+        label: "Rashmi, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:5},
+        description: "Rashmi sings all the louder, as though she might break the walls of her cell.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"rashmi"
+        },
+	
+	
+	
+	
+	
+	
+	///Heart 4 - Roger/roger
+		{
+        id: "roger_r",
+        label: "Roger, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, heart:5},
+        description: "Roger had fled to the Americas, and then fled back here.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:roger_d},
+		uniquenessgroup:"roger"
+        },
+		{
+        id: "roger_a",
+        label: "Roger, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Roger had spent more of his life out at sea than on land. He does not entirely know what to do with himself. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: roger_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"roger"
+        },
+		{
+        id: "roger_b",
+        label: "Roger, a believer",
+        aspects:{mortal: 1, follower: 1, heart: 2},
+		description: "Roger follows his orders to the word, and never asks questions.",
+		xtriggers: {promotiontodisciple: roger_c,killmortal:corpse,derangemortal:lunatic,capturefollower:roger_p},
+		uniquenessgroup:"roger"
+        },
+		{
+        id: "roger_c",
+        label: "Roger, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,heart:5},
+        description: "Roger works with the dedication of a saint and the doctrine of a barfly.",
+		xtriggers: {promotionto_d_heart: roger_d,killmortal:corpse,derangemortal:lunatic,capturefollower:roger_p},
+		uniquenessgroup:"roger"
+        },
+		{
+        id: "roger_d",
+        label: "Roger, a Nrityian",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,heart:10},
+        description: "Roger's work-song sends the world billowing in an unassailable rhythm.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:roger_p,rebellion:roger_r},
+		uniquenessgroup:"roger"
+        },
+		{
+        id: "roger_p",
+        label: "Roger, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:5},
+        description: "Roger eats his food, drinks his drinks, waits his time.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"roger"
+        },
+	
+	
+	
+	
+	
+	
+	///Winter 1 - Bora/bora
+		{
+        id: "bora_r",
+        label: "Bora, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, winter:5},
+        description: "No one knows anything about Bora. No one can say anything about them. Have they ever been seen?",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:bora_d},
+		uniquenessgroup:"bora"
+        },
+		{
+        id: "bora_a",
+        label: "Bora, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Bora is a peculiar and indeterminate sort, but they seem interested in what you have to say. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: bora_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"bora"
+        },
+		{
+        id: "bora_b",
+        label: "Bora, a believer",
+        aspects:{mortal: 1, follower: 1, winter: 2},
+		description: "Bora does not smile, not in the way people smile.",
+		xtriggers: {promotiontodisciple: bora_c,killmortal:corpse,derangemortal:lunatic,capturefollower:bora_p},
+		uniquenessgroup:"bora"
+        },
+		{
+        id: "bora_c",
+        label: "Bora, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,winter:5},
+        description: "A silver tongue can be caught. Bora's words slide out of your grasp like quicksilver.",
+		xtriggers: {promotionto_d_winter: bora_d,killmortal:corpse,derangemortal:lunatic,capturefollower:bora_p},
+		uniquenessgroup:"bora"
+        },
+		{
+        id: "bora_d",
+        label: "A silken-stepped shadow",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,winter:10},
+        description: "Another disappearance, another weight on the scales. The books are balanced once again.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:bora_p,rebellion:bora_r},
+		uniquenessgroup:"bora"
+        },
+		{
+        id: "bora_p",
+        label: "Bora, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, winter:5},
+        description: "Bora plays cat's cradle while they wait for us.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"bora"
+        },
+	
+	
+	
+	
+	
+	
+	///Winter 2 - Camille/camille
+		{
+        id: "camille_r",
+        label: "Camille, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, winter:5},
+        description: "Being in Camille's presence is enough to make one weep and lose all joy for life. Which makes apprehending him difficult.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:camille_d},
+		uniquenessgroup:"camille"
+        },
+		{
+        id: "camille_a",
+        label: "Camille, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Camille is a melancholy sort. He still weeps for his homeland and speaks not of why he left. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: camille_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"camille"
+        },
+		{
+        id: "camille_b",
+        label: "Camille, a believer",
+        aspects:{mortal: 1, follower: 1, winter: 2},
+		description: "Camille does not cry now. Neither does he smile. The melancholy lies deeper in him.",
+		xtriggers: {promotiontodisciple: camille_c,killmortal:corpse,derangemortal:lunatic,capturefollower:camille_p},
+		uniquenessgroup:"camille"
+        },
+		{
+        id: "camille_c",
+        label: "Camille, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,winter:5},
+        description: "Time buries almost all feelings. But it has not buried Camille's sorrow, but crystallized it.",
+		xtriggers: {promotionto_d_winter: camille_d,killmortal:corpse,derangemortal:lunatic,capturefollower:camille_p},
+		uniquenessgroup:"camille"
+        },
+		{
+        id: "camille_d",
+        label: "A silken-stepped melancholy",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,winter:10},
+        description: "Are you crying? Why are you crying? Why can't you stop crying?...",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:camille_p,rebellion:camille_r},
+		uniquenessgroup:"camille"
+        },
+		{
+        id: "camille_p",
+        label: "Camille, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, winter:5},
+        description: "Camille does not cry. Just another homeland lost. Another exile.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"camille"
+        },
+	
+	
+	
+	
+	
+	
+	///Winter 3 - Kathie/kathie
+		{
+        id: "kathie_r",
+        label: "Kathie, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, winter:5},
+        description: "Kathie crafts the art of silent death, her canvas the whole of humanity.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:kathie_d},
+		uniquenessgroup:"kathie"
+        },
+		{
+        id: "kathie_a",
+        label: "Kathie, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Kathie's trade is that of a jeweler, but she merely lives by it. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: kathie_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"kathie"
+        },
+		{
+        id: "kathie_b",
+        label: "Kathie, a believer",
+        aspects:{mortal: 1, follower: 1, winter: 2},
+		description: "Kathie's eyes are the only striking thing about her.",
+		xtriggers: {promotiontodisciple: kathie_c,killmortal:corpse,derangemortal:lunatic,capturefollower:kathie_p},
+		uniquenessgroup:"kathie"
+        },
+		{
+        id: "kathie_c",
+        label: "Kathie, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,winter:5},
+        description: "Kathie fades into the crowd like a snowflake dissolving into a puddle. Her fingerprints have long since been sanded away.",
+		xtriggers: {promotionto_d_winter: kathie_d,killmortal:corpse,derangemortal:lunatic,capturefollower:kathie_p},
+		uniquenessgroup:"kathie"
+        },
+		{
+        id: "kathie_d",
+        label: "A silken-stepped woman",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,winter:10},
+        description: "Not even the cobwebs stir in the breeze. A judgment is being made.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:kathie_p,rebellion:kathie_r},
+		uniquenessgroup:"kathie"
+        },
+		{
+        id: "kathie_p",
+        label: "Kathie, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, winter:5},
+        description: "Kathie may not be breathing anymore.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"kathie"
+        },
+	
+	
+	
+	
+	
+	
+	///Winter 4 - Margaret/margaret
+		{
+        id: "margaret_r",
+        label: "Margaret, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, winter:5},
+        description: "Margaret is here to collect. Nothing more, nothing less.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:margaret_d},
+		uniquenessgroup:"margaret"
+        },
+		{
+        id: "margaret_a",
+        label: "Margaret, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Margaret is a responsible sort. She had many friends, once. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: margaret_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"margaret"
+        },
+		{
+        id: "margaret_b",
+        label: "Margaret, a believer",
+        aspects:{mortal: 1, follower: 1, winter: 2},
+		description: "Margaret pays her debts, always.",
+		xtriggers: {promotiontodisciple: margaret_c,killmortal:corpse,derangemortal:lunatic,capturefollower:margaret_p},
+		uniquenessgroup:"margaret"
+        },
+		{
+        id: "margaret_c",
+        label: "Margaret, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,winter:5},
+        description: "Margaret keeps a ledger. Margaret demands recompense.",
+		xtriggers: {promotionto_d_winter: margaret_d,killmortal:corpse,derangemortal:lunatic,capturefollower:margaret_p},
+		uniquenessgroup:"margaret"
+        },
+		{
+        id: "margaret_d",
+        label: "A silken-stepped creditor",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,winter:10},
+        description: "A wary debtor, a heavy ink-blot. Someone was here.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:margaret_p,rebellion:margaret_r},
+		uniquenessgroup:"margaret"
+        },
+		{
+        id: "margaret_p",
+        label: "Margaret, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, winter:5},
+        description: "She will remember this.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"margaret"
+        },
+	
+	
+	
+	
+	
+	
+	///Forge 1 - Avery/avery
+		{
+        id: "avery_r",
+        label: "Avery, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, forge:5},
+        description: "Avery believes their flesh will melt in this wild and perilous heat. Wouldn't that be wonderful?",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:avery_d},
+		uniquenessgroup:"avery"
+        },
+		{
+        id: "avery_a",
+        label: "Avery, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Avery is a mercurial sort, but they've taken a liking to the occult. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: avery_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"avery"
+        },
+		{
+        id: "avery_b",
+        label: "Avery, a believer",
+        aspects:{mortal: 1, follower: 1, forge: 2},
+		description: "Avery envies molten metal, and always carries matches.",
+		xtriggers: {promotiontodisciple: avery_c,killmortal:corpse,derangemortal:lunatic,capturefollower:avery_p},
+		uniquenessgroup:"avery"
+        },
+		{
+        id: "avery_c",
+        label: "Avery, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,forge:5},
+        description: "Avery is clothed in burn marks, but the fire in their eyes has no match in the mortal world.",
+		xtriggers: {promotionto_d_forge: avery_d,killmortal:corpse,derangemortal:lunatic,capturefollower:avery_p},
+		uniquenessgroup:"avery"
+        },
+		{
+        id: "avery_d",
+        label: "Avery, an Alchemist",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,forge:10},
+        description: "Avery changes themselves freely now. Their touch sears the skin.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:avery_p,rebellion:avery_r},
+		uniquenessgroup:"avery"
+        },
+		{
+        id: "avery_p",
+        label: "Avery, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, forge:5},
+        description: "Avery is always cold, no matter how much we stoke the fires.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"avery"
+        },
+	
+	
+	
+	
+	
+	
+	///Forge 2 - Chen-Wei/chenwei
+		{
+        id: "chenwei_r",
+        label: "Chen-Wei, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, forge:5},
+        description: "Chen-Wei is the source of half the city's burglaries in machine-shops, but steals nothing, only works.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:chenwei_d},
+		uniquenessgroup:"chenwei"
+        },
+		{
+        id: "chenwei_a",
+        label: "Chen-Wei, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "If it rattles or moves or has gears, axles, and burners, Chen-Wei cheerily anthromorphizes it. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: chenwei_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"chenwei"
+        },
+		{
+        id: "chenwei_b",
+        label: "Chen-Wei, a believer",
+        aspects:{mortal: 1, follower: 1, forge: 2},
+		description: "Chen-Wei is ferociously protective of any machine she comes across. Especially her own.",
+		xtriggers: {promotiontodisciple: chenwei_c,killmortal:corpse,derangemortal:lunatic,capturefollower:chenwei_p},
+		uniquenessgroup:"chenwei"
+        },
+		{
+        id: "chenwei_c",
+        label: "Chen-Wei, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,forge:5},
+        description: "Chen-Wei is filled with inspiration. She flits between every one of her 'children' making improvements.",
+		xtriggers: {promotionto_d_forge: chenwei_d,killmortal:corpse,derangemortal:lunatic,capturefollower:chenwei_p},
+		uniquenessgroup:"chenwei"
+        },
+		{
+        id: "chenwei_d",
+        label: "Chen-Wei, an Alchemist",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,forge:10},
+        description: "Chen-Wei has at least twelve of her children to solve any problem in at least twelve ways each.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:chenwei_p,rebellion:chenwei_r},
+		uniquenessgroup:"chenwei"
+        },
+		{
+        id: "chenwei_p",
+        label: "Chen-Wei, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, forge:5},
+        description: "Not a scrap of metal, not even a hairpin is allowed in Chen-Wei's cell.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"chenwei"
+        },
+	
+	
+	
+	
+	
+	
+	///Forge 3 - Meghan/meghan
+		{
+        id: "meghan_r",
+        label: "Meghan, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, forge:5},
+        description: "Meghan has been banned from most museums, but she keeps getting in.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:meghan_d},
+		uniquenessgroup:"meghan"
+        },
+		{
+        id: "meghan_a",
+        label: "Meghan, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Meghan was once a world-famous sculptor, but now her works are deemed too controversial for public display. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: meghan_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"meghan"
+        },
+		{
+        id: "meghan_b",
+        label: "Meghan, a believer",
+        aspects:{mortal: 1, follower: 1, forge: 2},
+		description: "Meghan is glad to have found a patron that supports art in all its forms. Restraint, she says, is the enemy of true creativity.",
+		xtriggers: {promotiontodisciple: meghan_c,killmortal:corpse,derangemortal:lunatic,capturefollower:meghan_p},
+		uniquenessgroup:"meghan"
+        },
+		{
+        id: "meghan_c",
+        label: "Meghan, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,forge:5},
+        description: "Meghan rarely needs hammers or chisels to sculpt now. She holds onto them for sentimental value.",
+		xtriggers: {promotionto_d_forge: meghan_d,killmortal:corpse,derangemortal:lunatic,capturefollower:meghan_p},
+		uniquenessgroup:"meghan"
+        },
+		{
+        id: "meghan_d",
+        label: "Meghan, an Alchemist",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,forge:10},
+        description: "Meghan is no longer limited by the cold demands of stone.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:meghan_p,rebellion:meghan_r},
+		uniquenessgroup:"meghan"
+        },
+		{
+        id: "meghan_p",
+        label: "Meghan, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, forge:5},
+        description: "Her cell is free of any tools. Nevertheless, we can hear her working.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"meghan"
+        },
+	
+	
+	
+	
+	
+	
+	///Forge 4 - Rupa/rupa
+		{
+        id: "rupa_r",
+        label: "Rupa, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, forge:5},
+        description: "Rupa considers the whole of humanity to be in need of improvement. Her prototypes never survive.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:rupa_d},
+		uniquenessgroup:"rupa"
+        },
+		{
+        id: "rupa_a",
+        label: "Rupa, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Rupa enjoys working with people. She doesn't particularly enjoy people. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: rupa_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"rupa"
+        },
+		{
+        id: "rupa_b",
+        label: "Rupa, a believer",
+        aspects:{mortal: 1, follower: 1, forge: 2},
+		description: "The potential of the occult to improve humanity has lit a fire in Rupa's eyes.",
+		xtriggers: {promotiontodisciple: meghan_c,killmortal:corpse,derangemortal:lunatic,capturefollower:rupa_p},
+		uniquenessgroup:"rupa"
+        },
+		{
+        id: "rupa_c",
+        label: "Rupa, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,forge:5},
+        description: "Rupa works without ceasing. Every day she searches for a new assistant.",
+		xtriggers: {promotionto_d_forge: rupa_d,killmortal:corpse,derangemortal:lunatic,capturefollower:rupa_p},
+		uniquenessgroup:"rupa"
+        },
+		{
+        id: "rupa_d",
+        label: "Rupa, an Alchemist",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,forge:10},
+        description: "Rupa can fix anyone. She will fix everyone.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:rupa_p,rebellion:rupa_r},
+		uniquenessgroup:"rupa"
+        },
+		{
+        id: "rupa_p",
+        label: "Rupa, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, forge:5},
+        description: "No one can enter Rupa's cell, not after last time.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"rupa"
+        },
+	
+	
+	
+	
+	
+	
+	///Forge 5 - Sule/sule
+		{
+        id: "sule_r",
+        label: "Sule, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, forge:5},
+        description: "A thousand fires have been set already, and Sule intends to set a thousand more.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:sule_d},
+		uniquenessgroup:"sule"
+        },
+		{
+        id: "sule_a",
+        label: "Sule, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Sule works as a clerk in a department store. She's terribly bored. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: sule_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"sule"
+        },
+		{
+        id: "sule_b",
+        label: "Sule, a believer",
+        aspects:{mortal: 1, follower: 1, forge: 2},
+		description: "Sule is no longer bored with her life. Now she is enraged.",
+		xtriggers: {promotiontodisciple: sule_c,killmortal:corpse,derangemortal:lunatic,capturefollower:sule_p},
+		uniquenessgroup:"sule"
+        },
+		{
+        id: "sule_c",
+        label: "Sule, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,forge:5},
+        description: "Sule sets to the destruction of raw materials with a maniacal fervor.",
+		xtriggers: {promotionto_d_forge: sule_d,killmortal:corpse,derangemortal:lunatic,capturefollower:sule_p},
+		uniquenessgroup:"sule"
+        },
+		{
+        id: "sule_d",
+        label: "Sule, an Alchemist",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,forge:10},
+        description: "The only thing Sule seems to love is the destroying flame.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:sule_p,rebellion:sule_r},
+		uniquenessgroup:"sule"
+        },
+		{
+        id: "sule_p",
+        label: "Sule, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, forge:5},
+        description: "We can permit no bars or windows of any sort in Sule's prison.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"sule"
+        },
+	
+	
+	
+	
+	
+	
+	///Secret Histories 1 - Eli/eli
+		{
+        id: "eli_r",
+        label: "Eli, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, secrethistories:5},
+        description: "Eli spends his days recording and his nights reviewing. There are discrepancies.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:eli_d},
+		uniquenessgroup:"eli"
+        },
+		{
+        id: "eli_a",
+        label: "Eli, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Eli is a sharp fellow, and makes a valiant effort of being modest about it. His frequent interruptions annoy and mystify in equal parts. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: eli_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"eli"
+        },
+		{
+        id: "eli_b",
+        label: "Eli, a believer",
+        aspects:{mortal: 1, follower: 1, secrethistories: 2},
+		description: "Eli speaks of things that cannot be as if they were natural to him. Perhaps they are.",
+		xtriggers: {promotiontodisciple: eli_c,killmortal:corpse,derangemortal:lunatic,capturefollower:eli_p},
+		uniquenessgroup:"eli"
+        },
+		{
+        id: "eli_c",
+        label: "Eli, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,secrethistories:5},
+        description: "Eli can no longer hide his contempt for his fellow man, but he perseveres in his explanations. Some of them are intelligible.",
+		xtriggers: {promotionto_d_secrethistories: eli_d,killmortal:corpse,derangemortal:lunatic,capturefollower:eli_p},
+		uniquenessgroup:"eli"
+        },
+		{
+        id: "eli_d",
+        label: "Eli, a Grimoire",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,secrethistories:10},
+        description: "Eli has designed a new language, and has forbidden anybody else from learning it. 'You'll get splinters,' he clarifies.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:eli_p,rebellion:eli_r},
+		uniquenessgroup:"eli"
+        },
+		{
+        id: "eli_p",
+        label: "Eli, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, secrethistories:5},
+        description: "Eli is often found staring intensely at the wall in front of him, as if arguing for its improbability.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"eli"
+        },
+	
+	
+	
+	
+	
+	
+	///Secret Histories 2 - William/william
+		{
+        id: "william_r",
+        label: "William, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, secrethistories:5},
+        description: "He knows the truth. He must be silenced.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:william_d},
+		uniquenessgroup:"william"
+        },
+		{
+        id: "william_a",
+        label: "William, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "William is a librarian by day; a book collector by night. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: william_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"william"
+        },
+		{
+        id: "william_b",
+        label: "William, a believer",
+        aspects:{mortal: 1, follower: 1, secrethistories: 2},
+		description: "With a vast collection of knowledge, he is a valuable asset.",
+		xtriggers: {promotiontodisciple: william_c,killmortal:corpse,derangemortal:lunatic,capturefollower:william_p},
+		uniquenessgroup:"william"
+        },
+		{
+        id: "william_c",
+        label: "William, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,secrethistories:5},
+        description: "His body has grown frail, but his mind has grown strong.",
+		xtriggers: {promotionto_d_secrethistories: william_d,killmortal:corpse,derangemortal:lunatic,capturefollower:william_p},
+		uniquenessgroup:"william"
+        },
+		{
+        id: "william_d",
+        label: "William, a Grimoire",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,secrethistories:10},
+        description: "William rarely leaves his study, ever since the atrophy set in.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:william_p,rebellion:william_r},
+		uniquenessgroup:"william"
+        },
+		{
+        id: "william_p",
+        label: "William, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, secrethistories:5},
+        description: "He wastes away, patiently and politely sat in his wooden chair.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"william"
+        },
+	
+	
+	
+	
+	
+	
+	///Secret Histories 3 - Wilson/wilson
+		{
+        id: "wilson_r",
+        label: "Wilson, a troublemaker",
+        aspects:
+        {mortal:1,independent:1, suspicious:1, secrethistories:5},
+        description: "Wilson likes to be addressed as ‘your Majesty’. When he is not so addressed, there may be a scene.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,recruiting:wilson_d},
+		uniquenessgroup:"eli"
+        },
+		{
+        id: "wilson_a",
+        label: "Wilson, an acquaintance",
+        aspects:{mortal: 1,acquaintance:1},
+        description: "Wilson claims to have a lineage tracing back to ancient empires never mentioned in history books. [You might be able to recruit this acquaintance as a follower.]",
+		xtriggers: {recruiting: wilson_b,killmortal:corpse,derangemortal:lunatic},
+		uniquenessgroup:"wilson"
+        },
+		{
+        id: "wilson_b",
+        label: "Wilson, a believer",
+        aspects:{mortal: 1, follower: 1, secrethistories: 2},
+		description: "Wilson spends all of his earnings on jewelry and clothing. The rest goes into his 'coronation fund'.",
+		xtriggers: {promotiontodisciple: wilson_c,killmortal:corpse,derangemortal:lunatic,capturefollower:wilson_p},
+		uniquenessgroup:"wilson"
+        },
+		{
+        id: "wilson_c",
+        label: "Wilson, a disciple",
+        aspects:{mortal:1,follower:1, disciple:1,potential:1,secrethistories:5},
+        description: "He moves with the grace of a prince, or perhaps, an emperor. He engages in frequent tirades about the necessity of crossing the Histories to retake his homeland.",
+		xtriggers: {promotionto_d_secrethistories: eli_d,killmortal:corpse,derangemortal:lunatic,capturefollower:wilson_p},
+		uniquenessgroup:"wilson"
+        },
+		{
+        id: "wilson_d",
+        label: "Wilson, a Grimoire",
+        aspects:
+        {mortal:1,follower:1, disciple:1,potential:1,exalted:1,secrethistories:10},
+        description: "He has made himself a crown, and has commissioned a scepter. He insists on giving us all royal titles, for aiding him in his time of need.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic,capturefollower:wilson_p,rebellion:wilson_r},
+		uniquenessgroup:"wilson"
+        },
+		{
+        id: "wilson_p",
+        label: "Wilson, a prisoner",
+        aspects:{mortal:1, prisoner:1, lantern:3, grail:3, heart:3, secrethistories:5},
+        description: "He seems to believe someone is coming to rescue is him, and insists on being ransomed for exorbitant sums.",
+		xtriggers: {killmortal:corpse,derangemortal:lunatic},
+		lifetime:600, decayTo: "corpse",
+		uniquenessgroup:"wilson"
+        },
+]
+}

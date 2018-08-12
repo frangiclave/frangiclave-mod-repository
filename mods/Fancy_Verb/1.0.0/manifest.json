@@ -1,0 +1,10 @@
+{
+    "name": "Fancy Verb",
+    "author": "Amets Estibariz",
+    "version": "1.0.0",
+    
+    "description": "Adds a new Fancy verb, used to unlock other mods.",
+    "description_long": "Adds a new Fancy verb, used to unlock other mods. The verb will appear automatically when you start a new Legacy, or you may Explore with Fleeting Memories to unlock it during a playthrough.",
+
+    "dependencies": []
+}
