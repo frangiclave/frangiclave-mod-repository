@@ -44,5 +44,5 @@ navigation_footer:
 frangiclave:
   mod_manager:
     downloads:
-      windows: https://gitlab.com/frangiclave/frangiclave-mod-manager/uploads/4fc620f928566cd7f9955399d3fb8410/frangiclave-mod-manager.exe
-    version: 0.1.0
+      windows: https://gitlab.com/frangiclave/frangiclave-mod-manager/uploads/a8e2a801edd052193185432b12ebeaf3/frangiclave-mod-manager.exe
+    version: 0.2.0

@@ -52,6 +52,7 @@ module Jekyll
 
       # Update the Mods page with a list of mods
       mods = site.pages.detect { |page| page.name == 'mods.md' }
+      manifests = manifests.sort_by { |manifest| manifest['name'] }
       mods.data['mods'] = manifests
     end
   end
