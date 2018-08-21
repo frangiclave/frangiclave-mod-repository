@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'json'
 require 'semantic'
 require 'zip'
 
@@ -100,18 +101,27 @@ module Jekyll
   end
 
   Jekyll::Hooks.register :site, :post_write do |site, _|
-    # Create a ZIP archive for every mod's version
+    # Create a series of ZIP archives for every mod
     Dir.glob '../mods/*' do |mod_path|
+      version_list = []
       mod_id = File.basename(mod_path)
       zip_dir = site.in_dest_dir(File.join('downloads', mod_id))
       FileUtils.mkdir_p(zip_dir) unless File.directory?(zip_dir)
+
+      # Create a ZIP archive for every version, recording the list of versions for later
       Dir.glob File.join(mod_path, '*.*.*') do |version_path|
         version = File.basename version_path
+        version_list << version
         zf = ZipFileGenerator.new(
           version_path,
           File.join(zip_dir, "#{mod_id}-#{version}.zip")
         )
         zf.write
+      end
+
+      # Write out a list of versions the client can query
+      File.open(File.join(zip_dir, "versions.json"), "w") do |f|
+        f.write({:versions => version_list}.to_json)
       end
     end
   end
