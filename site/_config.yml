@@ -6,7 +6,7 @@ logo: "/assets/logo.png"
 lang: en-GB
 url: "https://mods.thefansus.com"
 baseurl: ""
-repo: "https://gitlab.com/frangiclave/frangiclave-mod-repository"
+repo: "https://github.com/frangiclave/frangiclave-mod-repository"
 css_inline: false
 
 sass:
@@ -39,10 +39,12 @@ navigation_header:
   Help: /help/
 
 navigation_footer:
-  View Repository: https://gitlab.com/frangiclave/frangiclave-mod-repository
+  View Repository: https://github.com/frangiclave/frangiclave-mod-repository
 
 frangiclave:
   mod_manager:
     downloads:
-      windows: https://gitlab.com/frangiclave/frangiclave-mod-manager/uploads/a8e2a801edd052193185432b12ebeaf3/frangiclave-mod-manager.exe
-    version: 0.2.0
+      windows: https://github.com/frangiclave/frangiclave-mod-manager/releases/download/v0.2.6/frangiclave-mod-manager-windows.exe
+      macos: https://github.com/frangiclave/frangiclave-mod-manager/releases/download/v0.2.6/frangiclave-mod-manager-macos
+      linux: https://github.com/frangiclave/frangiclave-mod-manager/releases/download/v0.2.6/frangiclave-mod-manager-linux
+    version: 0.2.6
