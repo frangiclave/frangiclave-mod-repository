@@ -18,7 +18,7 @@ Getting up and running with Frangiclave mods is really easy! Just follow the fol
 
 The mod manager takes the form of a simple command-line application with a few commands:
 
-- `p`: patches the game with the new functionality. Needs to be re-run at every updated. Some updates may require that you download a new version of the patcher to work properly.
+- `p`: patches the game with the new functionality. Needs to be re-run at every update. Some updates may require that you download a new version of the patcher to work properly.
 - `i <mod_id>`: installs a mod, along with all its required dependencies.
 - `u`: updates all your currently installed mods to their latest versions.
 - `r <mod_id>`: removes a mod from your game.
