@@ -29,9 +29,9 @@ The mod manager takes the form of a simple command-line application with a few c
 In order to create a mod, you will need to put your files in a folder with the following structure:
 
 - `/manifest.json`: a JSON file providing metadata (author, version, etc.) for your mod. If your mod requires entities definend in other mods, list them in the `dependencies` section. See the demo mod for an example.
-- `/content/`: any number of content files, eventually in their own subdirectories. One file can contain different types of entities, such as events and recipes. Valid entities are: `decks`, `elements`, `endings` (NEW), `legacies`, `recipes`, `verbs`.
+- `/content/`: any number of content files, eventually in their own subdirectories. One file can contain different types of entities, such as events and recipes. Valid entities are: `decks`, `elements`, `endings` (NEW), `legacies`, `maps` (NEW), `recipes`, `verbs`.
   - NEW: entities can override core files. Simply use the same ID to override existing entities.
-  - NEW: entities (except for `endings`) can now extend any number of other entities, inheriting their existing properties. You can do so through the `extend` property, which should be given an array of IDs to inherit from. **Example:** `"extends": ["element_a", "element_b", "element_c"]`.
-- `/images/`: image files for the game, organized into appropriate sub-directories. Valid sub-directories are: `cardBacks/`, `elementArt/`, `elementArt/anim/`, `endingArt/`, `icons40/aspects/`, `icons100/legacies/`, `icons100/verbs/`.
+  - NEW: entities (except for `endings` and `maps`) can now extend any number of other entities, inheriting their existing properties. You can do so through the `extend` property, which should be given an array of IDs to inherit from. **Example:** `"extends": ["element_a", "element_b", "element_c"]`.
+- `/images/`: image files for the game, organized into appropriate sub-directories. Valid sub-directories are: `cardBacks/`, `elementArt/`, `elementArt/anim/`, `endingArt/`, `icons40/aspects/`, `icons100/legacies/`, `icons100/verbs/`, `maps/`, `maps/portals/`.
 
 Once you are ready to distribute your mod, see the [Submit](/submit/) page.

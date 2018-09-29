@@ -1,0 +1,228 @@
+{
+    "decks": [
+        {
+            "id": "mansus_neville_d",
+            "spec": ["restlessness"],
+            "drawmessages": {
+                "restlessness": "Neville's fear is palpable; I will not push him. We shall try again later. There is no rush."
+            },
+            "defaultdrawmessages": {},
+            "resetonexhaustion": true
+        },
+        {
+            "id": "mansus_neville_d1",
+            "spec": ["dread"],
+            "drawmessages": {
+                "dread": "This was not the right way. We have failed."
+            },
+            "defaultdrawmessages": {},
+            "resetonexhaustion": true
+        },
+        {
+            "id": "mansus_neville_d2",
+            "spec": ["toolknockf"],
+            "drawmessages": {
+                "toolknockf": "We have it. The key that will leave no door unopened."
+            },
+            "defaultdrawmessages": {},
+            "resetonexhaustion": true
+        },
+
+        {
+            "id": "mansus_neville_e",
+            "spec": [
+                "contentment"
+            ],
+            "drawmessages": {},
+            "defaultdrawmessages": {},
+            "resetonexhaustion": true
+        },
+        {
+            "id": "mansus_neville_e1",
+            "spec": [
+                "fragmentedgeg",
+                "fragmentforgeg",
+                "fragmentgrailg",
+                "fragmentheartg"
+            ],
+            "drawmessages": {},
+            "defaultdrawmessages": {},
+            "resetonexhaustion": true
+        },
+        {
+            "id": "mansus_neville_e2",
+            "spec": [
+                "fragmentlanterng",
+                "fragmentmothg",
+                "fragmentsecrethistoriesg",
+                "fragmentwinterg"
+            ],
+            "drawmessages": {},
+            "defaultdrawmessages": {},
+            "resetonexhaustion": true
+        }
+    ],
+
+    "elements": [
+        {
+            "id": "neville_e",
+            "extends": ["neville_d"],
+            "label": "Neville, an Hour",
+            "description": "Neville is Everywhere.",
+            "aspects": {
+                "desire": 1,
+                "knock": 36
+            },
+            "animFrames": 0
+        },
+        {
+            "id": "toolknockf",
+            "extends": ["toolknockf"],
+            "slots": [
+                {
+                    "id": "Neville",
+                    "actionId": "work",
+                    "required": {"neville_d": 1},
+                    "description": "A Key for the key, that all doors may unlock.",
+                    "consumes": true
+                }
+            ]
+        }
+    ],
+
+    "legacies": [
+        {
+            "id": "aspirant",
+            "extends": ["aspirant"],
+            "label": "Neville",
+            "description": "Neville.",
+            "startdescription": "Alone in this chilly city, with my useless follower, and my dreams.\nCould he somehow be the key to more?",
+            "effects": {
+                "neville_d": 1
+            }
+        }
+    ],
+
+    "recipes": [
+        {
+            "id": "dreamuseneville_dway",
+            "label": "The Way to Greater Neville",
+            "actionId": "dream",
+            "requirements": {"neville_d": 1},
+            "startdescription": "There exists a key of keys. Should we find it, my follower's path may open.",
+            "description": "Let us begin our search.",
+            "map": "neville",
+            "portaleffect": "CustomGate0",
+            "craftable": true,
+            "warmup": 5
+        },
+        {
+            "id": "dreamuseneville_eway",
+            "label": "An Offering from Neville",
+            "actionId": "dream",
+            "requirements": {"neville_e": 1},
+            "startdescription": "Neville is ever generous. I need only ask to be provided with the most succulent lore.",
+            "description": "Neville holds out his hand and asks me to choose.",
+            "map": "neville",
+            "portaleffect": "CustomGate1",
+            "craftable": true,
+            "warmup": 5
+        },
+        {
+            "id": "neville_ascension",
+            "label": "The Hour of Neville",
+            "actionId": "work",
+            "requirements": {"toolknockf": 1, "neville_d": 1},
+            "effects": {"neville_e": 1},
+            "startdescription": "Neville is ready now. He has asked me to be there with him. I cannot refuse.",
+            "description": "It is done. Neville rises as the Hour above all Hours.",
+            "signalimportantloop": true,
+            "craftable": true,
+            "warmup": 10
+        },
+        {
+            "id": "ultimatenevillevictory",
+            "label": "Become One With Neville",
+            "actionId": "work",
+            "requirements": {"neville_e": 1},
+            "startdescription": "Perhaps I could achieve more as I am. But I will achieve so much more with Neville. It is time.",
+            "description": "I am one with Neville now.",
+            "warmup": 5,
+            "craftable": true,
+            "signalEndingFlavour": "Grand",
+            "ending": "ultimatenevillevictory"
+        }
+    ],
+
+    "verbs": [
+        {
+            "id": "dream",
+            "extends": ["dream"],
+            "atStart": true,
+            "slots": [
+                {
+                    "id": "Dream",
+                    "description": "A direction for my dreams; or a trouble to recover from.",
+                    "required": {"knock": 1},
+                    "forbidden": {"toolknockf": 1}
+                }
+            ],
+            "required": {"knock": 1}
+        },
+        {
+            "id": "work",
+            "extends": ["work"],
+            "slots": [
+                {
+                    "id": "Work",
+                    "description": "Something I can do; something I know; or something I am.",
+                    "required": {"knock": 1},
+                    "forbidden": {"neville_d": 1}
+                }
+            ]
+        }
+    ],
+
+    "endings": [
+        {
+            "id": "ultimatenevillevictory",
+            "title": "NEVILLE",
+            "description": "There is nothing but Neville for me now. This is good.",
+            "image": "neville",
+            "flavour": "Grand",
+            "anim": "DramaticLightCool"
+        }
+    ],
+
+    "maps": [
+        {
+            "id": "neville",
+            "portals": [
+                {
+                    "effect": "CustomGate0",
+                    "icon": "gate_neville",
+                    "position": [-500.0, 0.0],
+                    "deck": "mansus_neville_d",
+                    "cards": [
+                        [200.0, 0.0],
+                        [-200.0, 100.0],
+                        [-200.0, -100.0]
+                    ],
+                    "color": [0.20, 0.50, 0.30]
+                },
+                {
+                    "effect": "CustomGate1",
+                    "icon": "gate_neville",
+                    "position": [500.0, 0.0],
+                    "deck": "mansus_neville_e",
+                    "cards": [
+                        [-200.0, 0.0],
+                        [200.0, 100.0],
+                        [200.0, -100.0]
+                    ],
+                    "color": [0.30, 0.19, 0.90]
+                }
+            ]
+        }
+    ]
+}

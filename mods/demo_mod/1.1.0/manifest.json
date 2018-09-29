@@ -1,0 +1,10 @@
+{
+    "name": "Demo Mod",
+    "author": "Lyrositor",
+    "version": "1.1.0",
+
+    "description": "A simple demo mod.",
+    "description_long": "A simple demo mod, for the purposes of illustrating what Frangiclave is capable of.\n\n**Trailer:** [Demo Mod Trailer - Cultist Simulator](https://youtu.be/Gox1HOoHiqQ)\n\n**Warning:** May contains trace amounts of Neville.",
+
+    "dependencies": []
+}
