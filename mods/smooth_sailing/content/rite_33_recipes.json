@@ -1,0 +1,45 @@
+{
+    "recipes": [
+        {
+            id: "minorlanternvictory_trigger",
+            extends: ["minorlanternvictory_trigger"],
+            requirements: {ritual: 1,
+                ascensionenlightenmentf:1,
+                lantern:33},
+        },
+        {
+            id: "minorforgevictory_trigger",
+            extends: ["minorforgevictory_trigger"],
+            requirements: {ritual: 1,
+                ascensionpowerf:1,
+                forge:33},
+        },
+        {
+            id: "minorgrailvictory_trigger",
+            extends: ["minorgrailvictory_trigger"],
+            requirements: {ritual: 1,
+                ascensionsensationf:1,
+                grail:33},
+        },
+        {
+            id: "studytreatiseonunderplaces",
+            extends: ["studytreatiseonunderplaces"],
+            description: "A picaresque account of a journey through nightmare, interspersed with what might be partial rites. 'On the eighteenth Ascent is the bud. On the thirty-third Ascent, the blossom.'",
+        },
+        {
+            id: "minorforgevictory_hint_sixth",
+            extends: ["minorforgevictory_hint_sixth"],
+            startdescription: "The Seventh Mark is the Conflagration of the Heart. I am close: close as the flame is to the candle. I will need all the power of the Forge I can muster, to at least the thirty-third degree of intensity.",
+        },
+        {
+            id: "minorgrailvictory_hint_sixth",
+            extends: ["minorgrailvictory_hint_sixth"],
+            startdescription: "The Seventh Mark is the Feast of the True Birth. I am close: close as blood to the heart. I will need all the power of the Grail I can muster, to at least the thirty-third degree of intensity.",
+        },
+        {
+            id: "minorlanternvictory_hint_sixth",
+            extends: ["minorlanternvictory_hint_sixth"],
+            startdescription: "The Seventh Mark is the Incursus. I am close: close as the light to the shadow's edge. I will need all the power of the Lantern I can muster, to at least the thirty-third degree of intensity.",
+        },
+    ]
+}

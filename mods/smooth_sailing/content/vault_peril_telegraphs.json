@@ -1,0 +1,246 @@
+{
+    "elements": [
+        {
+            "id": "expect_guardian_watchers",
+            "extends": ["guardian_watchers"],
+            "aspects": {},
+            "icon": "guardian_watchers"
+        },
+        {
+            "id": "expect_seal_hiddendoor",
+            "extends": ["seal_hiddendoor"],
+            "aspects": {},
+            "icon": "seal_hiddendoor"
+        },
+        {
+            "id": "expect_peril_treacherousground",
+            "extends": ["peril_treacherousground"],
+            "aspects": {},
+            "icon": "peril_treacherousground"
+        },
+        {
+            "id": "expect_curse_dread",
+            "extends": ["curse_dread"],
+            "aspects": {},
+            "icon": "curse_dread"
+        },
+        {
+            "id": "expect_guardian_serpent",
+            "extends": ["guardian_serpent"],
+            "aspects": {},
+            "icon": "guardian_serpent"
+        },
+        {
+            "id": "expect_seal_wardeddoor",
+            "extends": ["seal_wardeddoor"],
+            "aspects": {},
+            "icon": "seal_wardeddoor"
+        },
+        {
+            "id": "expect_guardian_dead",
+            "extends": ["guardian_dead"],
+            "aspects": {},
+            "icon": "guardian_dead"
+        },
+        {
+            "id": "expect_curse_visions",
+            "extends": ["curse_visions"],
+            "aspects": {},
+            "icon": "curse_visions"
+        },
+        {
+            "id": "expect_peril_forest",
+            "extends": ["peril_forest"],
+            "aspects": {},
+            "icon": "peril_forest"
+        },
+        {
+            "id": "expect_guardian_monks",
+            "extends": ["guardian_monks"],
+            "aspects": {},
+            "icon": "guardian_monks"
+        },
+        {
+            "id": "expect_unknown",
+            "label": "No Intel",
+            "icon": "explorevault_casualty",
+            "description": "My research has failed, my scouts have vanished, and my contacts are staying silent.",
+            "isAspect": true
+        },
+        {
+            "id": "vaultcapital1",
+            "extends": ["vaultcapital1"],
+            "aspects":{"vault":1,"location":1,"vaultcapital":1,"expect_guardian_watchers":1}
+        },
+        {
+            "id": "vaultcapital2",
+            "extends": ["vaultcapital2"],
+            "aspects":{"vault":1,"location":1,"vaultcapital":1,"expect_seal_hiddendoor":1}
+        },
+        {
+            "id": "vaultcapital3",
+            "extends": ["vaultcapital3"],
+            "aspects":{"vault":1,"location":1,"vaultcapital":1,"expect_peril_treacherousground":1}
+        },
+        {
+            "id": "vaultcapital4",
+            "extends": ["vaultcapital4"],
+            "aspects":{"vault":1,"location":1,"vaultcapital":1,"expect_curse_dread":1}
+        },
+        {
+            "id":"vaultcapitaldefault",
+            "extends": ["vaultcapitaldefault"],
+            "aspects":{"vault":1,"location":1,"vaultcapital":1,"expect_peril_treacherousground":1,"expect_guardian_watchers":1}
+        },
+        {
+            "id": "vaultshires1",
+            "extends": ["vaultshires1"],
+            "aspects":{"vault":1,"location":1,"vaultshires":1,"expect_guardian_serpent":1}
+        },
+        {
+            "id": "vaultshires2",
+            "extends": ["vaultshires2"],
+            "aspects":{"vault":1,"location":1,"vaultshires":1,"expect_peril_treacherousground":1}
+        },
+        {
+            "id": "vaultshires3",
+            "extends": ["vaultshires3"],
+            "aspects":{"vault":1,"location":1,"vaultshires":1,"expect_seal_wardeddoor":1}
+        },
+        {
+            "id": "vaultshires4",
+            "extends": ["vaultshires4"],
+            "aspects":{"vault":1,"location":1,"vaultshires":1,"expect_peril_treacherousground":1,"expect_guardian_dead":1}
+        },
+        {
+            "id": "vaultshiresdefault",
+            "extends": ["vaultshiresdefault"],
+            "aspects":{"vault":1,"location":1,"vaultshires":1,"expect_seal_wardeddoor":1,"expect_guardian_watchers":1,"expect_curse_visions":1}
+        },
+        {
+            "id": "vaultcontinent1",
+            "extends": ["vaultcontinent1"],
+            "aspects":{"vault":1,"location":1,"vaultcontinent":1,"expect_seal_hiddendoor":1,"expect_curse_dread":1}
+        },
+        {
+            "id": "vaultcontinent2",
+            "extends": ["vaultcontinent2"],
+            "aspects":{"vault":1,"location":1,"vaultcontinent":1,"expect_peril_forest":1,"expect_guardian_monks":1}
+        },
+        {
+            "id": "vaultcontinent3",
+            "extends": ["vaultcontinent3"],
+            "aspects":{"vault":1,"location":1,"vaultcontinent":1,"expect_peril_forest":1,"expect_guardian_watchers":1}
+        },
+        {
+            "id": "vaultcontinent4",
+            "extends": ["vaultcontinent4"],
+            "aspects":{"vault":1,"location":1,"vaultcontinent":1,"expect_seal_wardeddoor":1, "expect_curse_visions":1}
+        },
+        {
+            "id":"vaultcontinentdefault",
+            "extends": ["vaultcontinentdefault"],
+            "aspects":{"vault":1,"location":1,"vaultcontinent":1, "expect_peril_forest":1,"expect_seal_hiddendoor": 1, "expect_guardian_watchers":1}
+        },
+        {
+            "id":"vaultlandbeyondforest1",
+            "extends":["vaultlandbeyondforest1"],
+            "aspects":{"vault":1,"location":1,"vaultlandbeyondforest":1,"expect_unknown":1}
+        }, 
+        {
+            "id":"vaultlandbeyondforest2",
+            "extends":["vaultlandbeyondforest2"],
+            "aspects":{"vault":1,"location":1,"vaultlandbeyondforest":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultlandbeyondforest3",
+            "extends":["vaultlandbeyondforest3"],
+            "aspects":{"vault":1,"location":1,"vaultlandbeyondforest":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultlandbeyondforest4",
+            "extends":["vaultlandbeyondforest4"],
+            "aspects":{"vault":1,"location":1,"vaultlandbeyondforest":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultlandbeyondforestdefault",
+            "extends":["vaultlandbeyondforestdefault"],
+            "aspects":{"vault":1,"location":1,"vaultlandbeyondforest":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultrendingmountains1",
+            "extends":["vaultrendingmountains1"],
+            "aspects":{"vault":1,"location":1,"vaultrendingmountains":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultrendingmountains2",
+            "extends":["vaultrendingmountains2"],
+            "aspects":{"vault":1,"location":1,"vaultrendingmountains":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultrendingmountains3",
+            "extends":["vaultrendingmountains3"],
+            "aspects":{"vault":1,"location":1,"vaultrendingmountains":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultrendingmountains4",
+            "extends":["vaultrendingmountains4"],
+            "aspects":{"vault":1,"location":1,"vaultrendingmountains":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultrendingmountainsdefault",
+            "extends":["vaultrendingmountainsdefault"],
+            "aspects":{"vault":1,"location":1,"vaultrendingmountains":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultloneandlevelsands1",
+            "extends":["vaultloneandlevelsands1"],
+            "aspects":{"vault":1,"location":1,"vaultloneandlevelsands":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultloneandlevelsands2",
+            "extends":["vaultloneandlevelsands2"],
+            "aspects":{"vault":1,"location":1,"vaultloneandlevelsands":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultloneandlevelsands3",
+            "extends":["vaultloneandlevelsands3"],
+            "aspects":{"vault":1,"location":1,"vaultloneandlevelsands":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultloneandlevelsands4",
+            "extends":["vaultloneandlevelsands4"],
+            "aspects":{"vault":1,"location":1,"vaultloneandlevelsands":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaultloneandlevelsandsdefault",
+            "extends":["vaultloneandlevelsandsdefault"],
+            "aspects":{"vault":1,"location":1,"vaultloneandlevelsands":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaulteveningisles1",
+            "extends":["vaulteveningisles1"],
+            "aspects":{"vault":1,"location":1,"vaulteveningisles":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaulteveningisles2",
+            "extends":["vaulteveningisles2"],
+            "aspects":{"vault":1,"location":1,"vaulteveningisles":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaulteveningisles3",
+            "extends":["vaulteveningisles3"],
+            "aspects":{"vault":1,"location":1,"vaulteveningisles":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaulteveningisles4",
+            "extends":["vaulteveningisles4"],
+            "aspects":{"vault":1,"location":1,"vaulteveningisles":1,"expect_unknown":1}
+        },
+        {
+            "id":"vaulteveningislesdefault",
+            "extends":["vaulteveningislesdefault"],
+            "aspects":{"vault":1,"location":1,"vaulteveningisles":1,"expect_unknown":1}
+        }
+    ]
+}
