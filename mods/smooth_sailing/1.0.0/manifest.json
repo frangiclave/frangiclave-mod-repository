@@ -1,0 +1,10 @@
+{
+    "name": "Smooth Sailing",
+    "author": "Comrade Vox",
+    "version": "1.0.0",
+
+    "description": "Fewer stall points.",
+    "description_long": "A set of changes making progress more smooth, with fewer stall points.\n\n* Ascension aspect requirement reduced to 33\n* Capital, Shire, and Continent vaults list peril aspects on the card.\n* Other vaults now have randomized perils",
+
+    "dependencies": []
+}
