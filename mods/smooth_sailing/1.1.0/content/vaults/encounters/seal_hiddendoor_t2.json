@@ -1,0 +1,152 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultseal_hiddendoor_encounter_t2",
+            "extends": ["explorevaultseal_hiddendoor_encounter"],
+            "requirements": {"seal_hiddendoor":1,"vaultshires":1},
+            "alternativerecipes": [
+                {"id":"explorevaultseal_hiddendoor_lantern7_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_knock7_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_lantern6_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_knock6_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_lantern5_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_knock5_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_lantern4_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_knock4_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_lantern3_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_knock3_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_lantern2_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_knock2_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_lantern1_t2", "chance":100},
+                {"id":"explorevaultseal_hiddendoor_knock1_t2", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultseal_hiddendoor_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_lantern7_t2",
+            "extends":["explorevaultseal_hiddendoor_highlantern"],
+            "requirements":{"lantern":7},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":90},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_lantern6_t2",
+            "extends":["explorevaultseal_hiddendoor_highlantern"],
+            "requirements":{"lantern":6},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":85},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_lantern5_t2",
+            "extends":["explorevaultseal_hiddendoor_midlantern"],
+            "requirements":{"lantern":5},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":80},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_lantern4_t2",
+            "extends":["explorevaultseal_hiddendoor_midlantern"],
+            "requirements":{"lantern":4},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":70},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_lantern3_t2",
+            "extends":["explorevaultseal_hiddendoor_midlantern"],
+            "requirements":{"lantern":3},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":60},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_lantern2_t2",
+            "extends":["explorevaultseal_hiddendoor_lowlantern"],
+            "requirements":{"lantern":2},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":45},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_lantern1_t2",
+            "extends":["explorevaultseal_hiddendoor_lowlantern"],
+            "requirements":{"lantern":1},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":30},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_knock7_t2",
+            "extends":["explorevaultseal_hiddendoor_highknock"],
+            "requirements":{"knock":7},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":90},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_knock6_t2",
+            "extends":["explorevaultseal_hiddendoor_highknock"],
+            "requirements":{"knock":6},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":85},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_knock5_t2",
+            "extends":["explorevaultseal_hiddendoor_midknock"],
+            "requirements":{"knock":5},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":80},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_knock4_t2",
+            "extends":["explorevaultseal_hiddendoor_midknock"],
+            "requirements":{"knock":4},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":70},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_knock3_t2",
+            "extends":["explorevaultseal_hiddendoor_midknock"],
+            "requirements":{"knock":3},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":60},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_knock2_t2",
+            "extends":["explorevaultseal_hiddendoor_lowknock"],
+            "requirements":{"knock":2},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":45},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_hiddendoor_knock1_t2",
+            "extends":["explorevaultseal_hiddendoor_lowknock"],
+            "requirements":{"knock":1},
+            "linked":[
+                {"id":"explorevaultseal_hiddendoor_success", "chance":30},
+                {"id":"explorevaultseal_hiddendoor_failure","chance":100}
+            ]
+        }
+    ]
+}

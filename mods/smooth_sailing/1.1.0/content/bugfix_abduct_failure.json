@@ -1,0 +1,9 @@
+{
+    "recipes": [
+        {
+            "id": "followeraction_abductfailure",
+            "extends": ["followeraction_abductfailure"],
+            "alternativerecipes": [{"id":"followeraction_abductfailure_losefollower","chance":30}]
+        }
+    ]
+}

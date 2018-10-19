@@ -1,0 +1,240 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultguardian_dead_encounter_t1",
+            "extends": ["explorevaultguardian_dead_encounter"],
+            "requirements": {"guardian_dead":1,"vaultcapital":1},
+            "alternativerecipes": [
+                {"id":"explorevaultguardian_dead_winter9_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_edge9_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_winter8_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_edge8_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_winter7_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_edge7_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_winter6_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_edge6_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_winter5_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_edge5_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_winter4_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_edge4_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_winter3_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_edge3_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_winter2_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_edge2_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_winter1_t1", "chance":100},
+                {"id":"explorevaultguardian_dead_edge1_t1", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultguardian_dead_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultguardian_dead_winter9_t1",
+            "extends":["explorevaultguardian_dead_highwinter"],
+            "requirements":{"winter":9},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_winter", "chance":90},
+                {"id":"explorevaultguardian_dead_failure_9_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_winter8_t1",
+            "extends":["explorevaultguardian_dead_highwinter"],
+            "requirements":{"winter":8},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_winter", "chance":90},
+                {"id":"explorevaultguardian_dead_failure_8_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_winter7_t1",
+            "extends":["explorevaultguardian_dead_highwinter"],
+            "requirements":{"winter":7},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_winter", "chance":90},
+                {"id":"explorevaultguardian_dead_failure_7_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_winter6_t1",
+            "extends":["explorevaultguardian_dead_highwinter"],
+            "requirements":{"winter":6},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_winter", "chance":90},
+                {"id":"explorevaultguardian_dead_failure_6_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_winter5_t1",
+            "extends":["explorevaultguardian_dead_highwinter"],
+            "requirements":{"winter":5},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_winter", "chance":90},
+                {"id":"explorevaultguardian_dead_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_winter4_t1",
+            "extends":["explorevaultguardian_dead_midwinter"],
+            "requirements":{"winter":4},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_winter", "chance":80},
+                {"id":"explorevaultguardian_dead_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_winter3_t1",
+            "extends":["explorevaultguardian_dead_midwinter"],
+            "requirements":{"winter":3},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_winter", "chance":70},
+                {"id":"explorevaultguardian_dead_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_winter2_t1",
+            "extends":["explorevaultguardian_dead_midwinter"],
+            "requirements":{"winter":2},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_winter", "chance":60},
+                {"id":"explorevaultguardian_dead_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_winter1_t1",
+            "extends":["explorevaultguardian_dead_lowwinter"],
+            "requirements":{"winter":1},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_winter", "chance":40},
+                {"id":"explorevaultguardian_dead_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_edge9_t1",
+            "extends":["explorevaultguardian_dead_highedge"],
+            "requirements":{"edge":9},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_edge", "chance":90},
+                {"id":"explorevaultguardian_dead_failure_9_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_edge8_t1",
+            "extends":["explorevaultguardian_dead_highedge"],
+            "requirements":{"edge":8},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_edge", "chance":90},
+                {"id":"explorevaultguardian_dead_failure_8_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_edge7_t1",
+            "extends":["explorevaultguardian_dead_highedge"],
+            "requirements":{"edge":7},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_edge", "chance":90},
+                {"id":"explorevaultguardian_dead_failure_7_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_edge6_t1",
+            "extends":["explorevaultguardian_dead_highedge"],
+            "requirements":{"edge":6},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_edge", "chance":90},
+                {"id":"explorevaultguardian_dead_failure_6_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_edge5_t1",
+            "extends":["explorevaultguardian_dead_highedge"],
+            "requirements":{"edge":5},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_edge", "chance":90},
+                {"id":"explorevaultguardian_dead_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_edge4_t1",
+            "extends":["explorevaultguardian_dead_midedge"],
+            "requirements":{"edge":4},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_edge", "chance":80},
+                {"id":"explorevaultguardian_dead_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_edge3_t1",
+            "extends":["explorevaultguardian_dead_midedge"],
+            "requirements":{"edge":3},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_edge", "chance":70},
+                {"id":"explorevaultguardian_dead_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_edge2_t1",
+            "extends":["explorevaultguardian_dead_midedge"],
+            "requirements":{"edge":2},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_edge", "chance":60},
+                {"id":"explorevaultguardian_dead_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_dead_edge1_t1",
+            "extends":["explorevaultguardian_dead_lowedge"],
+            "requirements":{"edge":1},
+            "linked":[
+                {"id":"explorevaultguardian_dead_success_edge", "chance":40},
+                {"id":"explorevaultguardian_dead_failure","chance":100}
+            ]
+        }, 
+        {
+            "id": "explorevaultguardian_dead_failure_9_t1",
+            "extends":["explorevaultguardian_dead_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":10,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_dead_failure_8_t1",
+            "extends":["explorevaultguardian_dead_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":20,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_dead_failure_7_t1",
+            "extends":["explorevaultguardian_dead_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":30,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_dead_failure_6_t1",
+            "extends":["explorevaultguardian_dead_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":50,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "recipes": [
+        {
+            "id":"A_talktofollower_givetool_router",
+            "extends": ["A_talktofollower_givetool_router"],
+            "linked": [
+                {"chance":100,"id": "L_give_tool_edgeb"},
+                {"chance":100,"id": "L_give_tool_edged"},
+                {"chance":100,"id": "L_give_tool_edgef"},
+                {"chance":100,"id": "L_give_tool_forgeb"},
+                {"chance":100,"id": "L_give_tool_forged"},
+                {"chance":100,"id": "L_give_tool_forgef"},
+                {"chance":100,"id": "L_give_tool_grailmoth"},
+                {"chance":100,"id": "L_give_tool_grailb"},
+                {"chance":100,"id": "L_give_tool_graild"},
+                {"chance":100,"id": "L_give_tool_grailf"},
+                {"chance":100,"id": "L_give_tool_heartb"},
+                {"chance":100,"id": "L_give_tool_heartd"},
+                {"chance":100,"id": "L_give_tool_heartf"},
+                {"chance":100,"id": "L_give_tool_knockb"},
+                {"chance":100,"id": "L_give_tool_knockd"},
+                {"chance":100,"id": "L_give_tool_knockf"},
+                {"chance":100,"id": "L_give_tool_lanternb"},
+                {"chance":100,"id": "L_give_tool_lanternd"},
+                {"chance":100,"id": "L_give_tool_lanternf"},
+                {"chance":100,"id": "L_give_tool_mothb"},
+                {"chance":100,"id": "L_give_tool_mothd"},
+                {"chance":100,"id": "L_give_tool_mothf"},
+                {"chance":100,"id": "L_give_tool_secrethistoriesb"},
+                {"chance":100,"id": "L_give_tool_secrethistoriesd"},
+                {"chance":100,"id": "L_give_tool_winterd"},
+                {"chance":100,"id": "L_give_tool_winterf"},
+                {"chance":100,"id": "L_give_tool_wintermirror"},
+                {"chance":100,"id": "L_give_paintingmasteredge"},
+                {"chance":100,"id": "L_give_paintingmasterforge"},
+                {"chance":100,"id": "L_give_paintingmastergrail"},
+                {"chance":100,"id": "L_give_paintingmasterheart"},
+                {"chance":100,"id": "L_give_paintingmasterknock"},
+                {"chance":100,"id": "L_give_paintingmasterlantern"},
+                {"chance":100,"id": "L_give_paintingmastermoth"},
+                {"chance":100,"id": "L_give_paintingmastersecrethistories"},
+                {"chance":100,"id": "L_give_paintingmasterwinter"},
+                {"chance":100,"id": "L_give_tool_other"}
+            ]
+        }   
+    ]
+}

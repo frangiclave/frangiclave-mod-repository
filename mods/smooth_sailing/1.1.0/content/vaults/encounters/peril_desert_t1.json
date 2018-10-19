@@ -1,0 +1,240 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultperil_desert_encounter_t1",
+            "extends": ["explorevaultperil_desert_encounter"],
+            "requirements": {"peril_desert":1,"vaultcapital":1},
+            "alternativerecipes": [
+                {"id":"explorevaultperil_desert_grail9_t1", "chance":100},
+                {"id":"explorevaultperil_desert_forge9_t1", "chance":100},
+                {"id":"explorevaultperil_desert_grail8_t1", "chance":100},
+                {"id":"explorevaultperil_desert_forge8_t1", "chance":100},
+                {"id":"explorevaultperil_desert_grail7_t1", "chance":100},
+                {"id":"explorevaultperil_desert_forge7_t1", "chance":100},
+                {"id":"explorevaultperil_desert_grail6_t1", "chance":100},
+                {"id":"explorevaultperil_desert_forge6_t1", "chance":100},
+                {"id":"explorevaultperil_desert_grail5_t1", "chance":100},
+                {"id":"explorevaultperil_desert_forge5_t1", "chance":100},
+                {"id":"explorevaultperil_desert_grail4_t1", "chance":100},
+                {"id":"explorevaultperil_desert_forge4_t1", "chance":100},
+                {"id":"explorevaultperil_desert_grail3_t1", "chance":100},
+                {"id":"explorevaultperil_desert_forge3_t1", "chance":100},
+                {"id":"explorevaultperil_desert_grail2_t1", "chance":100},
+                {"id":"explorevaultperil_desert_forge2_t1", "chance":100},
+                {"id":"explorevaultperil_desert_grail1_t1", "chance":100},
+                {"id":"explorevaultperil_desert_forge1_t1", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultperil_desert_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultperil_desert_grail9_t1",
+            "extends":["explorevaultperil_desert_highgrail"],
+            "requirements":{"grail":9},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":90},
+                {"id":"explorevaultperil_desert_failure_9_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_grail8_t1",
+            "extends":["explorevaultperil_desert_highgrail"],
+            "requirements":{"grail":8},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":90},
+                {"id":"explorevaultperil_desert_failure_8_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_grail7_t1",
+            "extends":["explorevaultperil_desert_highgrail"],
+            "requirements":{"grail":7},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":90},
+                {"id":"explorevaultperil_desert_failure_7_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_grail6_t1",
+            "extends":["explorevaultperil_desert_highgrail"],
+            "requirements":{"grail":6},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":90},
+                {"id":"explorevaultperil_desert_failure_6_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_grail5_t1",
+            "extends":["explorevaultperil_desert_highgrail"],
+            "requirements":{"grail":5},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":90},
+                {"id":"explorevaultperil_desert_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_grail4_t1",
+            "extends":["explorevaultperil_desert_midgrail"],
+            "requirements":{"grail":4},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":80},
+                {"id":"explorevaultperil_desert_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_grail3_t1",
+            "extends":["explorevaultperil_desert_midgrail"],
+            "requirements":{"grail":3},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":70},
+                {"id":"explorevaultperil_desert_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_grail2_t1",
+            "extends":["explorevaultperil_desert_midgrail"],
+            "requirements":{"grail":2},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":60},
+                {"id":"explorevaultperil_desert_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_grail1_t1",
+            "extends":["explorevaultperil_desert_lowgrail"],
+            "requirements":{"grail":1},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":40},
+                {"id":"explorevaultperil_desert_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_forge9_t1",
+            "extends":["explorevaultperil_desert_highforge"],
+            "requirements":{"forge":9},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":90},
+                {"id":"explorevaultperil_desert_failure_9_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_forge8_t1",
+            "extends":["explorevaultperil_desert_highforge"],
+            "requirements":{"forge":8},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":90},
+                {"id":"explorevaultperil_desert_failure_8_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_forge7_t1",
+            "extends":["explorevaultperil_desert_highforge"],
+            "requirements":{"forge":7},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":90},
+                {"id":"explorevaultperil_desert_failure_7_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_forge6_t1",
+            "extends":["explorevaultperil_desert_highforge"],
+            "requirements":{"forge":6},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":90},
+                {"id":"explorevaultperil_desert_failure_6_t1","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_forge5_t1",
+            "extends":["explorevaultperil_desert_highforge"],
+            "requirements":{"forge":5},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":90},
+                {"id":"explorevaultperil_desert_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_forge4_t1",
+            "extends":["explorevaultperil_desert_midforge"],
+            "requirements":{"forge":4},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":80},
+                {"id":"explorevaultperil_desert_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_forge3_t1",
+            "extends":["explorevaultperil_desert_midforge"],
+            "requirements":{"forge":3},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":70},
+                {"id":"explorevaultperil_desert_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_forge2_t1",
+            "extends":["explorevaultperil_desert_midforge"],
+            "requirements":{"forge":2},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":60},
+                {"id":"explorevaultperil_desert_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_desert_forge1_t1",
+            "extends":["explorevaultperil_desert_lowforge"],
+            "requirements":{"forge":1},
+            "linked":[
+                {"id":"explorevaultperil_desert_success", "chance":40},
+                {"id":"explorevaultperil_desert_failure","chance":100}
+            ]
+        }, 
+        {
+            "id": "explorevaultperil_desert_failure_9_t1",
+            "extends":["explorevaultperil_desert_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":10,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_desert_failure_8_t1",
+            "extends":["explorevaultperil_desert_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":20,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_desert_failure_7_t1",
+            "extends":["explorevaultperil_desert_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":30,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_desert_failure_6_t1",
+            "extends":["explorevaultperil_desert_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":50,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,212 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultcurse_dread_encounter_t4",
+            "extends": ["explorevaultcurse_dread_encounter"],
+            "requirements": {"curse_dread":1},
+            "alternativerecipes": [
+                {"id":"explorevaultcurse_dread_lantern10_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_heart10_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_lantern9_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_heart9_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_lantern8_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_heart8_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_lantern7_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_heart7_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_lantern6_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_heart6_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_lantern5_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_heart5_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_lantern4_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_heart4_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_lantern3_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_heart3_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_lantern2_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_heart2_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_lantern1_t4", "chance":100},
+                {"id":"explorevaultcurse_dread_heart1_t4", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultcurse_dread_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultcurse_dread_lantern10_t4",
+            "extends":["explorevaultcurse_dread_highlantern"],
+            "requirements":{"lantern":10},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":90},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_lantern9_t4",
+            "extends":["explorevaultcurse_dread_highlantern"],
+            "requirements":{"lantern":9},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":85},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_lantern8_t4",
+            "extends":["explorevaultcurse_dread_midlantern"],
+            "requirements":{"lantern":8},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":80},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_lantern7_t4",
+            "extends":["explorevaultcurse_dread_midlantern"],
+            "requirements":{"lantern":7},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":75},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_lantern6_t4",
+            "extends":["explorevaultcurse_dread_midlantern"],
+            "requirements":{"lantern":6},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":70},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_lantern5_t4",
+            "extends":["explorevaultcurse_dread_midlantern"],
+            "requirements":{"lantern":5},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":60},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_lantern4_t4",
+            "extends":["explorevaultcurse_dread_lowlantern"],
+            "requirements":{"lantern":4},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":45},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_lantern3_t4",
+            "extends":["explorevaultcurse_dread_lowlantern"],
+            "requirements":{"lantern":3},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":30},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_lantern2_t4",
+            "extends":["explorevaultcurse_dread_lowlantern"],
+            "requirements":{"lantern":2},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":20},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_lantern1_t4",
+            "extends":["explorevaultcurse_dread_lowlantern"],
+            "requirements":{"lantern":1},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":10},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_heart10_t4",
+            "extends":["explorevaultcurse_dread_highheart"],
+            "requirements":{"heart":10},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":90},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_heart9_t4",
+            "extends":["explorevaultcurse_dread_highheart"],
+            "requirements":{"heart":9},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":85},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_heart8_t4",
+            "extends":["explorevaultcurse_dread_midheart"],
+            "requirements":{"heart":8},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":80},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_heart7_t4",
+            "extends":["explorevaultcurse_dread_midheart"],
+            "requirements":{"heart":7},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":75},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_heart6_t4",
+            "extends":["explorevaultcurse_dread_midheart"],
+            "requirements":{"heart":6},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":70},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_heart5_t4",
+            "extends":["explorevaultcurse_dread_midheart"],
+            "requirements":{"heart":5},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":60},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_heart4_t4",
+            "extends":["explorevaultcurse_dread_lowheart"],
+            "requirements":{"heart":4},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":45},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_heart3_t4",
+            "extends":["explorevaultcurse_dread_lowheart"],
+            "requirements":{"heart":3},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":30},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_heart2_t4",
+            "extends":["explorevaultcurse_dread_lowheart"],
+            "requirements":{"heart":2},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":20},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_dread_heart1_t4",
+            "extends":["explorevaultcurse_dread_lowheart"],
+            "requirements":{"heart":1},
+            "linked":[
+                {"id":"explorevaultcurse_dread_success", "chance":10},
+                {"id":"explorevaultcurse_dread_failure","chance":100}
+            ]
+        }
+    ]
+}

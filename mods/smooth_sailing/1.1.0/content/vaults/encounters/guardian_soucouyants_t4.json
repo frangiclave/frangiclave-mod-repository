@@ -1,0 +1,404 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultguardian_soucouyants_encounter_t4",
+            "extends": ["explorevaultguardian_soucouyants_encounter"],
+            "requirements": {"guardian_soucouyants":1},
+            "alternativerecipes": [
+                {"id":"explorevaultguardian_soucouyants_moth16_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern16_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth15_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern15_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth14_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern14_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth13_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern13_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth12_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern12_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth11_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern11_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth10_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern10_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth9_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern9_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth8_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern8_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth7_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern7_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth6_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern6_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth5_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern5_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth4_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern4_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth3_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern3_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth2_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern2_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_moth1_t4", "chance":100},
+                {"id":"explorevaultguardian_soucouyants_lantern1_t4", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultguardian_soucouyants_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth16_t4",
+            "extends":["explorevaultguardian_soucouyants_highmoth"],
+            "requirements":{"moth":16},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_16_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth15_t4",
+            "extends":["explorevaultguardian_soucouyants_highmoth"],
+            "requirements":{"moth":15},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_15_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth14_t4",
+            "extends":["explorevaultguardian_soucouyants_highmoth"],
+            "requirements":{"moth":14},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_14_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth13_t4",
+            "extends":["explorevaultguardian_soucouyants_highmoth"],
+            "requirements":{"moth":13},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_13_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth12_t4",
+            "extends":["explorevaultguardian_soucouyants_highmoth"],
+            "requirements":{"moth":12},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_12_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth11_t4",
+            "extends":["explorevaultguardian_soucouyants_highmoth"],
+            "requirements":{"moth":11},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_11_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth10_t4",
+            "extends":["explorevaultguardian_soucouyants_highmoth"],
+            "requirements":{"moth":10},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth9_t4",
+            "extends":["explorevaultguardian_soucouyants_highmoth"],
+            "requirements":{"moth":9},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":85},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth8_t4",
+            "extends":["explorevaultguardian_soucouyants_midmoth"],
+            "requirements":{"moth":8},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":80},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth7_t4",
+            "extends":["explorevaultguardian_soucouyants_midmoth"],
+            "requirements":{"moth":7},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":75},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth6_t4",
+            "extends":["explorevaultguardian_soucouyants_midmoth"],
+            "requirements":{"moth":6},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":70},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth5_t4",
+            "extends":["explorevaultguardian_soucouyants_midmoth"],
+            "requirements":{"moth":5},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":60},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth4_t4",
+            "extends":["explorevaultguardian_soucouyants_lowmoth"],
+            "requirements":{"moth":4},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":45},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth3_t4",
+            "extends":["explorevaultguardian_soucouyants_lowmoth"],
+            "requirements":{"moth":3},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":30},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth2_t4",
+            "extends":["explorevaultguardian_soucouyants_lowmoth"],
+            "requirements":{"moth":2},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":20},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_moth1_t4",
+            "extends":["explorevaultguardian_soucouyants_lowmoth"],
+            "requirements":{"moth":1},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_moth", "chance":10},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern16_t4",
+            "extends":["explorevaultguardian_soucouyants_highlantern"],
+            "requirements":{"lantern":16},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_16_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern15_t4",
+            "extends":["explorevaultguardian_soucouyants_highlantern"],
+            "requirements":{"lantern":15},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_15_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern14_t4",
+            "extends":["explorevaultguardian_soucouyants_highlantern"],
+            "requirements":{"lantern":14},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_14_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern13_t4",
+            "extends":["explorevaultguardian_soucouyants_highlantern"],
+            "requirements":{"lantern":13},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_13_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern12_t4",
+            "extends":["explorevaultguardian_soucouyants_highlantern"],
+            "requirements":{"lantern":12},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_12_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern11_t4",
+            "extends":["explorevaultguardian_soucouyants_highlantern"],
+            "requirements":{"lantern":11},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure_11_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern10_t4",
+            "extends":["explorevaultguardian_soucouyants_highlantern"],
+            "requirements":{"lantern":10},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":90},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern9_t4",
+            "extends":["explorevaultguardian_soucouyants_highlantern"],
+            "requirements":{"lantern":9},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":85},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern8_t4",
+            "extends":["explorevaultguardian_soucouyants_midlantern"],
+            "requirements":{"lantern":8},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":80},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern7_t4",
+            "extends":["explorevaultguardian_soucouyants_midlantern"],
+            "requirements":{"lantern":7},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":75},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern6_t4",
+            "extends":["explorevaultguardian_soucouyants_midlantern"],
+            "requirements":{"lantern":6},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":70},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern5_t4",
+            "extends":["explorevaultguardian_soucouyants_midlantern"],
+            "requirements":{"lantern":5},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":60},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern4_t4",
+            "extends":["explorevaultguardian_soucouyants_lowlantern"],
+            "requirements":{"lantern":4},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":45},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern3_t4",
+            "extends":["explorevaultguardian_soucouyants_lowlantern"],
+            "requirements":{"lantern":3},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":30},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern2_t4",
+            "extends":["explorevaultguardian_soucouyants_lowlantern"],
+            "requirements":{"lantern":2},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":20},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_soucouyants_lantern1_t4",
+            "extends":["explorevaultguardian_soucouyants_lowlantern"],
+            "requirements":{"lantern":1},
+            "linked":[
+                {"id":"explorevaultguardian_soucouyants_success_lantern", "chance":10},
+                {"id":"explorevaultguardian_soucouyants_failure","chance":100}
+            ]
+        },
+        {
+            "id": "explorevaultguardian_soucouyants_failure_16_t4",
+            "extends":["explorevaultguardian_soucouyants_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":10,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_soucouyants_failure_15_t4",
+            "extends":["explorevaultguardian_soucouyants_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":20,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_soucouyants_failure_14_t4",
+            "extends":["explorevaultguardian_soucouyants_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":30,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_soucouyants_failure_13_t4",
+            "extends":["explorevaultguardian_soucouyants_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":40,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_soucouyants_failure_12_t4",
+            "extends":["explorevaultguardian_soucouyants_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":50,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_soucouyants_failure_11_t4",
+            "extends":["explorevaultguardian_soucouyants_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":60,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        }
+    ]
+}

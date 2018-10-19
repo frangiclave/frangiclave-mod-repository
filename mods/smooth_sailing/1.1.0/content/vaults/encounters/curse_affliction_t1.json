@@ -1,0 +1,112 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultcurse_affliction_encounter_t1",
+            "extends": ["explorevaultcurse_affliction_encounter"],
+            "requirements": {"curse_affliction":1,"vaultcapital":1},
+            "alternativerecipes": [
+                {"id":"explorevaultcurse_affliction_grail5_t1", "chance":100},
+                {"id":"explorevaultcurse_affliction_heart5_t1", "chance":100},
+                {"id":"explorevaultcurse_affliction_grail4_t1", "chance":100},
+                {"id":"explorevaultcurse_affliction_heart4_t1", "chance":100},
+                {"id":"explorevaultcurse_affliction_grail3_t1", "chance":100},
+                {"id":"explorevaultcurse_affliction_heart3_t1", "chance":100},
+                {"id":"explorevaultcurse_affliction_grail2_t1", "chance":100},
+                {"id":"explorevaultcurse_affliction_heart2_t1", "chance":100},
+                {"id":"explorevaultcurse_affliction_grail1_t1", "chance":100},
+                {"id":"explorevaultcurse_affliction_heart1_t1", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultcurse_affliction_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultcurse_affliction_grail5_t1",
+            "extends":["explorevaultcurse_affliction_highgrail"],
+            "requirements":{"grail":5},
+            "linked":[
+                {"id":"explorevaultcurse_affliction_success", "chance":90},
+                {"id":"explorevaultcurse_affliction_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_affliction_grail4_t1",
+            "extends":["explorevaultcurse_affliction_midgrail"],
+            "requirements":{"grail":4},
+            "linked":[
+                {"id":"explorevaultcurse_affliction_success", "chance":80},
+                {"id":"explorevaultcurse_affliction_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_affliction_grail3_t1",
+            "extends":["explorevaultcurse_affliction_midgrail"],
+            "requirements":{"grail":3},
+            "linked":[
+                {"id":"explorevaultcurse_affliction_success", "chance":70},
+                {"id":"explorevaultcurse_affliction_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_affliction_grail2_t1",
+            "extends":["explorevaultcurse_affliction_midgrail"],
+            "requirements":{"grail":2},
+            "linked":[
+                {"id":"explorevaultcurse_affliction_success", "chance":60},
+                {"id":"explorevaultcurse_affliction_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_affliction_grail1_t1",
+            "extends":["explorevaultcurse_affliction_lowgrail"],
+            "requirements":{"grail":1},
+            "linked":[
+                {"id":"explorevaultcurse_affliction_success", "chance":40},
+                {"id":"explorevaultcurse_affliction_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_affliction_heart5_t1",
+            "extends":["explorevaultcurse_affliction_highheart"],
+            "requirements":{"heart":5},
+            "linked":[
+                {"id":"explorevaultcurse_affliction_success", "chance":90},
+                {"id":"explorevaultcurse_affliction_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_affliction_heart4_t1",
+            "extends":["explorevaultcurse_affliction_midheart"],
+            "requirements":{"heart":4},
+            "linked":[
+                {"id":"explorevaultcurse_affliction_success", "chance":80},
+                {"id":"explorevaultcurse_affliction_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_affliction_heart3_t1",
+            "extends":["explorevaultcurse_affliction_midheart"],
+            "requirements":{"heart":3},
+            "linked":[
+                {"id":"explorevaultcurse_affliction_success", "chance":70},
+                {"id":"explorevaultcurse_affliction_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_affliction_heart2_t1",
+            "extends":["explorevaultcurse_affliction_midheart"],
+            "requirements":{"heart":2},
+            "linked":[
+                {"id":"explorevaultcurse_affliction_success", "chance":60},
+                {"id":"explorevaultcurse_affliction_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_affliction_heart1_t1",
+            "extends":["explorevaultcurse_affliction_lowheart"],
+            "requirements":{"heart":1},
+            "linked":[
+                {"id":"explorevaultcurse_affliction_success", "chance":40},
+                {"id":"explorevaultcurse_affliction_failure","chance":100}
+            ]
+        }
+    ]
+}

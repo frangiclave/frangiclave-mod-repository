@@ -1,0 +1,404 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultperil_treacherousground_encounter_t4",
+            "extends": ["explorevaultperil_treacherousground_encounter"],
+            "requirements": {"peril_treacherousground":1},
+            "alternativerecipes": [
+                {"id":"explorevaultperil_treacherousground_lantern16_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge16_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern15_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge15_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern14_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge14_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern13_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge13_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern12_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge12_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern11_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge11_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern10_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge10_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern9_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge9_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern8_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge8_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern7_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge7_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern6_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge6_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern5_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge5_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern4_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge4_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern3_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge3_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern2_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge2_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_lantern1_t4", "chance":100},
+                {"id":"explorevaultperil_treacherousground_forge1_t4", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultperil_treacherousground_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern16_t4",
+            "extends":["explorevaultperil_treacherousground_highlantern"],
+            "requirements":{"lantern":16},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_16_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern15_t4",
+            "extends":["explorevaultperil_treacherousground_highlantern"],
+            "requirements":{"lantern":15},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_15_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern14_t4",
+            "extends":["explorevaultperil_treacherousground_highlantern"],
+            "requirements":{"lantern":14},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_14_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern13_t4",
+            "extends":["explorevaultperil_treacherousground_highlantern"],
+            "requirements":{"lantern":13},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_13_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern12_t4",
+            "extends":["explorevaultperil_treacherousground_highlantern"],
+            "requirements":{"lantern":12},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_12_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern11_t4",
+            "extends":["explorevaultperil_treacherousground_highlantern"],
+            "requirements":{"lantern":11},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_11_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern10_t4",
+            "extends":["explorevaultperil_treacherousground_highlantern"],
+            "requirements":{"lantern":10},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern9_t4",
+            "extends":["explorevaultperil_treacherousground_highlantern"],
+            "requirements":{"lantern":9},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":85},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern8_t4",
+            "extends":["explorevaultperil_treacherousground_midlantern"],
+            "requirements":{"lantern":8},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":80},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern7_t4",
+            "extends":["explorevaultperil_treacherousground_midlantern"],
+            "requirements":{"lantern":7},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":75},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern6_t4",
+            "extends":["explorevaultperil_treacherousground_midlantern"],
+            "requirements":{"lantern":6},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":70},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern5_t4",
+            "extends":["explorevaultperil_treacherousground_midlantern"],
+            "requirements":{"lantern":5},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":60},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern4_t4",
+            "extends":["explorevaultperil_treacherousground_lowlantern"],
+            "requirements":{"lantern":4},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":45},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern3_t4",
+            "extends":["explorevaultperil_treacherousground_lowlantern"],
+            "requirements":{"lantern":3},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":30},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern2_t4",
+            "extends":["explorevaultperil_treacherousground_lowlantern"],
+            "requirements":{"lantern":2},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":20},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_lantern1_t4",
+            "extends":["explorevaultperil_treacherousground_lowlantern"],
+            "requirements":{"lantern":1},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":10},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge16_t4",
+            "extends":["explorevaultperil_treacherousground_highforge"],
+            "requirements":{"forge":16},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_16_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge15_t4",
+            "extends":["explorevaultperil_treacherousground_highforge"],
+            "requirements":{"forge":15},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_15_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge14_t4",
+            "extends":["explorevaultperil_treacherousground_highforge"],
+            "requirements":{"forge":14},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_14_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge13_t4",
+            "extends":["explorevaultperil_treacherousground_highforge"],
+            "requirements":{"forge":13},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_13_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge12_t4",
+            "extends":["explorevaultperil_treacherousground_highforge"],
+            "requirements":{"forge":12},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_12_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge11_t4",
+            "extends":["explorevaultperil_treacherousground_highforge"],
+            "requirements":{"forge":11},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure_11_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge10_t4",
+            "extends":["explorevaultperil_treacherousground_highforge"],
+            "requirements":{"forge":10},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":90},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge9_t4",
+            "extends":["explorevaultperil_treacherousground_highforge"],
+            "requirements":{"forge":9},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":85},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge8_t4",
+            "extends":["explorevaultperil_treacherousground_midforge"],
+            "requirements":{"forge":8},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":80},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge7_t4",
+            "extends":["explorevaultperil_treacherousground_midforge"],
+            "requirements":{"forge":7},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":75},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge6_t4",
+            "extends":["explorevaultperil_treacherousground_midforge"],
+            "requirements":{"forge":6},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":70},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge5_t4",
+            "extends":["explorevaultperil_treacherousground_midforge"],
+            "requirements":{"forge":5},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":60},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge4_t4",
+            "extends":["explorevaultperil_treacherousground_lowforge"],
+            "requirements":{"forge":4},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":45},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge3_t4",
+            "extends":["explorevaultperil_treacherousground_lowforge"],
+            "requirements":{"forge":3},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":30},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge2_t4",
+            "extends":["explorevaultperil_treacherousground_lowforge"],
+            "requirements":{"forge":2},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":20},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_treacherousground_forge1_t4",
+            "extends":["explorevaultperil_treacherousground_lowforge"],
+            "requirements":{"forge":1},
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_success", "chance":10},
+                {"id":"explorevaultperil_treacherousground_failure","chance":100}
+            ]
+        },
+        {
+            "id": "explorevaultperil_treacherousground_failure_16_t4",
+            "extends":["explorevaultperil_treacherousground_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":10,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_treacherousground_failure_15_t4",
+            "extends":["explorevaultperil_treacherousground_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":20,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_treacherousground_failure_14_t4",
+            "extends":["explorevaultperil_treacherousground_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":30,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_treacherousground_failure_13_t4",
+            "extends":["explorevaultperil_treacherousground_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":40,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_treacherousground_failure_12_t4",
+            "extends":["explorevaultperil_treacherousground_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":50,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_treacherousground_failure_11_t4",
+            "extends":["explorevaultperil_treacherousground_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":60,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaulttick",
+            "extends": ["explorevaulttick"],
+            "linked":[
+                {"id":"explorevaultperil_treacherousground_encounter_t1","chance":100},
+                {"id":"explorevaultperil_treacherousground_encounter_t2","chance":100},
+                {"id":"explorevaultperil_treacherousground_encounter_t3","chance":100},
+                {"id":"explorevaultperil_treacherousground_encounter_t4","chance":100},
+
+                {"id":"explorevaultperil_forest_encounter_t1","chance":100},
+                {"id":"explorevaultperil_forest_encounter_t2","chance":100},
+                {"id":"explorevaultperil_forest_encounter_t3","chance":100},
+                {"id":"explorevaultperil_forest_encounter_t4","chance":100},
+
+                {"id":"explorevaultperil_mountains_encounter_t1","chance":100},
+                {"id":"explorevaultperil_mountains_encounter_t2","chance":100},
+                {"id":"explorevaultperil_mountains_encounter_t3","chance":100},
+                {"id":"explorevaultperil_mountains_encounter_t4","chance":100},
+
+                {"id":"explorevaultperil_desert_encounter_t1","chance":100},
+                {"id":"explorevaultperil_desert_encounter_t2","chance":100},
+                {"id":"explorevaultperil_desert_encounter_t3","chance":100},
+                {"id":"explorevaultperil_desert_encounter_t4","chance":100},
+
+                {"id":"explorevaultperil_sea_encounter_t1","chance":100},
+                {"id":"explorevaultperil_sea_encounter_t2","chance":100},
+                {"id":"explorevaultperil_sea_encounter_t3","chance":100},
+                {"id":"explorevaultperil_sea_encounter_t4","chance":100},
+
+                {"id":"explorevaultguardian_watchers_encounter_t1","chance":100},
+                {"id":"explorevaultguardian_watchers_encounter_t2","chance":100},
+                {"id":"explorevaultguardian_watchers_encounter_t3","chance":100},
+                {"id":"explorevaultguardian_watchers_encounter_t4","chance":100},
+
+                {"id":"explorevaultguardian_monks_encounter_t1","chance":100},
+                {"id":"explorevaultguardian_monks_encounter_t2","chance":100},
+                {"id":"explorevaultguardian_monks_encounter_t3","chance":100},
+                {"id":"explorevaultguardian_monks_encounter_t4","chance":100},
+
+                {"id":"explorevaultguardian_serpent_encounter_t1","chance":100},
+                {"id":"explorevaultguardian_serpent_encounter_t2","chance":100},
+                {"id":"explorevaultguardian_serpent_encounter_t3","chance":100},
+                {"id":"explorevaultguardian_serpent_encounter_t4","chance":100},
+
+                {"id":"explorevaultguardian_dead_encounter_t1","chance":100},
+                {"id":"explorevaultguardian_dead_encounter_t2","chance":100},
+                {"id":"explorevaultguardian_dead_encounter_t3","chance":100},
+                {"id":"explorevaultguardian_dead_encounter_t4","chance":100},
+            
+                {"id":"explorevaultguardian_soucouyants_encounter_t1","chance":100},
+                {"id":"explorevaultguardian_soucouyants_encounter_t2","chance":100},
+                {"id":"explorevaultguardian_soucouyants_encounter_t3","chance":100},
+                {"id":"explorevaultguardian_soucouyants_encounter_t4","chance":100},
+            
+                {"id":"explorevaultguardian_long_encounter_t1","chance":100},
+                {"id":"explorevaultguardian_long_encounter_t2","chance":100},
+                {"id":"explorevaultguardian_long_encounter_t3","chance":100},
+                {"id":"explorevaultguardian_long_encounter_t4","chance":100},
+                
+                {"id":"explorevaultseal_hiddendoor_encounter_t1","chance":100},
+                {"id":"explorevaultseal_hiddendoor_encounter_t2","chance":100},
+                {"id":"explorevaultseal_hiddendoor_encounter_t3","chance":100},
+                {"id":"explorevaultseal_hiddendoor_encounter_t4","chance":100},
+        
+                {"id":"explorevaultseal_wardeddoor_encounter_t1","chance":100},
+                {"id":"explorevaultseal_wardeddoor_encounter_t2","chance":100},
+                {"id":"explorevaultseal_wardeddoor_encounter_t3","chance":100},
+                {"id":"explorevaultseal_wardeddoor_encounter_t4","chance":100},
+            
+                {"id":"explorevaultcurse_dread_encounter_t1","chance":100},
+                {"id":"explorevaultcurse_dread_encounter_t2","chance":100},
+                {"id":"explorevaultcurse_dread_encounter_t3","chance":100},
+                {"id":"explorevaultcurse_dread_encounter_t4","chance":100},
+            
+                {"id":"explorevaultcurse_visions_encounter_t1","chance":100},
+                {"id":"explorevaultcurse_visions_encounter_t2","chance":100},
+                {"id":"explorevaultcurse_visions_encounter_t3","chance":100},
+                {"id":"explorevaultcurse_visions_encounter_t4","chance":100},
+
+                {"id":"explorevaultcurse_affliction_encounter_t1","chance":100},
+                {"id":"explorevaultcurse_affliction_encounter_t2","chance":100},
+                {"id":"explorevaultcurse_affliction_encounter_t3","chance":100},
+                {"id":"explorevaultcurse_affliction_encounter_t4","chance":100},
+
+                {"id":"explorevaultcurse_nowhere_encounter_t1","chance":100},
+                {"id":"explorevaultcurse_nowhere_encounter_t2","chance":100},
+                {"id":"explorevaultcurse_nowhere_encounter_t3","chance":100},
+                {"id":"explorevaultcurse_nowhere_encounter_t4","chance":100}
+            ]
+        }
+    ]
+}
+
