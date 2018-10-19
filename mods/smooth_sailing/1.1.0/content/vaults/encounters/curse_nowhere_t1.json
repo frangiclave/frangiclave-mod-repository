@@ -1,0 +1,112 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultcurse_nowhere_encounter_t1",
+            "extends": ["explorevaultcurse_nowhere_encounter"],
+            "requirements": {"curse_nowhere":1,"vaultcapital":1},
+            "alternativerecipes": [
+                {"id":"explorevaultcurse_nowhere_lantern5_t1", "chance":100},
+                {"id":"explorevaultcurse_nowhere_moth5_t1", "chance":100},
+                {"id":"explorevaultcurse_nowhere_lantern4_t1", "chance":100},
+                {"id":"explorevaultcurse_nowhere_moth4_t1", "chance":100},
+                {"id":"explorevaultcurse_nowhere_lantern3_t1", "chance":100},
+                {"id":"explorevaultcurse_nowhere_moth3_t1", "chance":100},
+                {"id":"explorevaultcurse_nowhere_lantern2_t1", "chance":100},
+                {"id":"explorevaultcurse_nowhere_moth2_t1", "chance":100},
+                {"id":"explorevaultcurse_nowhere_lantern1_t1", "chance":100},
+                {"id":"explorevaultcurse_nowhere_moth1_t1", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultcurse_nowhere_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultcurse_nowhere_lantern5_t1",
+            "extends":["explorevaultcurse_nowhere_highlantern"],
+            "requirements":{"lantern":5},
+            "linked":[
+                {"id":"explorevaultcurse_nowhere_success", "chance":90},
+                {"id":"explorevaultcurse_nowhere_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_nowhere_lantern4_t1",
+            "extends":["explorevaultcurse_nowhere_midlantern"],
+            "requirements":{"lantern":4},
+            "linked":[
+                {"id":"explorevaultcurse_nowhere_success", "chance":80},
+                {"id":"explorevaultcurse_nowhere_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_nowhere_lantern3_t1",
+            "extends":["explorevaultcurse_nowhere_midlantern"],
+            "requirements":{"lantern":3},
+            "linked":[
+                {"id":"explorevaultcurse_nowhere_success", "chance":70},
+                {"id":"explorevaultcurse_nowhere_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_nowhere_lantern2_t1",
+            "extends":["explorevaultcurse_nowhere_midlantern"],
+            "requirements":{"lantern":2},
+            "linked":[
+                {"id":"explorevaultcurse_nowhere_success", "chance":60},
+                {"id":"explorevaultcurse_nowhere_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_nowhere_lantern1_t1",
+            "extends":["explorevaultcurse_nowhere_lowlantern"],
+            "requirements":{"lantern":1},
+            "linked":[
+                {"id":"explorevaultcurse_nowhere_success", "chance":40},
+                {"id":"explorevaultcurse_nowhere_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_nowhere_moth5_t1",
+            "extends":["explorevaultcurse_nowhere_highmoth"],
+            "requirements":{"moth":5},
+            "linked":[
+                {"id":"explorevaultcurse_nowhere_success", "chance":90},
+                {"id":"explorevaultcurse_nowhere_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_nowhere_moth4_t1",
+            "extends":["explorevaultcurse_nowhere_midmoth"],
+            "requirements":{"moth":4},
+            "linked":[
+                {"id":"explorevaultcurse_nowhere_success", "chance":80},
+                {"id":"explorevaultcurse_nowhere_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_nowhere_moth3_t1",
+            "extends":["explorevaultcurse_nowhere_midmoth"],
+            "requirements":{"moth":3},
+            "linked":[
+                {"id":"explorevaultcurse_nowhere_success", "chance":70},
+                {"id":"explorevaultcurse_nowhere_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_nowhere_moth2_t1",
+            "extends":["explorevaultcurse_nowhere_midmoth"],
+            "requirements":{"moth":2},
+            "linked":[
+                {"id":"explorevaultcurse_nowhere_success", "chance":60},
+                {"id":"explorevaultcurse_nowhere_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_nowhere_moth1_t1",
+            "extends":["explorevaultcurse_nowhere_lowmoth"],
+            "requirements":{"moth":1},
+            "linked":[
+                {"id":"explorevaultcurse_nowhere_success", "chance":40},
+                {"id":"explorevaultcurse_nowhere_failure","chance":100}
+            ]
+        }
+    ]
+}

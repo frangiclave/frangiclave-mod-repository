@@ -1,0 +1,121 @@
+{
+    "recipes": [
+        {
+            "id": "L_give_paintingmasteredge",
+            "label":"A significant gift of Edge",
+            "actionId":"talk",
+            "description":"To be kept: away from prying eyes, but not *too* far away.",
+            "requirements":{"paintingmasteredge":1},
+            "effects":{"paintingmasteredge":-1},
+            "mutations":[
+                {"filterOnAspectId":"follower","mutateAspectId":"edge","mutationLevel":1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"resentment","mutationLevel":-1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"follower_honoured","mutationLevel":1,"additive":false}
+            ]
+        },
+        {
+            "id": "L_give_paintingmasterforge",
+            "label":"A significant gift of Forge",
+            "actionId":"talk",
+            "description":"To be kept: away from prying eyes, but not *too* far away.",
+            "requirements":{"paintingmasterforge":1},
+            "effects":{"paintingmasterforge":-1},
+            "mutations":[
+                {"filterOnAspectId":"follower","mutateAspectId":"forge","mutationLevel":1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"resentment","mutationLevel":-1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"follower_honoured","mutationLevel":1,"additive":false}
+            ]
+        },
+        {
+            "id": "L_give_paintingmastergrail",
+            "label":"A significant gift of Grail",
+            "actionId":"talk",
+            "description":"To be kept: away from prying eyes, but not *too* far away.",
+            "requirements":{"paintingmastergrail":1},
+            "effects":{"paintingmastergrail":-1},
+            "mutations":[
+                {"filterOnAspectId":"follower","mutateAspectId":"grail","mutationLevel":1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"resentment","mutationLevel":-1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"follower_honoured","mutationLevel":1,"additive":false}
+            ]
+        },
+        {
+            "id": "L_give_paintingmasterheart",
+            "label":"A significant gift of Heart",
+            "actionId":"talk",
+            "description":"To be kept: away from prying eyes, but not *too* far away.",
+            "requirements":{"paintingmasterheart":1},
+            "effects":{"paintingmasterheart":-1},
+            "mutations":[
+                {"filterOnAspectId":"follower","mutateAspectId":"heart","mutationLevel":1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"resentment","mutationLevel":-1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"follower_honoured","mutationLevel":1,"additive":false}
+            ]
+        },
+        {
+            "id": "L_give_paintingmasterknock",
+            "label":"A significant gift of Knock",
+            "actionId":"talk",
+            "description":"To be kept: away from prying eyes, but not *too* far away.",
+            "requirements":{"paintingmasterknock":1},
+            "effects":{"paintingmasterknock":-1},
+            "mutations":[
+                {"filterOnAspectId":"follower","mutateAspectId":"knock","mutationLevel":1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"resentment","mutationLevel":-1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"follower_honoured","mutationLevel":1,"additive":false}
+            ]
+        },
+        {
+            "id": "L_give_paintingmasterlantern",
+            "label":"A significant gift of Lantern",
+            "actionId":"talk",
+            "description":"To be kept: away from prying eyes, but not *too* far away.",
+            "requirements":{"paintingmasterlantern":1},
+            "effects":{"paintingmasterlantern":-1},
+            "mutations":[
+                {"filterOnAspectId":"follower","mutateAspectId":"lantern","mutationLevel":1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"resentment","mutationLevel":-1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"follower_honoured","mutationLevel":1,"additive":false}
+            ]
+        },
+        {
+            "id": "L_give_paintingmastermoth",
+            "label":"A significant gift of Moth",
+            "actionId":"talk",
+            "description":"To be kept: away from prying eyes, but not *too* far away.",
+            "requirements":{"paintingmastermoth":1},
+            "effects":{"paintingmastermoth":-1},
+            "mutations":[
+                {"filterOnAspectId":"follower","mutateAspectId":"moth","mutationLevel":1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"resentment","mutationLevel":-1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"follower_honoured","mutationLevel":1,"additive":false}
+            ]
+        },
+        {
+            "id": "L_give_paintingmastersecrethistories",
+            "label":"A significant gift in commemoration of the Secret Histories",
+            "actionId":"talk",
+            "description":"To be kept: away from prying eyes, but not *too* far away.",
+            "requirements":{"paintingmastersecrethistories":1},
+            "effects":{"paintingmastersecrethistories":-1},
+            "mutations":[
+                {"filterOnAspectId":"follower","mutateAspectId":"secrethistories","mutationLevel":1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"resentment","mutationLevel":-1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"follower_honoured","mutationLevel":1,"additive":false}
+            ]
+        },
+        {
+            "id": "L_give_paintingmasterwinter",
+            "label":"A significant gift of Winter",
+            "actionId":"talk",
+            "description":"To be kept: away from prying eyes, but not *too* far away.",
+            "requirements":{"paintingmasterwinter":1},
+            "effects":{"paintingmasterwinter":-1},
+            "mutations":[
+                {"filterOnAspectId":"follower","mutateAspectId":"winter","mutationLevel":1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"resentment","mutationLevel":-1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"follower_honoured","mutationLevel":1,"additive":false}
+            ]
+        }
+    ]
+}

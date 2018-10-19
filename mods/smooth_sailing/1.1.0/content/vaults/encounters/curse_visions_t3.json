@@ -1,0 +1,212 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultcurse_visions_encounter_t3",
+            "extends": ["explorevaultcurse_visions_encounter"],
+            "requirements": {"curse_visions":1,"vaultcontinent":1},
+            "alternativerecipes": [
+                {"id":"explorevaultcurse_visions_winter10_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_heart10_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_winter9_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_heart9_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_winter8_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_heart8_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_winter7_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_heart7_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_winter6_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_heart6_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_winter5_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_heart5_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_winter4_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_heart4_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_winter3_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_heart3_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_winter2_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_heart2_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_winter1_t3", "chance":100},
+                {"id":"explorevaultcurse_visions_heart1_t3", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultcurse_visions_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultcurse_visions_winter10_t3",
+            "extends":["explorevaultcurse_visions_highwinter"],
+            "requirements":{"winter":10},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":90},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_winter9_t3",
+            "extends":["explorevaultcurse_visions_highwinter"],
+            "requirements":{"winter":9},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":87},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_winter8_t3",
+            "extends":["explorevaultcurse_visions_highwinter"],
+            "requirements":{"winter":8},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":84},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_winter7_t3",
+            "extends":["explorevaultcurse_visions_midwinter"],
+            "requirements":{"winter":7},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":80},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_winter6_t3",
+            "extends":["explorevaultcurse_visions_midwinter"],
+            "requirements":{"winter":6},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":75},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_winter5_t3",
+            "extends":["explorevaultcurse_visions_midwinter"],
+            "requirements":{"winter":5},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":70},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_winter4_t3",
+            "extends":["explorevaultcurse_visions_midwinter"],
+            "requirements":{"winter":4},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":60},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_winter3_t3",
+            "extends":["explorevaultcurse_visions_lowwinter"],
+            "requirements":{"winter":3},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":45},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_winter2_t3",
+            "extends":["explorevaultcurse_visions_lowwinter"],
+            "requirements":{"winter":2},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":30},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_winter1_t3",
+            "extends":["explorevaultcurse_visions_lowwinter"],
+            "requirements":{"winter":1},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":20},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_heart10_t3",
+            "extends":["explorevaultcurse_visions_highheart"],
+            "requirements":{"heart":10},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":90},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_heart9_t3",
+            "extends":["explorevaultcurse_visions_highheart"],
+            "requirements":{"heart":9},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":87},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_heart8_t3",
+            "extends":["explorevaultcurse_visions_highheart"],
+            "requirements":{"heart":8},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":84},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_heart7_t3",
+            "extends":["explorevaultcurse_visions_midheart"],
+            "requirements":{"heart":7},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":80},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_heart6_t3",
+            "extends":["explorevaultcurse_visions_midheart"],
+            "requirements":{"heart":6},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":75},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_heart5_t3",
+            "extends":["explorevaultcurse_visions_midheart"],
+            "requirements":{"heart":5},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":70},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_heart4_t3",
+            "extends":["explorevaultcurse_visions_midheart"],
+            "requirements":{"heart":4},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":60},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_heart3_t3",
+            "extends":["explorevaultcurse_visions_lowheart"],
+            "requirements":{"heart":3},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":45},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_heart2_t3",
+            "extends":["explorevaultcurse_visions_lowheart"],
+            "requirements":{"heart":2},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":30},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultcurse_visions_heart1_t3",
+            "extends":["explorevaultcurse_visions_lowheart"],
+            "requirements":{"heart":1},
+            "linked":[
+                {"id":"explorevaultcurse_visions_success", "chance":20},
+                {"id":"explorevaultcurse_visions_failure","chance":100}
+            ]
+        }
+    ]
+}

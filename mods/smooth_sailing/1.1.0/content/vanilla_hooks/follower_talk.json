@@ -1,0 +1,82 @@
+{
+    "recipes": [
+        {
+            "id": "talktofollower",
+            "extends": ["talktofollower"],
+            "alternativerecipes":[
+                {"id":"talktohireling_rehire","chance":100},
+                {"id":"A_talktofollower_givetool_router","chance":100},
+                {"id":"A_talktofollower_cantgivetool","chance":100},
+                
+                {"id":"A_talktofollower_locationcabaret_lustsensation","chance":100},
+                {"id":"A_talktofollower_locationcabaret_lustchange","chance":100},
+                {"id":"A_talktofollower_locationstreetsstrange_lustenlightenment","chance":100},
+                {"id":"A_talktofollower_locationauctionhouse_lustpower","chance":100},
+                
+                {"id":"A_talktofollower_locationcabaret_notinterested","chance":100},
+                {"id":"A_talktofollower_locationstreetsstrange_notinterested","chance":100},
+                {"id":"A_talktofollower_locationauctionhouse_notinterested","chance":100},
+                
+                
+                {"id":"followeraction_repairtoollanternbcracked","chance":100},
+                {"id":"followeraction_repairtoollanterndcracked","chance":100},
+                {"id":"followeraction_repairtoollanternfcracked","chance":100},
+                {"id":"winter_mirror_repair", "chance": 100},
+                
+                {"id":"A_follower_settrap_independent","chance":100},
+                {"id":"A_follower_settrap_vault","chance":100},
+                
+                
+                {"id":"followeraction_murderhighwinter","chance":100},
+                {"id":"followeraction_craftworkhighforge","chance":100},
+                {"id":"followeraction_seducehighgrail","chance":100},
+                {"id":"followeraction_burglehighknock","chance":100},
+                {"id":"followeraction_charmhighheart","chance":100},
+                {"id":"followeraction_auguryhighlantern","chance":100},
+                {"id":"followeraction_hoodwinkhighmoth","chance":100},
+                {"id":"followeraction_abducthighedge","chance":100},
+                {"id":"followeraction_murdermidwinter","chance":100},
+                {"id":"followeraction_craftworkmidforge","chance":100},
+                {"id":"followeraction_seducemidgrail","chance":100},
+                {"id":"followeraction_burglemidknock","chance":100},
+                {"id":"followeraction_charmmidheart","chance":100},
+                {"id":"followeraction_augurymidlantern","chance":100},
+                {"id":"followeraction_hoodwinkmidmoth","chance":100},
+                {"id":"followeraction_abductmidedge","chance":100},
+                {"id":"followeraction_murderlowwinter","chance":100},
+                
+                {"id":"followeraction_craftworklowforge","chance":100},
+                {"id":"followeraction_seducelowgrail","chance":100},
+                {"id":"followeraction_burglelowknock","chance":100},
+                {"id":"followeraction_charmlowheart","chance":100},
+                {"id":"followeraction_augurylowlantern","chance":100},
+                {"id":"followeraction_hoodwinklowmoth","chance":100},
+                {"id":"followeraction_abductlowedge","chance":100},
+                
+                {"id":"hunterattackhighedge","chance":100},
+                {"id":"hunterattackmidedge","chance":100},
+                {"id":"hunterattacklowedge","chance":100},
+                {"id":"hunterattackhighwinter","chance":100},
+                {"id":"hunterattackmidwinter","chance":100},
+                {"id":"hunterattacklowwinter","chance":100},
+                {"id":"hunterattacknoedge","chance":100},
+                
+                
+                {"id":"annoyanceseducehighgrail","chance":100},
+                {"id":"annoyanceattackhighedge","chance":100},
+                {"id":"annoyanceseducemidgrail","chance":100},
+                {"id":"annoyanceattackmidedge","chance":100},
+                {"id":"annoyancederangemidmoth","chance":100},
+                {"id":"annoyanceseducelowgrail","chance":100},
+                {"id":"annoyanceattacklowedge","chance":100},
+                {"id":"annoyancederangelowmoth","chance":100},
+                {"id":"annoyanceattacknoedge","chance":100},
+                
+                
+                {"id": "evidencedestroymidmoth","chance":100},
+                {"id": "evidencedestroylowmoth","chance":100},
+                {"id": "evidencedestroynomoth","chance":100}
+            ]
+        }
+    ]
+}

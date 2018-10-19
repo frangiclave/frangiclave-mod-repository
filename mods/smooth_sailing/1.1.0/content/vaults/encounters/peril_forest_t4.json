@@ -1,0 +1,404 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultperil_forest_encounter_t4",
+            "extends": ["explorevaultperil_forest_encounter"],
+            "requirements": {"peril_forest":1},
+            "alternativerecipes": [
+                {"id":"explorevaultperil_forest_moth16_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge16_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth15_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge15_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth14_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge14_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth13_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge13_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth12_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge12_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth11_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge11_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth10_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge10_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth9_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge9_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth8_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge8_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth7_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge7_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth6_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge6_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth5_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge5_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth4_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge4_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth3_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge3_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth2_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge2_t4", "chance":100},
+                {"id":"explorevaultperil_forest_moth1_t4", "chance":100},
+                {"id":"explorevaultperil_forest_forge1_t4", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultperil_forest_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultperil_forest_moth16_t4",
+            "extends":["explorevaultperil_forest_highmoth"],
+            "requirements":{"moth":16},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_16_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth15_t4",
+            "extends":["explorevaultperil_forest_highmoth"],
+            "requirements":{"moth":15},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_15_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth14_t4",
+            "extends":["explorevaultperil_forest_highmoth"],
+            "requirements":{"moth":14},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_14_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth13_t4",
+            "extends":["explorevaultperil_forest_highmoth"],
+            "requirements":{"moth":13},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_13_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth12_t4",
+            "extends":["explorevaultperil_forest_highmoth"],
+            "requirements":{"moth":12},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_12_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth11_t4",
+            "extends":["explorevaultperil_forest_highmoth"],
+            "requirements":{"moth":11},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_11_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth10_t4",
+            "extends":["explorevaultperil_forest_highmoth"],
+            "requirements":{"moth":10},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth9_t4",
+            "extends":["explorevaultperil_forest_highmoth"],
+            "requirements":{"moth":9},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":85},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth8_t4",
+            "extends":["explorevaultperil_forest_midmoth"],
+            "requirements":{"moth":8},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":80},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth7_t4",
+            "extends":["explorevaultperil_forest_midmoth"],
+            "requirements":{"moth":7},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":75},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth6_t4",
+            "extends":["explorevaultperil_forest_midmoth"],
+            "requirements":{"moth":6},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":70},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth5_t4",
+            "extends":["explorevaultperil_forest_midmoth"],
+            "requirements":{"moth":5},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":60},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth4_t4",
+            "extends":["explorevaultperil_forest_lowmoth"],
+            "requirements":{"moth":4},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":45},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth3_t4",
+            "extends":["explorevaultperil_forest_lowmoth"],
+            "requirements":{"moth":3},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":30},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth2_t4",
+            "extends":["explorevaultperil_forest_lowmoth"],
+            "requirements":{"moth":2},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":20},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_moth1_t4",
+            "extends":["explorevaultperil_forest_lowmoth"],
+            "requirements":{"moth":1},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":10},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge16_t4",
+            "extends":["explorevaultperil_forest_highforge"],
+            "requirements":{"forge":16},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_16_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge15_t4",
+            "extends":["explorevaultperil_forest_highforge"],
+            "requirements":{"forge":15},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_15_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge14_t4",
+            "extends":["explorevaultperil_forest_highforge"],
+            "requirements":{"forge":14},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_14_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge13_t4",
+            "extends":["explorevaultperil_forest_highforge"],
+            "requirements":{"forge":13},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_13_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge12_t4",
+            "extends":["explorevaultperil_forest_highforge"],
+            "requirements":{"forge":12},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_12_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge11_t4",
+            "extends":["explorevaultperil_forest_highforge"],
+            "requirements":{"forge":11},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure_11_t4","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge10_t4",
+            "extends":["explorevaultperil_forest_highforge"],
+            "requirements":{"forge":10},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":90},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge9_t4",
+            "extends":["explorevaultperil_forest_highforge"],
+            "requirements":{"forge":9},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":85},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge8_t4",
+            "extends":["explorevaultperil_forest_midforge"],
+            "requirements":{"forge":8},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":80},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge7_t4",
+            "extends":["explorevaultperil_forest_midforge"],
+            "requirements":{"forge":7},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":75},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge6_t4",
+            "extends":["explorevaultperil_forest_midforge"],
+            "requirements":{"forge":6},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":70},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge5_t4",
+            "extends":["explorevaultperil_forest_midforge"],
+            "requirements":{"forge":5},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":60},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge4_t4",
+            "extends":["explorevaultperil_forest_lowforge"],
+            "requirements":{"forge":4},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":45},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge3_t4",
+            "extends":["explorevaultperil_forest_lowforge"],
+            "requirements":{"forge":3},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":30},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge2_t4",
+            "extends":["explorevaultperil_forest_lowforge"],
+            "requirements":{"forge":2},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":20},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultperil_forest_forge1_t4",
+            "extends":["explorevaultperil_forest_lowforge"],
+            "requirements":{"forge":1},
+            "linked":[
+                {"id":"explorevaultperil_forest_success", "chance":10},
+                {"id":"explorevaultperil_forest_failure","chance":100}
+            ]
+        },
+        {
+            "id": "explorevaultperil_forest_failure_16_t4",
+            "extends":["explorevaultperil_forest_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":10,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_forest_failure_15_t4",
+            "extends":["explorevaultperil_forest_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":20,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_forest_failure_14_t4",
+            "extends":["explorevaultperil_forest_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":30,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_forest_failure_13_t4",
+            "extends":["explorevaultperil_forest_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":40,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_forest_failure_12_t4",
+            "extends":["explorevaultperil_forest_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":50,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultperil_forest_failure_11_t4",
+            "extends":["explorevaultperil_forest_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":60,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        }
+    ]
+}

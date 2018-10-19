@@ -1,0 +1,212 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultseal_wardeddoor_encounter_t4",
+            "extends": ["explorevaultseal_wardeddoor_encounter"],
+            "requirements": {"seal_wardeddoor":1},
+            "alternativerecipes": [
+                {"id":"explorevaultseal_wardeddoor_forge10_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_knock10_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_forge9_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_knock9_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_forge8_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_knock8_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_forge7_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_knock7_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_forge6_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_knock6_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_forge5_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_knock5_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_forge4_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_knock4_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_forge3_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_knock3_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_forge2_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_knock2_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_forge1_t4", "chance":100},
+                {"id":"explorevaultseal_wardeddoor_knock1_t4", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultseal_wardeddoor_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_forge10_t4",
+            "extends":["explorevaultseal_wardeddoor_highforge"],
+            "requirements":{"forge":10},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":90},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_forge9_t4",
+            "extends":["explorevaultseal_wardeddoor_highforge"],
+            "requirements":{"forge":9},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":85},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_forge8_t4",
+            "extends":["explorevaultseal_wardeddoor_midforge"],
+            "requirements":{"forge":8},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":80},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_forge7_t4",
+            "extends":["explorevaultseal_wardeddoor_midforge"],
+            "requirements":{"forge":7},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":75},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_forge6_t4",
+            "extends":["explorevaultseal_wardeddoor_midforge"],
+            "requirements":{"forge":6},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":70},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_forge5_t4",
+            "extends":["explorevaultseal_wardeddoor_midforge"],
+            "requirements":{"forge":5},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":60},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_forge4_t4",
+            "extends":["explorevaultseal_wardeddoor_lowforge"],
+            "requirements":{"forge":4},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":45},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_forge3_t4",
+            "extends":["explorevaultseal_wardeddoor_lowforge"],
+            "requirements":{"forge":3},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":30},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_forge2_t4",
+            "extends":["explorevaultseal_wardeddoor_lowforge"],
+            "requirements":{"forge":2},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":20},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_forge1_t4",
+            "extends":["explorevaultseal_wardeddoor_lowforge"],
+            "requirements":{"forge":1},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":10},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_knock10_t4",
+            "extends":["explorevaultseal_wardeddoor_highknock"],
+            "requirements":{"knock":10},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":90},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_knock9_t4",
+            "extends":["explorevaultseal_wardeddoor_highknock"],
+            "requirements":{"knock":9},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":85},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_knock8_t4",
+            "extends":["explorevaultseal_wardeddoor_midknock"],
+            "requirements":{"knock":8},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":80},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_knock7_t4",
+            "extends":["explorevaultseal_wardeddoor_midknock"],
+            "requirements":{"knock":7},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":75},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_knock6_t4",
+            "extends":["explorevaultseal_wardeddoor_midknock"],
+            "requirements":{"knock":6},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":70},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_knock5_t4",
+            "extends":["explorevaultseal_wardeddoor_midknock"],
+            "requirements":{"knock":5},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":60},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_knock4_t4",
+            "extends":["explorevaultseal_wardeddoor_lowknock"],
+            "requirements":{"knock":4},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":45},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_knock3_t4",
+            "extends":["explorevaultseal_wardeddoor_lowknock"],
+            "requirements":{"knock":3},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":30},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_knock2_t4",
+            "extends":["explorevaultseal_wardeddoor_lowknock"],
+            "requirements":{"knock":2},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":20},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultseal_wardeddoor_knock1_t4",
+            "extends":["explorevaultseal_wardeddoor_lowknock"],
+            "requirements":{"knock":1},
+            "linked":[
+                {"id":"explorevaultseal_wardeddoor_success", "chance":10},
+                {"id":"explorevaultseal_wardeddoor_failure","chance":100}
+            ]
+        }
+    ]
+}

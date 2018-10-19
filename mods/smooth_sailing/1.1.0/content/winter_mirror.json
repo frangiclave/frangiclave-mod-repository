@@ -1,0 +1,52 @@
+{
+    "elements": [
+        {
+            "id": "toolwintermirrorcracked",
+            "label": "Cracked Madrugan Handmirror",
+            "description": "The glass of this hand mirror has been shattered; the metal is cool to the touch. A Forge-aspected follower could repair it, with sufficient resources - or I could use up what power remains in it.",
+            "aspects": {"winter":1,"ingredient":1}
+        },
+        {
+            "id": "toolwintermirror",
+            "label": "Madrugan Handmirror",
+            "description": "The metal is chilled and the glass perpetually fogged. Still, something dark moves within the fog.",
+            "aspects": {"winter":4,"auctionable":3,"tool":1,"mirror":1},
+            "xtriggers": {"crackmirror":"toolwintermirrorcracked"}
+        }
+    ],
+    "recipes": [
+        {
+            "id": "L_give_tool_wintermirror",
+            "label":"A minor gift of Winter",
+            "actionId":"talk",
+            "description":"Kept away from mortal touch.",
+            "requirements":{"toolwintermirror":1},
+            "effects":{"toolwintermirror":-1},
+            "mutations":[
+                {"filterOnAspectId":"follower","mutateAspectId":"winter","mutationLevel":1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"resentment","mutationLevel":-1,"additive":true},
+                {"filterOnAspectId":"follower","mutateAspectId":"follower_honoured","mutationLevel":1,"additive":false}
+            ]
+        },
+        {
+            "id":"winter_mirror_repair",
+            "extends": ["followeraction_repairtoollanterndcracked"],
+            "label":"Repair a Cracked Madrugan Handmirror",
+            "requirements":{"follower":1,"forge":1,"toolwintermirrorcracked":1},
+            "linked": [{"chance":100,"id": "winter_mirror_repair_attempt"}]
+        },
+        {
+            "id":"winter_mirror_repair_attempt",
+            "extends": ["followeraction_repairtoollanterndcracked_attempt"],
+            "label":"Repairing a Cracked Madrugan Handmirror",
+            "alternativerecipes":[{"id":"winter_mirror_repair_succeed","chance":100}]
+        },
+        {
+            "id":"winter_mirror_repair_succeed",
+            "extends":["followeraction_repairtoollanterndcracked_succeed"],
+            "label":"Repairing a Cracked Madrugan Handmirror",
+            "description": "The mirror is repaired! The glass is blanketed with cool, damp mist.",
+            "effects":{"compensationvalue":-1,"toolwintermirrorcracked":-1,"toolwintermirror":1}
+        }
+    ]
+}

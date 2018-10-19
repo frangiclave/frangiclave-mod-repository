@@ -1,0 +1,340 @@
+{
+    "recipes": [
+        {
+            "id": "explorevaultguardian_monks_encounter_t3",
+            "extends": ["explorevaultguardian_monks_encounter"],
+            "requirements": {"guardian_monks":1,"vaultcontinent":1},
+            "alternativerecipes": [
+                {"id":"explorevaultguardian_monks_moth14_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge14_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth13_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge13_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth12_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge12_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth11_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge11_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth10_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge10_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth9_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge9_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth8_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge8_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth7_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge7_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth6_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge6_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth5_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge5_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth4_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge4_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth3_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge3_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth2_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge2_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_moth1_t3", "chance":100},
+                {"id":"explorevaultguardian_monks_edge1_t3", "chance":100}
+            ],
+            "linked": [{"id":"explorevaultguardian_monks_failure","chance":100}]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth14_t3",
+            "extends":["explorevaultguardian_monks_highmoth"],
+            "requirements":{"moth":14},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":90},
+                {"id":"explorevaultguardian_monks_failure_14_t3","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth13_t3",
+            "extends":["explorevaultguardian_monks_highmoth"],
+            "requirements":{"moth":13},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":90},
+                {"id":"explorevaultguardian_monks_failure_13_t3","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth12_t3",
+            "extends":["explorevaultguardian_monks_highmoth"],
+            "requirements":{"moth":12},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":90},
+                {"id":"explorevaultguardian_monks_failure_12_t3","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth11_t3",
+            "extends":["explorevaultguardian_monks_highmoth"],
+            "requirements":{"moth":11},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":90},
+                {"id":"explorevaultguardian_monks_failure_11_t3","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth10_t3",
+            "extends":["explorevaultguardian_monks_highmoth"],
+            "requirements":{"moth":10},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":90},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth9_t3",
+            "extends":["explorevaultguardian_monks_highmoth"],
+            "requirements":{"moth":9},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":87},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth8_t3",
+            "extends":["explorevaultguardian_monks_highmoth"],
+            "requirements":{"moth":8},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":84},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth7_t3",
+            "extends":["explorevaultguardian_monks_midmoth"],
+            "requirements":{"moth":7},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":80},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth6_t3",
+            "extends":["explorevaultguardian_monks_midmoth"],
+            "requirements":{"moth":6},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":75},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth5_t3",
+            "extends":["explorevaultguardian_monks_midmoth"],
+            "requirements":{"moth":5},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":70},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth4_t3",
+            "extends":["explorevaultguardian_monks_midmoth"],
+            "requirements":{"moth":4},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":60},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth3_t3",
+            "extends":["explorevaultguardian_monks_lowmoth"],
+            "requirements":{"moth":3},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":45},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth2_t3",
+            "extends":["explorevaultguardian_monks_lowmoth"],
+            "requirements":{"moth":2},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":30},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_moth1_t3",
+            "extends":["explorevaultguardian_monks_lowmoth"],
+            "requirements":{"moth":1},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_moth", "chance":20},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge14_t3",
+            "extends":["explorevaultguardian_monks_highedge"],
+            "requirements":{"edge":14},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":90},
+                {"id":"explorevaultguardian_monks_failure_14_t3","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge13_t3",
+            "extends":["explorevaultguardian_monks_highedge"],
+            "requirements":{"edge":13},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":90},
+                {"id":"explorevaultguardian_monks_failure_13_t3","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge12_t3",
+            "extends":["explorevaultguardian_monks_highedge"],
+            "requirements":{"edge":12},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":90},
+                {"id":"explorevaultguardian_monks_failure_12_t3","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge11_t3",
+            "extends":["explorevaultguardian_monks_highedge"],
+            "requirements":{"edge":11},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":90},
+                {"id":"explorevaultguardian_monks_failure_11_t3","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge10_t3",
+            "extends":["explorevaultguardian_monks_highedge"],
+            "requirements":{"edge":10},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":90},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge9_t3",
+            "extends":["explorevaultguardian_monks_highedge"],
+            "requirements":{"edge":9},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":87},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge8_t3",
+            "extends":["explorevaultguardian_monks_highedge"],
+            "requirements":{"edge":8},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":84},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge7_t3",
+            "extends":["explorevaultguardian_monks_midedge"],
+            "requirements":{"edge":7},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":80},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge6_t3",
+            "extends":["explorevaultguardian_monks_midedge"],
+            "requirements":{"edge":6},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":75},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge5_t3",
+            "extends":["explorevaultguardian_monks_midedge"],
+            "requirements":{"edge":5},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":70},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge4_t3",
+            "extends":["explorevaultguardian_monks_midedge"],
+            "requirements":{"edge":4},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":60},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge3_t3",
+            "extends":["explorevaultguardian_monks_lowedge"],
+            "requirements":{"edge":3},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":45},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge2_t3",
+            "extends":["explorevaultguardian_monks_lowedge"],
+            "requirements":{"edge":2},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":30},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id":"explorevaultguardian_monks_edge1_t3",
+            "extends":["explorevaultguardian_monks_lowedge"],
+            "requirements":{"edge":1},
+            "linked":[
+                {"id":"explorevaultguardian_monks_success_edge", "chance":20},
+                {"id":"explorevaultguardian_monks_failure","chance":100}
+            ]
+        },
+        {
+            "id": "explorevaultguardian_monks_failure_14_t3",
+            "extends":["explorevaultguardian_monks_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":10,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_monks_failure_13_t3",
+            "extends":["explorevaultguardian_monks_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":25,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_monks_failure_12_t3",
+            "extends":["explorevaultguardian_monks_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":40,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        },
+        {
+            "id": "explorevaultguardian_monks_failure_11_t3",
+            "extends":["explorevaultguardian_monks_failure"],
+            "alternativerecipes":[
+                {
+                    "id":"explorevault_casualty",
+                    "chance":55,
+                    "additional":true, 
+                    "expulsion":{"limit":1,"filter":{"follower":1}}
+                }
+            ]
+        }
+    ]
+}
