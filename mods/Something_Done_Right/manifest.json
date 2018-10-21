@@ -1,0 +1,10 @@
+{
+    "name": "Something Done Right",
+    "author": "Rockhopper Games",
+    "version": "1.0.0",
+    
+    "description": "A mod to allow players to go on Expeditions.",
+    "description_long": "A mod to allow players to accompany their followers on expeditions, or to adventure alone. Tested for version 2018.10.k.6\n\nWhen you first find a vault, a job to prepare for expiditions will also appear. By mixing lore with all 3 attributes, a player can create a preparation that can take the place of a follower. This preparation can be broken back down to its original attributes. If the preparation is wounded during the expedition, injuries for all three attributes will appear.\n\nThis mod serves largely as a test run, and may not recieve substantial updates in future. It also includes injuries for passion and reason as a minor feature.",
+
+    "dependencies": []
+}
