@@ -1,0 +1,10 @@
+{
+	"name": "True Rivals",
+	"author": "lapis",
+	"version": "1.0.0",
+	
+	"description": "A mod allowing rivals to spawn on their own.",
+	"description_long": "A mod that adds a 5% chance to the normal acquaintance recipe, to instead make an acquaintance spawn as a rival.",
+	
+	"dependencies": []
+}
