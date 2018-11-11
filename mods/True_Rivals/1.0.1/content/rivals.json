@@ -1,0 +1,49 @@
+{
+	"recipes": [
+		{
+			"id": "talkfindacquaintance",
+			"label": "An Acquaintance?",
+			"actionId": "talk",
+			"requirements": {dayacquaintances:1},
+			"slots":[{id:"escalation",label:"Passion",description:"I must be fervent and convincing.",required:{passion:1},greedy:true}],
+			"startdescription": "I've found someone who may be a kindred spirit - but I'll need to win them over. [Winning over an Acquaintance requires your Passion.]",
+			"alternativerecipes":[
+			{id:"talkdeveloprivalfirststage",chance:95},
+			{id:"talkmeetacquaintance",chance:100}],
+			"description": "I could not muster the Passion to bring them into my circle. Perhaps another time.",
+			"effects":{season:-1},
+			"warmup": 60
+		},
+
+		{
+			"id": "talkdeveloprivalfirststage",
+			"label": "A Mistake...",
+			"actionId": "talk",
+			"requirements": {passion:1},
+			"startdescription": "I have said too much, too boldy-",
+			"description": "I feel like I will come to regret this, some day.",
+			"deckeffect": {"acquaintances":1},
+			"warmup": 5,
+			"linked": [{id:"talkdeveloprivalsecondstage",chance:100}]
+		},
+		{
+			"id": "talkdeveloprivalsecondstage",
+			"label": "A Mistake...",
+			"actionId": "talk",
+			"startdescription": ".",
+			"description": ".",
+			"aspects": {recruiting:1},
+			"effects":{season:-1},
+			"linked": [{id:"talkdeveloprivalthirdstage",chance:100}]
+		},
+		{
+			"id": "talkdeveloprivalthirdstage",
+			"label": "A Rival!",
+			"actionId": "talk",
+			"startdescription": ".",
+			"description": ".",
+			"aspects": {rebellion:1}
+		}
+	]
+	
+}
