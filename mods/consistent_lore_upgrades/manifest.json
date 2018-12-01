@@ -1,0 +1,10 @@
+{
+    "name": "consistent lore upgrades",
+    "author": "Infinoid",
+    "version": "1.0.0",
+
+    "description": "Makes lore upgrades more consistent.",
+    "description_long": "# Consistent lore upgrades\n\nThis mod removes randomness from the process of upgrading and subverting lore.\nThe research process now takes 2 minutes in total, and always asks for an\nErudition, a Glimmering, and a Reason, in that order.  The research process\nwill succeed if and only if these needs are met.\n\nThis mod will make the research process significantly faster, and easier, in\ntwo ways: you always know ahead of time what you will need, and the Study verb\nis not tied up in this process for such a long time period.",
+
+    "dependencies": []
+}
