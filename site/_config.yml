@@ -43,8 +43,5 @@ navigation_footer:
 
 frangiclave:
   mod_manager:
-    downloads:
-      windows: https://github.com/frangiclave/frangiclave-mod-manager/releases/download/v0.4.0/frangiclave-mod-manager-windows.exe
-      macos: https://github.com/frangiclave/frangiclave-mod-manager/releases/download/v0.4.0/frangiclave-mod-manager-macos
-      linux: https://github.com/frangiclave/frangiclave-mod-manager/releases/download/v0.4.0/frangiclave-mod-manager-linux
-    version: 0.4.0
+    downloads: https://github.com/frangiclave/frangiclave-mod-manager/releases/download/v1.0.0/frangiclave-mod-manager-1.0.0.zip
+    version: 1.0.0

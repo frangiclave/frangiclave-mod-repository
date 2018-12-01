@@ -3,7 +3,9 @@ require 'json'
 require 'semantic'
 require 'zip'
 
+# Extensions for Jekyll site generation.
 module Jekyll
+  # The document for a mod's page.
   class ModPage < Page
     def initialize(site, base, dir, manifest)
       @site = site
@@ -18,29 +20,16 @@ module Jekyll
     end
   end
 
+  # A utility class for generating descriptive mod pages.
   class ModsPageGenerator < Jekyll::Generator
     def generate(site)
       manifests = []
 
       # Load all the mod definitions
-      Dir.glob '../mods/*/' do |versions_path|
-        # Use the data from the latest version as the authoritative source
-        mod_id = File.basename(versions_path)
-        latest_version = nil
-        Dir.glob File.join(versions_path, '*.*.*') do |version_path|
-          version = Semantic::Version.new File.basename(version_path)
-          if latest_version.nil? || latest_version < version
-            latest_version = version
-          end
-        end
-        next if latest_version.nil?
-
+      Dir.glob '../mods/*/' do |mod_path|
         # Parse the manifest
-        manifest = JSON.parse(
-          File.read(
-            File.join(versions_path, latest_version.to_s, 'manifest.json')
-          )
-        )
+        mod_id = File.basename(mod_path)
+        manifest = JSON.parse(File.read(File.join(mod_path, 'manifest.json')))
         manifest['id'] = mod_id
         manifests << manifest
 
@@ -57,6 +46,25 @@ module Jekyll
     end
   end
 
+  Jekyll::Hooks.register :site, :post_write do |site, _|
+    # Create a series of ZIP archives for every mod
+    Dir.glob '../mods/*' do |mod_path|
+      mod_id = File.basename(mod_path)
+      zip_dir = site.in_dest_dir(File.join('downloads', mod_id))
+      FileUtils.mkdir_p(zip_dir) unless File.directory?(zip_dir)
+
+      # Create a ZIP archive for the mod
+      manifest = JSON.parse(File.read(File.join(mod_path, 'manifest.json')))
+      version = manifest['version']
+      zf = ZipFileGenerator.new(
+        mod_path,
+        File.join(zip_dir, "#{mod_id}-#{version}.zip")
+      )
+      zf.write
+    end
+  end
+
+  # A utility class for creating ZIP archives.
   class ZipFileGenerator
     def initialize(input_dir, output_file)
       @input_dir = input_dir
@@ -68,7 +76,7 @@ module Jekyll
 
       File.delete(@output_file) if File.exist?(@output_file)
       ::Zip::File.open(@output_file, ::Zip::File::CREATE) do |zipfile|
-        zipfile.mkdir File.basename(File.dirname(@input_dir))
+        zipfile.mkdir File.basename(@input_dir)
         write_entries entries, '', zipfile
       end
     end
@@ -89,40 +97,18 @@ module Jekyll
     end
 
     def recursively_deflate_directory(disk_file_path, zipfile, zipfile_path)
-      zipfile.mkdir File.join(File.basename(File.dirname(@input_dir)), zipfile_path)
+      zipfile.mkdir File.join(
+        File.basename(@input_dir), zipfile_path
+      )
       subdir = Dir.entries(disk_file_path) - %w[. ..]
       write_entries subdir, zipfile_path, zipfile
     end
 
     def put_into_archive(disk_file_path, zipfile, zipfile_path)
-      zipfile.get_output_stream(File.join(File.basename(File.dirname(@input_dir)), zipfile_path)) do |f|
+      zipfile.get_output_stream(
+        File.join(File.basename(@input_dir), zipfile_path)
+      ) do |f|
         f.write(File.open(disk_file_path, 'rb').read)
-      end
-    end
-  end
-
-  Jekyll::Hooks.register :site, :post_write do |site, _|
-    # Create a series of ZIP archives for every mod
-    Dir.glob '../mods/*' do |mod_path|
-      version_list = []
-      mod_id = File.basename(mod_path)
-      zip_dir = site.in_dest_dir(File.join('downloads', mod_id))
-      FileUtils.mkdir_p(zip_dir) unless File.directory?(zip_dir)
-
-      # Create a ZIP archive for every version, recording the list of versions for later
-      Dir.glob File.join(mod_path, '*.*.*') do |version_path|
-        version = File.basename version_path
-        version_list << version
-        zf = ZipFileGenerator.new(
-          version_path,
-          File.join(zip_dir, "#{mod_id}-#{version}.zip")
-        )
-        zf.write
-      end
-
-      # Write out a list of versions the client can query
-      File.open(File.join(zip_dir, "versions.json"), "w") do |f|
-        f.write({:versions => version_list}.to_json)
       end
     end
   end

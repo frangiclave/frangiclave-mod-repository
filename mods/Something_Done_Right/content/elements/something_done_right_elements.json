@@ -1,0 +1,222 @@
+{"elements":
+    [
+		{id: "readiness",
+		label: "Readiness",
+		description: "With this, I can embark on an expedition",
+		isAspect: true
+	},
+
+		{id: "preparationwork",
+            label: "A Collection of Maps",
+            aspects:{job:1},
+			slots: [{id:"Body",actionId: "work",required: {health:1}, description: "I must prepare my body, for the rigours of the journey."},
+					{id:"Intellect",actionId: "work",required: {reason:1}, description: "I must ready my mind, and sharpen my reflexes."},
+					{id:"Willpower",actionId: "work",required: {passion:1}, description: "I must hone my will, to see this expedition to its conclusion."},
+					{id:"Knowledge",actionId: "work",required: {lore:1}, description: "The rites through which I prepare myself. It shall determine what trials I am ready for."
+				}],
+            description: "I have been keeping notes on locations of interest. Perhaps I might even venture to some myself...",
+			unique:true
+	},
+
+	{
+        id: "fearinjury",
+            label: "A Delusion",
+            aspects:
+            {illhealth: 1,
+			  moth: 2,
+			  ingredient:1},
+			  			slots: [{id:"Medicines, or...",actionId:"dream",description: "A tincture of laudnum to ease the nerves...",required:{funds:1},actionId:"dream"},
+			{id:"...Erudition",description: "...but perhaps I could make sense of this myself.",required:{erudition:1},actionId:"dream"}],
+            description: "Recent experiences have left me checking over my shoulder. I need rest and quiet, if I am to collect myself. [Dreaming with a Delusion before the card fades will also allow you to recover Reason.]",
+			xtriggers: {restorehealth: reason,scar_ability:scar_lantern},
+			lifetime: 150,
+			decayTo: "fascination"
+	},
+
+	{
+        id: "dreadinjury",
+            label: "A Horror",
+            aspects:
+            {illhealth: 1,
+			  winter: 2,
+			  ingredient:1},
+			  			slots: [{id:"Medicines, or...",actionId:"dream",description: "A tincture of laudnum to ease the nerves...",required:{funds:1},actionId:"dream"},
+			{id:"...Glimmering",description: "...but perhaps I can overcome this alone.",required:{glimmering:1},actionId:"dream"}],
+            description: "Fear is holding me back. I need to focus myself, if I am to regain my fire. [Dreaming with a Horror before the card fades will also allow you to recover Passion.]",
+			xtriggers: {restorehealth: passion,scar_ability:scar_moth},
+			lifetime: 150,
+			decayTo: "dread"
+	},
+
+	{id: "preparedbundle",
+			label: "Preparations for an Expedition",
+			aspects:{mortal:1, job: 1, follower: 1},
+			description: "A collection of supplies and notes. With this I should be ready to depart on an expidition. Once I'm done, I can break it down by taking a rest.",
+
+	},
+
+		{id: "preparedbundleedgeminor",
+			label: "A Preparation of Edge (Minor)",
+			aspects:{readiness:1, job: 1, edge: 2, follower: 1},
+			description: "Supplies for a journey. A sharpened blade has pride of place within. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlewinterminor",
+			label: "A Preparation of Winter (Minor)",
+			aspects:{readiness:1, job: 1, winter: 2, follower: 1},
+			description: "Supplies for a journey. A bleached dove's bone has pride of place within. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleheartminor",
+			label: "A Preparation of Heart (Minor)",
+			aspects:{readiness:1, job: 1, heart: 2, follower: 1},
+			description: "Supplies for a journey. A patterned tambourine has pride of place within. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlegrailminor",
+			label: "A Preparation of Grail (Minor)",
+			aspects:{readiness:1, job: 1, grail: 2, follower: 1},
+			description: "Supplies for a journey. A bottle of red wine has pride of place within. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlemothminor",
+			label: "A Preparation of Moth (Minor)",
+			aspects:{readiness:1, job: 1, moth: 2, follower: 1},
+			description: "Supplies for a journey. A masquerade mask has pride of place within. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlelanternminor",
+			label: "A Preparation of Lantern (Minor)",
+			aspects:{readiness:1, job: 1, lantern: 2, follower: 1},
+			description: "Supplies for a journey. A bullseye lamp has pride of place within. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleforgeminor",
+			label: "A Preparation of Forge (Minor)",
+			aspects:{readiness:1, job: 1, forge: 2, follower: 1},
+			description: "Supplies for a journey. A craftsman's hammer has pride of place within. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleknockminor",
+			label: "A Preparation of Knock (Minor)",
+			aspects:{readiness:1, job: 1, knock: 2, follower: 1},
+			description: "Supplies for a journey. A large iron key has pride of place within. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlehistoriesminor",
+			label: "A Preparation of Histories (Minor)",
+			aspects:{readiness:1, job: 1, secrethistories: 2, follower: 1},
+			description: "Supplies for a journey. An annotated map has pride of place within. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleedgemoderate",
+			label: "A Preparation of Edge (Major)",
+			aspects:{readiness:1, job: 1, edge: 5, follower: 1},
+			description: "My luggage jangles when shifted, heavy with instruments of violence. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlewintermoderate",
+			label: "A Preparation of Winter (Major)",
+			aspects:{readiness:1, job: 1, winter: 5, follower: 1},
+			description: "My luggage contains fragments of endings. Of objects. Of stories. Of lives. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleheartmoderate",
+			label: "A Preparation of Heart (Major)",
+			aspects:{readiness:1, job: 1, heart: 5, follower: 1},
+			description: "My luggage rattles and shakes. A living thing is held inside. Its motion is power. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlegrailmoderate",
+			label: "A Preparation of Grail (Major)",
+			aspects:{readiness:1, job: 1, grail: 5, follower: 1},
+			description: "My luggage is full of fine wines and succulent meats. I, at least, won't go hungry. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlemothmoderate",
+			label: "A Preparation of Moth (Major)",
+			aspects:{readiness:1, job: 1, grail: 5, follower: 1},
+			description: "My luggage is stuffed with elaborate costumes, a diversity of skins. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlelanternmoderate",
+			label: "A Preparation of Lantern (Major)",
+			aspects:{readiness:1, job: 1, lantern: 5, follower: 1},
+			description: "My luggage is neatly organised, with tools of sight and navigation ready at hand. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleforgemoderate",
+			label: "A Preparation of Forge (Major)",
+			aspects:{readiness:1, job: 1, forge: 5, follower: 1},
+			description: "My luggage is weighed down with tools of shaping. Thankfully, the heat they use is weightless. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleknockmoderate",
+			label: "A Preparation of Knock (Major)",
+			aspects:{readiness:1, job: 1, knock: 5, follower: 1},
+			description: "My luggage has a full set of thieves tools, lockpicks and ropes, hidden beneath a false bottom. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlehistoriesmoderate",
+			label: "A Preparation of Histories (Major)",
+			aspects:{readiness:1, job: 1, secrethistories: 5, follower: 1},
+			description: "My luggage includes a variety of travel guides, though I have had to mark the interesting locations myself. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleedgemajor",
+			label: "A Preparation of Edge (Grand)",
+			aspects:{readiness:1, job: 1, edge: 10, follower: 1},
+			description: "It would take a well trained eye to spot the blades concealed inside my garments, or the dangerous fluidity of my movements. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlewintermajor",
+			label: "A Preparation of Winter (Grand)",
+			aspects:{readiness:1, job: 1, winter: 10, follower: 1},
+			description: "There is empty space in my luggage, I have only packed the meagerest of supplies. I will go cold. I will go hungry. As Winter dictates. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleheartmajor",
+			label: "A Preparation of Heart (Grand)",
+			aspects:{readiness:1, job: 1, heart: 10, follower: 1},
+			description: "They might think me for a tourist, with my bright clothes and cheerful manner. Whenever they look, I always smile back. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlegrailmajor",
+			label: "A Preparation of Grail (Grand)",
+			aspects:{readiness:1, job: 1, grail: 10, follower: 1},
+			description: "I have enlisted a porter to carry my luggage, bulging with silks and delicacies. If the need arises, they might serve as provisions too. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlemothmajor",
+			label: "A Preparation of Moth (Grand)",
+			aspects:{readiness:1, job: 1, moth: 10, follower: 1},
+			description: "I travel light, ready to leave whenever the fancy takes me. They will remember my presence, but never my face. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlelanternmajor",
+			label: "A Preparation of Lantern (Grand)",
+			aspects:{readiness:1, job: 1, lantern: 10, follower: 1},
+			description: "My clothes are bleached, and my pocket watch is finished to a mirror sheen. No secrets will be kept from my stern gaze. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleforgemajor",
+			label: "A Preparation of Forge (Grand)",
+			aspects:{readiness:1, job: 1, forge: 10, follower: 1},
+			description: "I shall keep my luggage away from inspectors, lest they mistake me an anarchist. They would not understand the volatile contents within. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundleknockmajor",
+			label: "A Preparation of Knock (Grand)",
+			aspects:{readiness:1, job: 1, knock: 10, follower: 1},
+			description: "The ring of keys is tucked into my clothes, and bandages hide the cut on my hand. Where no keys fit, the opening in my body shall suffice. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		{id: "preparedbundlehistoriesmajor",
+			label: "A Preparation of History (Grand)",
+			aspects:{readiness:1, job: 1, secrethistory: 10, follower: 1},
+			description: "The road beneath guides me, to the places where paths have been worn, red and raw, over the world's skins. We will not need a map. [This can take the place of a follower on an expedition. Once done, return to Work to restore your attributes.]",
+
+	},
+		 
+	]
+}

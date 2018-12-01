@@ -10,12 +10,7 @@ layout: page
 
         <div class="mod-detail mod-version"><strong>Latest Version:</strong> {{ page.mod.version | xml_escape }}</div>
 
-        <div class="mod-detail mod-install">
-            <strong>Install:</strong> Open the Frangiclave Mod Manager and type:<br/>
-            <pre>i {{ page.mod.id | xml_escape }}</pre>
-        </div>
-
-        <div class="mod-detail mod-download"><strong>Download (Manual):</strong> <a href="/downloads/{{ page.mod.id | escape }}/{{ page.mod.id | escape }}-{{ page.mod.version | escape }}.zip">{{ page.mod.id | xml_escape }}-{{ page.mod.version | xml_escape }}.zip</a></div>
+        <div class="mod-detail mod-download"><strong>Download:</strong> <a href="/downloads/{{ page.mod.id | escape }}/{{ page.mod.id | escape }}-{{ page.mod.version | escape }}.zip">{{ page.mod.id | xml_escape }}-{{ page.mod.version | xml_escape }}.zip</a></div>
     </div>
 
     <div class="mod-description_long">{{ page.mod.description_long | xml_escape | markdownify }}</div>

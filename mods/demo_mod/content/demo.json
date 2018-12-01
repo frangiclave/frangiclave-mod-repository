@@ -60,6 +60,12 @@
             "drawmessages": {},
             "defaultdrawmessages": {},
             "resetonexhaustion": true
+        },
+        {
+            "id": "acquaintances",
+            "extends": ["acquaintances"],
+            "spec$remove": ["saliba_a", "neville_a"],
+            "spec$append": ["neville_d"]
         }
     ],
 
@@ -86,7 +92,15 @@
                     "description": "A Key for the key, that all doors may unlock.",
                     "consumes": true
                 }
-            ]
+            ],
+            "aspects$extend": {
+                "auctionable": 36
+            }
+        },
+        {
+            "id": "saliba_a",
+            "deleted": true,
+            "comments": "No more Saliba. Only Neville."
         }
     ],
 
