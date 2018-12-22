@@ -1,0 +1,48 @@
+{
+    "elements": [
+      {
+        "id": "mp.test.initiator",
+        "label": "The Initiator",
+        "aspects": {"desire": 1},
+        "description": "Initiates the multiplayer recipes."
+      }
+    ],
+    "legacies": [
+      {
+        "extends": ["aspirant"],
+        "id": "aspirant",
+        "effects$extend": {
+          "mp.test.initiator": 1
+        },
+      },
+    ],
+    "recipes": [
+    {
+      "id": "mp.test.initiate",
+      "actionId": "work",
+      "label": "Send a verb away",
+      "startdescription": "Send a verb to another player.",
+      "description": "It is done.",
+      "requirements": {"mp.test.initiator": 1},
+      "alternativerecipes": [
+        {
+          "id": "mp.test.remote",
+          "chance": 100,
+          "additional": true,
+          "remote": true
+        }
+      ],
+      "warmup": 10,
+      "craftable": true
+    },
+    {
+      "id": "mp.test.remote",
+      "actionId": "remoteverb",
+      "label": "A delivery",
+      "startdescription": "A delivery for another player.",
+      "description": "Delivery complete.",
+      "warmup": 20,
+      "craftable": false
+    }
+  ]
+}
