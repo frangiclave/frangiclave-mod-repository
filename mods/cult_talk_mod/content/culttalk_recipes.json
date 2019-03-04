@@ -1,0 +1,156 @@
+ {"recipes":
+ [
+ 	{
+        id: "cult_talk_setup",
+        label: "Setting up cult business",
+        actionId: "cult_talk",
+        startdescription: "We're busy setting up this new location for our future plans.",
+        description: "We are set up and can begin work immediately.",
+        warmup: 60,
+    },
+	
+	
+	{
+		id: "expand_cult",
+		label:"Expand the cult infrastructure",
+		actionId: "explore",
+		startdescription: "We could manifest a stronger base of operations here, but this would permanently dedicate this location for that purpose.",
+		description: "We have started establishing a base of operations. Naturally the leadership will have move to a new, safer location.",
+		requirements: {hq: 1, society: 1, hq.temporary: -1},
+		effects: {hq: -1, hq.temporary: 1},
+		alternativerecipes:[
+			{id:"cult_talk_setup", chance:100, additional:true},
+		],
+		warmup: 60,
+		craftable: true,
+		maxexecutions: 1,
+	},
+	
+	
+	
+	{
+		id: "talktofollower_cult_talk",
+		label:"Discuss occult business with a Follower",
+		actionId: "cult_talk",
+		startdescription: "Significant conversations in a smoky meeting-room. [Currently only for forges, moths, and knocks.]",
+		description: ".",
+		requirements: {follower: 1},
+		alternativerecipes:[
+		
+			{id:"followeraction_craftworkhighforge_culttalk",chance:100},
+			{id:"followeraction_hoodwinkhighmoth_culttalk",chance:100},
+			{id:"followeraction_burglehighknock_culttalk",chance:100},
+
+			{id:"followeraction_craftworkmidforge_culttalk",chance:100},
+			{id:"followeraction_hoodwinkmidmoth_culttalk",chance:100},
+			{id:"followeraction_burglemidknock_culttalk",chance:100},
+
+			{id:"followeraction_craftworklowforge_culttalk",chance:100},
+			{id:"followeraction_hoodwinklowmoth_culttalk",chance:100},
+			{id:"followeraction_burglelowknock_culttalk",chance:100},
+
+		],
+		warmup: 60,
+		craftable: true
+	},
+
+
+
+	{
+		id: "followeraction_hoodwinkhighmoth_culttalk",
+		label: "Cult Business: Hoodwink",
+		actionId:"cult_talk",
+		startdescription:"My Skintwister's cunning is enough to part fools from their treasure as easily as picking pears in an orchard. (Although even a pear orchard has the occasional hazard. Wasps, perhaps.)",
+		description:".",
+		requirements: {moth:10,follower:1},
+		linked: [{id:"followeraction_hoodwinksuccess",chance:90},
+		{id:"followeraction_hoodwinkfailure",chance:100}
+		]
+	},
+	{
+		id: "followeraction_hoodwinkmidmoth_culttalk",
+		label: "Cult Business: Hoodwink",
+		actionId:"cult_talk",
+		startdescription:"My Disciple can probably use their talents to part fools from their treasures.",
+		requirements: {moth:5,follower:1},
+		linked: [{id:"followeraction_hoodwinksuccess",chance:70},
+		{id:"followeraction_hoodwinkfailure",chance:100}
+		]
+	},
+	{
+		id: "followeraction_hoodwinklowmoth_culttalk",
+		label: "Cult Business: Hoodwink",
+		actionId:"cult_talk",
+		startdescription:"My Believer might be able to part fools from their treasures... if they're lucky.",
+		requirements: {moth:1,follower:1},
+		linked: [{id:"followeraction_hoodwinksuccess",chance:30},
+		{id:"followeraction_hoodwinkfailure",chance:100}
+		]
+	},
+	
+	{
+		id: "followeraction_burglehighknock_culttalk",
+		label: "Cult Business: Burglary",
+		actionId:"cult_talk",
+		startdescription:"My Key should be capable of defeating any lock in this city.",
+		description:".",
+		requirements: {knock:10,follower:1},
+		linked: [{id:"followeraction_burglesuccess",chance:90},
+		{id:"followeraction_burglefailure",chance:100}
+		]
+		},
+
+		   {id: "followeraction_burglemidknock_culttalk",
+		   label: "Cult Business: Burglary",
+		actionId:"cult_talk",
+		startdescription:"My Disciple can probably use their talents to harvest treasures from the unsuspecting.",
+		requirements: {knock:5,follower:1},
+		linked: [{id:"followeraction_burglesuccess",chance:70},
+		{id:"followeraction_burglefailure",chance:100}
+		]
+		},
+			   {id: "followeraction_burglelowknock_culttalk",
+		   label: "Cult Business: Burglary",
+		actionId:"cult_talk",
+		startdescription:"My Believer might be able to harvest treasures from the unsuspecting... if they're lucky.",
+		requirements: {knock:1,follower:1},
+		linked: [{id:"followeraction_burglesuccess",chance:30},
+		{id:"followeraction_burglefailure",chance:100}
+		]
+	},
+	
+   {
+		id: "followeraction_craftworkhighforge_culttalk",
+		label: "Cult Business: Craftsmanship",
+		actionId:"cult_talk",
+		startdescription:"My Reshaper can earn funds in illegal laboratories and shadowy manufactories. Occasionally, something may go awry.",
+		description:".",
+		requirements: {forge:10,follower:1},
+		linked: [{id:"followeraction_craftworksuccess",chance:90},
+		{id:"followeraction_craftworkfailure",chance:100}
+		]
+		},
+
+		{id: "followeraction_craftworkmidforge_culttalk",
+		label: "Cult Business: Craftsmanship",
+		actionId:"cult_talk",
+		startdescription:"My Disciple can probably earn funds in illegal laboratories and shadowy manufactories - but there is a risk of accidents.",
+		requirements: {forge:5,follower:1},
+		linked: [{id:"followeraction_craftworksuccess",chance:70},
+		{id:"followeraction_craftworkfailure",chance:100}
+		]
+		},
+		   {id: "followeraction_craftworklowforge_culttalk",
+		label: "Cult Business: Craftsmanship",
+		actionId:"cult_talk",
+		startdescription:"My Believer might be able to earn funds in illegal laboratories and shadowy manufactories... if they're lucky.",
+		requirements: {forge:1,follower:1},
+		linked: [{id:"followeraction_craftworksuccess",chance:30},
+		{id:"followeraction_craftworkfailure",chance:100}
+		]
+	},
+	
+	
+	
+]
+}

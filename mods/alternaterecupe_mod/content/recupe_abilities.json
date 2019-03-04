@@ -1,0 +1,42 @@
+{"elements":
+    [
+		{
+         id: "fatigue",
+            label: "Health (Fatigued)",
+            aspects:
+            {illhealth: 1,heart:1},
+            description: "This card can't be used, but it will recover after a while. I can recover it faster by Dreaming.",
+			xtriggers: {restorehealth: health,damagehealth:injury,destroyhealth:decrepitude,fallsick:affliction,scarability:scar_heart, recupable:health},
+			induces:[{id:"recupe_wait",chance:100}],
+			icon:"health",
+			resaturate: true
+		},
+		{
+		id: "concentration",
+            label: "Reason [Dimmed]",
+			description: "My mind is weary. [This card can't be used, but it will recover after a while.]",	
+			icon:"reason",
+			xtriggers:{scarability:scar_lantern,topassion:passionexhausted, recupable:reason},
+			induces:[{id:"recupe_wait",chance:100}],
+			resaturate: true
+        },
+		{
+        id: "passionexhausted",
+            label: "Passion (Exhausted)",
+            description: "My passions burn low. [This card can't be used, but it will recover after a while.]",
+			icon:"passion",
+			xtriggers:{scarability:scar_moth,toreason:concentration, recupable:passion},
+			induces:[{id:"recupe_wait",chance:100}],
+			resaturate: true,
+			comments: "Added xtrigger and induction on these three."
+		},
+		
+		{
+        id: "recupable",
+            label: "Recupable",
+            description: "This can refresh mental and physical abilities.",
+			icon:"passion",
+			isAspect: true,
+		},
+	]
+};

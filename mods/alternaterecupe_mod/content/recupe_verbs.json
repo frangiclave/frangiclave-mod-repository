@@ -1,0 +1,8 @@
+{"verbs":[
+		{
+            "id": "recuperate",
+            "label": "Recuperate",
+            "description": "Regeneration at last.",
+			"atStart": false,
+        },
+]}

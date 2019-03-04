@@ -1,0 +1,80 @@
+ {"recipes":
+ [
+	{
+        id: "explorelocationbookdealer",
+        label: "Add to your Library",
+        actionId: "explore",
+        requirements: {locationbookdealer:1,funds:1},
+		effects: {funds: -1},
+		deckeffect: {"commontomes":1},
+        startdescription: "It takes time to sort the gold from the dross, the wheat from the chaff, the blood from the water. If I buy enough books, I'll find something interesting. \n\n [You can place multiple funds in the slot at once. Use Health to leave early.]",
+        description: "I've found something noteworthy.",
+		slots: [{id:"Funds",
+				required: {funds : 1, health: 1},
+				description: "My savings will have to go."
+				}],
+        warmup: 30,
+        craftable: true,
+		alternativerecipes: [
+		{id:"explorelocationbookdealer_leave_early", chance:100},
+		{id:"explorelocationbookdealer_leave_early_no_funds", chance:100},
+		{id:"explorelocationbookdealer_book", chance:100, additional:true, expulsion: {limit: 1, filter: {text: 1}}},],
+		linked:[
+			{id:"explorelocationbookdealer_exhausted",chance:100},
+			{id:"explorelocationbookdealer",chance:100},
+			]
+    },
+	{
+        id: "explorelocationbookdealer_book",
+        label: "Add to your Library",
+        actionId: "explore_book",
+        requirements: {funds: 1},
+		effects: {},
+        startdescription: "I've found something noteworthy.",
+        description: "I've found something noteworthy.",
+        warmup: 1,
+    },
+	{
+        id: "explorelocationbookdealer_leave_early",
+        label: "Add to your Library",
+        actionId: "explore",
+        requirements: {health: 1},
+		effects: {},
+        startdescription: "Right now there are more important things I need my money for than old books.",
+        description: "I've left Morland's shop to return another day.",
+        warmup: 0,
+    },
+	{
+        id: "explorelocationbookdealer_leave_early_no_funds",
+        label: "Add to your Library",
+        actionId: "explore",
+        requirements: {funds: -2},
+		effects: {funds: -1},
+		deckeffect: {"commontomes":1},
+        startdescription: "I'm running a little low on my pocket funds. I have just enough for one more antiquated novella.",
+        description: "I've left Morland's shop to return another day, with more money.",
+        warmup: 0,
+		linked:[
+			{id:"explorelocationbookdealer_exhausted",chance:100},]
+    },
+	
+],
+
+"elements":
+    [
+		{
+        id: "locationbookdealer",
+            label: "Morland's Shop",
+            aspects:{location: 1},
+			slots: [{id:"Cost",
+					required: {funds: 1},
+					actionId: "explore"
+					}
+				],
+            description: "The dim premises of Miss Morland, who deals in rare and sometimes dangerous books.",
+			unique:true,
+			xtriggers:{exhaustlocation:locationbookdealer_exhausted},
+			comments: "Removed 'consumes'."
+        },
+	]
+}

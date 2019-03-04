@@ -1,0 +1,10 @@
+{
+    "name": "Additional Cult Talk Verb Mod",
+    "author": "Destragon",
+    "version": "1.1.0",
+
+    "description": "Gives you a way to expand your cult and create a new verb to do cult business with.",
+    "description_long": "**Steam discussion thread:** https://steamcommunity.com/app/718670/discussions/0/1842440600617712246/\n\nTo unlock the verb tile, you first need to find a new HQ, then you can explore that HQ together with your cult card to expand your cult and create the new verb tile. This will only work once.\n\nThe mod gives you another reason to explore more HQs, gives some of your idle cultists another thing to do and gives you more opportunity to scar your cultists, if that's your thing.\n\nThe new verb tile currently only lets you do forge, moth, knock missions.",
+
+    "dependencies": []
+}
