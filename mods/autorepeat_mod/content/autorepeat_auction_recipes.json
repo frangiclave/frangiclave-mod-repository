@@ -1,0 +1,380 @@
+ {"recipes":
+ [
+	{
+        id: "explorelocationauctionhouse_loop",
+        label: "Auctions at Oriflamme's",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1},
+		effects: {},
+        startdescription: "I could attend another auction or sell another one of my eldritch finger paints. \n\n[Use Health to attend another auction.]",
+        description: "Enough excitement for today.",
+		slots: [{id:"Items",
+				required: {auctionable: 1, health: 1},
+				description: "Who would want this anyway?"
+				}],
+        warmup: 10,
+        alternativerecipes:
+		[
+			{id:"explorelocationauctionhouse_loop2", chance:100},
+			{id:"auctionentry6_loop", chance:100},
+			{id:"auctionentry5_loop", chance:100},
+			{id:"auctionentry4_loop", chance:100},
+			{id:"auctionentry3_loop", chance:100},
+			{id:"auctionentry2_loop", chance:100},
+			{id:"auctionentry1_loop", chance:100},
+
+		],
+    },
+	{
+        id: "explorelocationauctionhouse_loop2",
+        label: "Auctions at Oriflamme's",
+        actionId: "explore",
+        requirements: {health: 1},
+		effects: {},
+        startdescription: "It seems another auction that peaks my interest is just about to start.",
+        description: ".",
+        warmup: 0,
+		linked:
+		[
+			{id:"explorelocationauctionhouse_loop3", chance:100},
+		],
+		comments: "This is just to display the description. The expulsion effect doesn't work otherwise."
+    },
+	{
+        id: "explorelocationauctionhouse_loop3",
+        label: "Auctions at Oriflamme's",
+        actionId: "explore",
+		effects: {},
+        startdescription: "We perch on alarming Rietveld chairs in a windowless auction room with vividly burnt orange walls, waiting for the auctioneer to announce what he's offering. The reek of new paint makes the brain spin.",
+        description: ".",
+        warmup: 0,
+        alternativerecipes:
+		[
+			{id: "auction_health_return", chance:100, additional: true, expulsion: {limit: 1, filter: {health: 1}}},
+		],
+		linked:
+		[
+			{id:"explorelocationauctionhouse", chance:100},
+		],
+    },
+	
+	
+	{
+        id: "auctionentry6_loop",
+        label: "Sell Something of Great Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:6},
+		startdescription: "Few of the customer at Oriflamme's are students of the invisible arts. But even laymen will recognise this as something extraordinary. [Sell with caution. There's no way to get it back.]",
+        description: ".",
+        warmup: 0,
+		linked:
+		[
+			{id:"auctionentry6", chance:100},
+		],
+		comments: "This is just to display the description."
+    },
+	{
+        id: "auctionentry5_loop",
+        label: "Sell Something of Rare Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:5},
+		startdescription: "Few of the customer at Oriflamme's are students of the invisible arts. They'll buy tools of power as trophies or curiosities, without any idea of their true value. But this is obviously something rare. [Sell with caution. There's no way to get it back.]",
+        description: ".",
+        warmup: 0,
+		linked:
+		[
+			{id:"auctionentry5", chance:100},
+		],
+		comments: "This is just to display the description."
+    },
+	{
+        id: "auctionentry4_loop",
+        label: "Sell Something of Significant Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:4},
+		startdescription: "Few of the customer at Oriflamme's are students of the invisible arts. They'll buy tools of power as trophies or curiosities, without any idea of their true value. But this will get their attention. [Sell with caution. There's no way to get it back.]",
+        description: ".",
+        warmup: 0,
+		linked:
+		[
+			{id:"auctionentry4", chance:100},
+		],
+		comments: "This is just to display the description."
+    },
+	{
+        id: "auctionentry3_loop",
+        label: "Sell Something of Real Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:3},
+		startdescription: "This unusual item will definitely earn you some funds. [Sell with caution. There's no way to get it back.]",
+        description: ".",
+        warmup: 0,
+		linked:
+		[
+			{id:"auctionentry3", chance:100},
+		],
+		comments: "This is just to display the description."
+    },
+	{
+        id: "auctionentry2_loop",
+        label: "Sell Something of Some Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:2},
+		startdescription: "This curiosity will earn you some funds. [Sell with caution. There's no way to get it back.]",
+        description: ".",
+        warmup: 0,
+		linked:
+		[
+			{id:"auctionentry2", chance:100},
+		],
+		comments: "This is just to display the description."
+    },
+	{
+        id: "auctionentry1_loop",
+        label: "Sell Something of Minimal Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:1},
+        startdescription: "This oddity is probably worth something, but it's hard to be sure.",
+        description: ".",
+        warmup: 0,
+		linked:
+		[
+			{id:"auctionentry1", chance:100},
+		],
+		comments: "This is just to display the description."
+    },
+	
+	
+   {
+        id: "auction_health_return",
+        label: "I've found a new auction",
+        actionId: "explore_health_return",
+        startdescription: "I'm searching for another auction.",
+        description: "Could this be what I'm looking for?",
+        warmup: 1,
+   },
+	
+	
+	
+	{
+		id:"auctionfailure",
+		actionId:"explore",
+		label: "I haven't won the auction",
+		effects:{text:-1,tool:-1,ingredient:-1},
+		startdescription:".",
+		description:"The auction is over. The lot has gone on elsewhere. I retain my funds.",
+		warmup:0,
+		linked:
+		[
+			{id:"auctionfailure2", chance:100},
+		],
+   },
+	{
+		id:"auctionfailure2",
+		actionId:"explore",
+		label: "I haven't won the auction",
+		aspects: {restore:1},
+		startdescription:".",
+		description:"The auction is over. The lot has gone on elsewhere. I retain my funds.",
+		warmup:0,
+		linked:
+		[
+			{id:"auctionfailure_expulse", chance:100},
+		],
+		comments: "This is because the funds would be removed otherwise because they are ingredients."
+   },
+	{
+		id:"auctionfailure_expulse",
+		actionId:"explore",
+		label: "I haven't won the auction",
+		startdescription:".",
+		description:"The auction is over. The lot has gone on elsewhere. I retain my funds.",
+		warmup:0,
+        alternativerecipes:
+		[
+			{id: "auctionfailure_delivery", chance:100, additional: true, expulsion: {limit: 100, filter: {funds: 1}}},
+			{id: "auctionfailure_delivery_no_bid", chance:100, additional: true},
+		],
+		linked:
+		[
+			{id:"explorelocationauctionhouse_loop", chance:100},
+		],
+		comments: "This is because expulse effects don't work on an xtrigger card on the same recipe."
+   },
+   {
+        id: "auctionfailure_delivery",
+        label: "I haven't won the auction",
+        actionId: "explore_auction_return",
+        startdescription: "The auction is over. The lot has gone on elsewhere. I retain my funds.",
+        description: "The auction is over. The lot has gone on elsewhere. I retain my funds.",
+		requirements: {funds: 1},
+        warmup: 10,
+   },
+   {
+        id: "auctionfailure_delivery_no_bid",
+        label: "I haven't won the auction",
+        actionId: "explore_auction_return",
+        startdescription: "The auction is over. The lot vanishes forever. It was nothing worth my attention either way.",
+        description: "The auction is over. The lot vanishes forever. It was nothing worth my attention either way.",
+		requirements: {funds: -1},
+        warmup: 10,
+   },
+   
+   
+   {
+        id: "auctionsuccess",
+        label: "I've won the auction!",
+        actionId: "explore",
+		effects: {funds:-100,bid:-100},
+        startdescription: ".",
+        description: "The auctioneer makes a note of my name, and signals one of the attendants. I have my prize. I hope it's worth it.",
+        warmup: 0,
+        alternativerecipes:
+		[
+			{id: "auction_delivery2", chance:100, additional: true, expulsion: {limit: 1, filter: {text: 1, tool: 1, ingredient: 1, funds: -1}}},
+		],
+		linked:
+		[
+			{id:"explorelocationauctionhouse_loop", chance:100},
+		],
+		comments: "The auction item should be inherited from the linking recipe."
+   },
+   {
+        id: "auction_delivery2",
+        label: "I've won the auction!",
+        actionId: "explore_auction_return",
+        startdescription: "The auctioneer makes a note of my name, and signals one of the attendants. I have my prize. I hope it's worth it.",
+        description: "The auctioneer makes a note of my name, and signals one of the attendants. I have my prize. I hope it's worth it.",
+        warmup: 10,
+   },
+   
+	{
+        id: "auctioncleanup",
+        label: "The Auction is Complete",
+        actionId: "explore",
+        startdescription: ".",
+		description: ".",
+		 effects:{auctionable:-99},
+        warmup:0,
+        alternativerecipes:
+		[
+			{id: "auctioncleanup_delivery", chance:100, additional: true, expulsion: {limit: 100, filter: {funds: 1}}},
+			{id: "auctioncleanup_delivery_no_funds", chance:100, additional: true},
+		],
+		linked:
+		[
+			{id:"explorelocationauctionhouse_loop", chance:100},
+		],
+    },
+   {
+        id: "auctioncleanup_delivery",
+        label: "The Auction is Complete",
+        actionId: "explore_auction_return",
+        startdescription: "The auctioneer's gavel bangs. My item has sold.",
+        description: "The auctioneer's gavel bangs. My item has sold.",
+		requirements: {funds: 1},
+        warmup: 10,
+   },
+   {
+        id: "auctioncleanup_delivery_no_funds",
+        label: "The Auction is Complete",
+        actionId: "explore_auction_return",
+        startdescription: "The auctioneer's gavel bangs. My item has sold, but for a sum so trifling as not to be worth recording.",
+        description: "The auctioneer's gavel bangs. My item has sold, but for a sum so trifling as not to be worth recording.",
+		requirements: {funds: -1},
+        warmup: 10,
+   },
+	
+   
+   
+	{
+        id: "auctionbuy",
+        label: "Bid in an Auction",
+        actionId: "explore",
+		effects: {},
+		slots:[{id:"Bid",required: {funds:1}}],
+        startdescription: "A crowd of pinched faces, glinting eyes. Who will bid? [The item at auction is visible on the right. It will be gone forever if the auction is lost.]",
+        description: ".",
+        warmup: 20,
+		alternativerecipes:[{id:"playerincreasedbid",chance:100}],
+		linked:[{id:"auctionfailure",chance:100}],
+		comments: "The auction item should be inherited from the linking recipe. If this event completes, the auction has failed and the item is removed. NB the auctioncomplete aspect, which converts existing bids back into funds."
+	},
+ 	{
+        id: "auctionentry6",
+        label: "Sell Something of Great Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:6},
+        effects: {funds:20},
+	linked:[{id:"auctionsell_increasegrand",chance:30},
+	{id:"auctioncleanup",chance:100}],
+		startdescription: "Few of the customer at Oriflamme's are students of the invisible arts. But even laymen will recognise this as something extraordinary. [Sell with caution. There's no way to get it back.]",
+        warmup:20,
+        craftable: true
+    },
+		 	{
+        id: "auctionentry5",
+        label: "Sell Something of Rare Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:5},
+        effects: {funds:16},
+	linked:[{id:"auctionsell_increasemajor",chance:30},
+	{id:"auctioncleanup",chance:100}],
+		startdescription: "Few of the customer at Oriflamme's are students of the invisible arts. They'll buy tools of power as trophies or curiosities, without any idea of their true value. But this is obviously something rare. [Sell with caution. There's no way to get it back.]",
+        warmup:20,
+        craftable: true
+    },
+			 	{
+        id: "auctionentry4",
+        label: "Sell Something of Significant Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:4},
+        effects: {funds:8},
+	linked:[{id:"auctionsell_increasemajor",chance:30},
+	{id:"auctioncleanup",chance:100}],
+		startdescription: "Few of the customer at Oriflamme's are students of the invisible arts. They'll buy tools of power as trophies or curiosities, without any idea of their true value. But this will get their attention. [Sell with caution. There's no way to get it back.]",
+        warmup:20,
+        craftable: true
+    },
+			 	{
+        id: "auctionentry3",
+        label: "Sell Something of Real Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:3},
+        effects: {funds:4},
+	linked:[{id:"auctionsell_increaseminor",chance:30},
+	{id:"auctioncleanup",chance:100}],
+		startdescription: "This unusual item will definitely earn you some funds. [Sell with caution. There's no way to get it back.]",
+        warmup:20,
+        craftable: true
+    },
+			 	{
+        id: "auctionentry2",
+        label: "Sell Something of Some Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:2},
+        effects: {funds:2},
+	linked:[{id:"auctionsell_increaseminor",chance:30},
+	{id:"auctioncleanup",chance:100}],
+		startdescription: "This curiosity will earn you some funds. [Sell with caution. There's no way to get it back.]",
+        warmup:20,
+        craftable: true
+    },
+			 	{
+        id: "auctionentry1",
+        label: "Sell Something of Minimal Value",
+        actionId: "explore",
+        requirements: {locationauctionhouse:1,auctionable:1},
+        effects: {funds:1},
+	linked:[{id:"auctionsell_increasepetty",chance:30},
+	{id:"auctionsell_worthless",chance:30},
+	{id:"auctioncleanup",chance:100}],
+		startdescription: "This oddity is probably worth something, but it's hard to be sure.",
+        warmup:20,
+        craftable: true
+    },
+   
+   
+	
+]
+}

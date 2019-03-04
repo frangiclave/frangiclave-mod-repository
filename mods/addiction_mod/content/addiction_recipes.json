@@ -1,0 +1,211 @@
+ {"recipes":
+ [
+ 	{
+        id: "dreamfunds",
+        label: "Purchase a Tincture of Opium",
+        actionId: "dream",
+        requirements: {funds:1},
+		effects: {contentment:1,funds:-1},
+		startdescription: "In times of especial crisis, I might visit a discreet pharmacist, to purchase a tincture of opium and make my dreams sweet. But only in times of especial crisis. [This is an expensive and risky way to gain Contentment. It might provoke sickness or despair.]",
+        description: "Oh, that deep peace. But I should not do this again.",
+        warmup: 30,
+        craftable: true,
+		alternativerecipes: [
+		{id:"grailinduction", chance:30, additional:true},
+		{id:"addiction_initial", chance:20, additional:true}]
+    },
+	
+	{
+        id: "addiction_initial",
+        label: "Addiction arose",
+		startdescription: "It happened long before I could take note. A minuscule force at first, it rapidly cemented, then grew beyond my control. Now my habit threatens to eclipse me.",
+        description: ".",
+        actionId: "addiction",
+		slots: [{id:"Help",
+				required: {romanticinterest: 1},
+				description: "Maybe there is someone who could drag me out of this hole."
+				}],
+        warmup: 60,
+		alternativerecipes: [
+		{id:"addiction_lover", chance:100},],
+		linked: [
+		{id:"addiction_funds", chance:33},
+		{id:"addiction_alleys", chance:50},
+		{id:"addiction_sickness", chance:100},]
+    },
+	{
+        id: "addiction",
+        label: "Addiction",
+		startdescription: "Addiction has its tireless grip around me. The chaos will not cease.",
+        description: ".",
+        actionId: "addiction",
+		slots: [{id:"Help",
+				required: {romanticinterest: 1},
+				description: "Maybe there is someone who could drag me out of this hole."
+				}],
+        warmup: 60,
+		alternativerecipes: [
+		{id:"addiction_lover", chance:100},],
+		linked: [
+		{id:"addiction_funds", chance:25},
+		{id:"addiction_alleys", chance:33},
+		{id:"addiction_sickness", chance:50},
+		{id:"addiction_end", chance:100}]
+    },
+	{
+        id: "addiction_lover",
+        label: "Addiction: Help",
+		startdescription: "I don't have to fight this battle alone. My lover has promised to be my guide back to sobriety.",
+        description: ".",
+        actionId: "addiction",
+		requirements: {romanticinterest: 1},
+        warmup: 0,
+		linked: [
+		{id:"addiction_lover2", chance:100},]
+    },
+	{
+        id: "addiction_lover2",
+        label: "Addiction: Help",
+		startdescription: "'I will stay with you until your mind is clear again. Don't you worry, my love. Remember, focus on what is truly important.'",
+        description: ".",
+        actionId: "addiction",
+		requirements: {romanticinterest: 1},
+        warmup: 60,
+		linked: [
+		{id:"addiction_lover2", chance:50},
+		{id:"addiction_lover_end", chance:100},]
+    },
+	{
+        id: "addiction_lover_end",
+        label: "Addiction: Help",
+		startdescription: "'I will stay with you until your mind is clear again. Don't you worry, my love. Remember, focus on what is truly important.'",
+        description: "It took some dedication, but thanks to my lover, I believe I am able to stand on my own feet once again.",
+        actionId: "addiction",
+		deckeffect: {"roserewards": 1},
+        warmup: 0,
+    },
+	{
+        id: "addiction_funds",
+        label: "Addiction: Need",
+		startdescription: "No, I just can't help it. I need it. Now!",
+        description: ".",
+        actionId: "addiction",
+		effects: {funds: -1},
+		slots: [{id:"Funds",
+				required: {funds : 1},
+				greedy: true,
+				noanim: false,
+				description: "My savings will have to go."
+				}],
+        warmup: 30,
+		alternativerecipes: [
+		{id:"addiction_funds_despair", chance:100, additional:true},],
+		linked: [
+		{id:"addiction", chance:100}]
+    },
+	{
+        id: "addiction_funds_despair",
+        label: "Addiction: Need",
+		startdescription: "I don't have the money to assuage my urges. How can I live like this?",
+        description: "I don't have the money to assuage my urges. How can I live like this?",
+        actionId: "addiction2",
+		requirements: {funds: -1},
+        warmup: 1,
+		alternativerecipes: [
+		{id:"despairrisk", chance:100, additional:true},],
+    },
+	{
+        id: "addiction_alleys",
+        label: "Addiction: Dark streets",
+		startdescription: "I am restless and must visit places that no one who values their status should be seen at.",
+        description: ".",
+        actionId: "addiction",
+        warmup: 30,
+		alternativerecipes: [
+		{id:"addiction_alleys2", chance:100, additional:true},
+		],
+		linked: [
+		{id:"addiction",chance:100}]
+    },
+	{
+        id: "addiction_alleys2",
+        label: "Addiction: Dark streets",
+		startdescription: "I am restless and must visit places that no one who values their status should be seen at.",
+        description: ".",
+        actionId: "addiction2",
+        warmup: 1,
+		linked: [
+		{id:"addiction_alleys_notoriety", chance:40},
+		{id:"addiction_alleys_streets", chance:58},
+		{id:"addiction_alleys_corpse", chance:100},]
+    },
+	{
+        id: "addiction_alleys_notoriety",
+        label: "Addiction: Dark streets",
+		startdescription: "My cravings have gotten me into the wrong parts of town.",
+        description: "My cravings have gotten me into the wrong parts of town. Stumbling and with clouded mind I cannot protect myself from the suspicious eyes of the public.",
+        actionId: "addiction2",
+		effects: {notoriety: 1},
+        warmup: 0,
+    },
+	{
+        id: "addiction_alleys_streets",
+        label: "Addiction: Dark streets",
+		startdescription: "My cravings have gotten me into the wrong parts of town.",
+        description: "It might seem odd, but my condition has beneficially led me to pick up some useful knowledge on the layout of the city's darker corners.",
+        actionId: "addiction2",
+		effects: {locationstreetsstrange: 1},
+        warmup: 0,
+    },
+	{
+        id: "addiction_alleys_corpse",
+        label: "Addiction: Dark streets",
+		startdescription: "My cravings have gotten me into the wrong parts of town.",
+        description: "My mind is a haze. When I came to, I found myself next to a scarcely dressed dead body with no recollection of how I or it had gotten here.",
+        actionId: "addiction2",
+		effects: {corpse: 1},
+        warmup: 0,
+    },
+	{
+        id: "addiction_sickness",
+        label: "Addiction: Weak body",
+		startdescription: "I'm filled with pain and my eyes are unable to see what is real anymore.",
+        description: ".",
+        actionId: "addiction",
+		alternativerecipes: [
+		{id:"sickness2", chance:100, additional:true}],
+        warmup: 30,
+		linked: [
+		{id:"addiction",chance:100}]
+    },
+	{
+		id: "sickness2",
+        label: "Sickness",
+        actionId: "illhealth",
+		extantreqs: {apostlegrail.pillar2.dormant:-1},
+				slots: [{id:"Affliction",
+					required: {health: 1,fatigue:1},
+					greedy: true
+		}],
+		aspects:{fallsick:1},
+		alternativerecipes:
+		[
+		{id: "deathofthebody",chance:100}],
+        startdescription: "I've become unwell! [If an illness cannot consume Health, it will kill you.]",
+        description: "The sickness has ravaged my body.",
+        warmup: 60,
+		comments:"This is a slightly altered copy of the core sickness recipe",
+    },
+	{
+        id: "addiction_end",
+        label: "Addiction: Clear mind",
+		startdescription: "I've escaped. I feel like I'm back in control of my body. I can only hope I will not have to experience this again.",
+        description: "I've escaped. I feel like I'm back in control of my body. I can only hope I will not have to experience this again.",
+        actionId: "addiction",
+		effects: {fleeting: 1},
+        warmup: 1,
+
+    },
+	
+]
+}

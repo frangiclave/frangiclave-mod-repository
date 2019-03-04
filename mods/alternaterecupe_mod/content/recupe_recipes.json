@@ -1,0 +1,131 @@
+ {"recipes":
+ [
+ 	{
+        id: "recupe_wait",
+        label: "I am rested",
+        actionId: "recuperate",
+        startdescription: "I feel like I can take on the world right now, but when I need to rest, I can do it here. In the meantime, I should make use of my abilities.",
+        description: ".",
+        warmup: 12,
+		slots: [{id:"Exhaustion",
+					required: {fatigue : 1, concentration: 1, passionexhausted: 1},
+				greedy: true,
+				noanim: true,
+				description: "Exhausted, but not yet lost."
+				}],
+		linked: [
+			{id: "recupe_health_desc", chance:100},
+			{id: "recupe_reason_desc", chance:100},
+			{id: "recupe_passion_desc", chance:100},
+			{id: "recupe_wait", chance:100}],
+		
+		comments: "Gathers cards and sends them to be recuperated. I'd like this to be on a shorter loop, but the sound would get annoying."
+    },
+	
+   {
+        id: "recupe_health_desc",
+        label: "Recuperating health",
+        startdescription: "My body is tired. I will rest for a while.",
+		description: ".",
+        actionId: "recuperate",
+        requirements: {fatigue: 1},
+		aspects: {recupable: 1},
+		warmup:50,
+		linked: [{id: "recupe_health_expulse", chance:100}],
+		comments: "Mainly for displaying the description."
+	},
+   {
+        id: "recupe_health_expulse",
+        label: "Recuperating health",
+        startdescription: ".",
+		description: ".",
+        actionId: "recuperate",
+		warmup:0,
+        alternativerecipes:
+		[
+		{id: "recupe_health", chance:100, additional: true, expulsion: {limit: 1, filter: {health : 1}}},
+		],
+		linked: [{id: "recupe_wait", chance:100}],
+		comments: "Required for the expulsion."
+	},
+   {
+        id: "recupe_health",
+        label: "Recuperated health",
+        startdescription: "My body is tired. I will rest for a while.",
+		description: "I feel refreshed.",
+        actionId: "recuperate2",
+		warmup:1,
+	},
+	
+   {
+        id: "recupe_reason_desc",
+        label: "Recuperating reason",
+        startdescription: "My mind is blank. It is too early to handle these complex problems.",
+		description: ".",
+        actionId: "recuperate",
+        requirements: {concentration: 1},
+		aspects: {recupable: 1},
+		warmup:50,
+		linked: [{id: "recupe_reason_expulse", chance:100}],
+		comments: "For displaying the description."
+	},
+   {
+        id: "recupe_reason_expulse",
+        label: "Recuperating reason",
+        startdescription: ".",
+		description: ".",
+        actionId: "recuperate",
+		warmup:0,
+        alternativerecipes:
+		[
+		{id: "recupe_reason", chance:100, additional: true, expulsion: {limit: 1, filter: {reason: 1}}},
+		],
+		linked: [{id: "recupe_wait", chance:100}],
+		comments: "This is required for expulsing the card. I tried to first expulse and then xtrigger afterwards, but that left a spooky ghost card behind, probably because requirements are checked before expulsions happen."
+	},
+   {
+        id: "recupe_reason",
+        label: "Recuperated reason",
+        startdescription: "My mind is blank. It is too early to handle these complex problems.",
+		description: "I can think clearly again.",	
+        actionId: "recuperate2",
+		warmup:1
+	},
+	
+   {
+        id: "recupe_passion_desc",
+        label: "Recuperating passion",
+        startdescription: "I don't feel like doing much at all. Rest will do me good.",
+		description: ".",	
+        actionId: "recuperate",
+        requirements: {passionexhausted: 1},
+		aspects: {recupable: 1},
+		warmup:50,
+		linked: [{id: "recupe_passion_expulse", chance:100}],
+		comments: "For displaying the description."
+	},
+   {
+        id: "recupe_passion_expulse",
+        label: "Recuperating passion",
+        startdescription: ".",
+		description: ".",
+        actionId: "recuperate",
+		warmup:0,
+        alternativerecipes:
+		[
+		{id: "recupe_passion", chance:100, additional: true, expulsion: {limit: 1, filter: {passion: 1}}},
+		],
+		linked: [{id: "recupe_wait", chance:100}],
+		comments: "This is required for expulsing the card. I tried to first expulse and then xtrigger afterwards, but that left a spooky ghost card behind, probably because requirements are checked before expulsions happen."
+	},
+   {
+        id: "recupe_passion",
+        label: "Recuperated passion",
+        startdescription: "I don't feel like doing much at all. Rest will do me good.",
+		description: "The fire in my heart has returned.",	
+        actionId: "recuperate2",
+		warmup:1
+	},
+	
+]
+}

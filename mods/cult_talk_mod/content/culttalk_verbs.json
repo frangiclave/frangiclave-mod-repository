@@ -1,0 +1,12 @@
+{"verbs":[
+		{
+            "id": "cult_talk",
+            "label": "Cult Business",
+            "description": "Sometimes you can't get around a little dirty work. \n\nYou can tell <sprite name=forge>, <sprite name=moth>, <sprite name=knock> cult members to go on missions here.",
+			"atStart": false,
+			slots: [{id:"follower",label:"Follower",
+				description: "One of us.",
+				required:{follower: 1},
+				}]
+        },
+]}
