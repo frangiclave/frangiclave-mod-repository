@@ -9,21 +9,44 @@
         warmup: 60,
     },
 	
-	
 	{
 		id: "expand_cult",
 		label:"Expand the cult infrastructure",
 		actionId: "explore",
-		startdescription: "We could manifest a stronger base of operations here, but this would permanently dedicate this location for that purpose.",
-		description: "We have started establishing a base of operations. Naturally the leadership will have move to a new, safer location.",
-		requirements: {hq: 1, society: 1, hq.temporary: -1},
-		effects: {hq: -1, hq.temporary: 1},
+		startdescription: "We could manifest a stronger base of operations here, but this would permanently dedicate this location to that purpose and it will require at least a Bronze Spintria. [This can only be done once.]",
+		description: ".",
+		requirements: {base_potential: 1, society: 1, hq.temporary: -1, compensationvalue: 4},
+		effects: {compensationvalue: -1},
 		alternativerecipes:[
 			{id:"cult_talk_setup", chance:100, additional:true},
 		],
 		warmup: 60,
 		craftable: true,
 		maxexecutions: 1,
+		linked: [
+			{id:"expand_cult_hq", chance:100},
+			{id:"expand_cult_potential", chance:100}
+		],
+	},
+	{
+		id: "expand_cult_hq",
+		label:"Expand the cult infrastructure",
+		actionId: "explore",
+		startdescription: ".",
+		description: "We have started establishing a base of operations here. Naturally the leadership will have to move to a new, safer location.",
+		requirements: {hq: 1},
+		effects: {hq: -1, hq.temporary: 1},
+		warmup: 0,
+	},
+	{
+		id: "expand_cult_potential",
+		label:"Expand the cult infrastructure",
+		actionId: "explore",
+		startdescription: ".",
+		description: "We have started establishing a base of operations at the location.",
+		requirements: {hq.potential: 1},
+		effects: {hq.potential: -1},
+		warmup: 0,
 	},
 	
 	
@@ -65,7 +88,8 @@
 		requirements: {moth:10,follower:1},
 		linked: [{id:"followeraction_hoodwinksuccess",chance:90},
 		{id:"followeraction_hoodwinkfailure",chance:100}
-		]
+		],
+		comments: "These have the cult removed from the requirements and have the actionId changed."
 	},
 	{
 		id: "followeraction_hoodwinkmidmoth_culttalk",
