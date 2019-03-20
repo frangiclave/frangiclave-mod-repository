@@ -1,0 +1,63 @@
+{"verbs":[
+	{
+		"id": "accuse",
+		"label": "Accuse",
+		"description": "Use this to accuse cultists of being traitors.",
+		slots: [{
+			id:"accuseslot", label:"Accused",
+			description: "Well, who will it be?",
+			required: {ftt_start_card: 1, follower: 1, ftt_dead_traitor: 1, cheat: 1},
+			forbidden: {}
+		},],
+		verbicon: work,
+	},
+
+	{
+		"id": "tasks",
+		"label": "Tasks",
+		"description": "Work needs to be done.",
+		slots: [{
+			id:"task", label:"Task",
+			description: "We will have to deal with this.",
+			required: {task: 1},
+			forbidden: {}
+		},],
+	},
+	
+	{
+		"id": "extra_tasks",
+		"label": "Extra work",
+		"description": "Use this to send cultists to deal with extra tasks or to use certain bonus items.",
+		slots: [{
+			id:"task", label:"Extra work",
+			description: "Let's deal with this.",
+			required: {bonus: 1, bonustask: 1,},
+			forbidden: {}
+		},],
+	},
+	
+	{
+		"id": "ftt_investigator",
+		"label": "Investigations",
+		"description": "The Suppression Bureau always seems to be one step ahead of you.",
+	},
+	
+	{
+		"id": "ftt_time",
+		"label": "Time",
+		"description": "Time is always advancing.",
+	},
+	
+	
+	{
+		"id": "ftt_debug",
+		"label": "Debug",
+		"description": "Place cultists to see if they are traitors.",
+		slots: [{
+			id:"cultist", label:"Cultist",
+			description: "Are you a traitor?",
+			required: {traitor: 1},
+			forbidden: {}
+		},],
+	},
+]}

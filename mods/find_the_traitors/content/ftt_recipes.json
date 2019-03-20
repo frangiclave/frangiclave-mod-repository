@@ -1,0 +1,416 @@
+{"recipes":[
+	
+	 {
+        id: "ftt_accuse",
+        label: "Accusation",
+        actionId: "accuse",
+        startdescription: "If we suspect someone to be a traitor, we can <i>deal</i> with them here, but if the suspicions turn out wrong, the cult is not going to be happy with your decisionmaking. \n\n<color=red>This will permanently eliminate this cultist.</color>",
+        description: ".",
+		requirements: {follower: 1},
+        warmup: 60,
+        craftable: true,
+		slots: [{
+			id:"bonus", label:"Bonus",
+			description: "Bonus",
+			required: {ftt_start_card: 1},
+			forbidden: {}
+		}],
+		linked: [
+			{id: "ftt_accuse_traitor", chance: 100},
+			{id: "ftt_accuse_no_traitor", chance: 100},
+		] 
+    },
+	 {
+        id: "ftt_accuse_traitor",
+        label: "Accusation correct",
+        actionId: "accuse",
+        startdescription: ".",
+        description: "You were correct.",
+		requirements: {traitor: 1},
+		effects: {follower: -1, ftt_dead_traitor: 1, bonus_red_herring: 1},
+        warmup: 0,
+    },
+	 {
+        id: "ftt_accuse_no_traitor",
+        label: "Accusation wrong",
+        actionId: "accuse",
+        startdescription: ".",
+        description: "You were wrong.",
+		requirements: {traitor: -1},
+		effects: {follower: -1, ftt_bad_judgement: 1},
+        warmup: 0,
+    },
+	 {
+        id: "ftt_accuse_win",
+        label: "You've found every traitor!",
+        actionId: "accuse",
+        startdescription: "Now that you've managed to plug all leaks in your organisation, your power will continue to grow in secrecy and your ultimate goals creep ever closer.",
+        description: "YOU HAVE WON",
+		requirements: {ftt_win: 3},
+        warmup: 10,
+		craftable: true,
+		ending: "ftt_victory",
+		signalEndingFlavour: Grand
+    },
+	
+	 {
+        id: "ftt_contradiction",
+        label: "Investigating a contradiction",
+        actionId: "extra_tasks",
+        startdescription: "Two of your cultists give contradicting statements about recent happenings. If they really disagree, then one of them will have to be a traitor. If it turns out they actually agree, then they are both loyal ... or both traitors.",
+        description: ".",
+		requirements: {bonus_contradiction: 1, follower: 2},
+		effects: {bonus_contradiction: -1},
+        warmup: 60,
+		craftable: true,
+		linked: [
+			{id: "ftt_contradiction_no1", chance: 100},
+			{id: "ftt_contradiction_no2", chance: 100},
+			{id: "ftt_contradiction_yes", chance: 100},
+		]
+    },
+	 {
+        id: "ftt_contradiction_no1",
+        label: "Investigating a contradiction",
+        actionId: "extra_tasks",
+        startdescription: ".",
+        description: "The cultists are agreeing with each other after all. That means they are both loyal ... or both traitors.",
+		requirements: {traitor: -1},
+        warmup: 0,
+    },
+	 {
+        id: "ftt_contradiction_no2",
+        label: "Investigating a contradiction",
+        actionId: "extra_tasks",
+        startdescription: ".",
+        description: "The cultists are agreeing with each other after all. That means they are both loyal ... or both traitors.",
+		requirements: {traitor: 2},
+        warmup: 0,
+    },
+	 {
+        id: "ftt_contradiction_yes",
+        label: "Investigating a contradiction",
+        actionId: "extra_tasks",
+        startdescription: ".",
+        description: "The cultists are in disagreement. One of them is a traitor.",
+		requirements: {traitor: 1},
+        warmup: 0,
+    },
+	
+	
+	
+	{
+        id: "ftt_time_loop",
+        label: "Time",
+        actionId: "ftt_time",
+        startdescription: "Time is always advancing.",
+        description: ".",
+        warmup: 60,
+		deckeffect: {"tasks": 1},
+		alternativerecipes:[
+			{id:"ftt_time_loop_expulse", chance:100, additional:true, expulsion: {limit: 1, filter: {task: 1}}},
+		],
+		linked: [
+			{id: "ftt_time_loop_bonus", chance: 33},
+			{id: "ftt_time_loop", chance: 50},
+			{id: "ftt_time_loop_social", chance: 100},
+		]
+	},
+	{
+        id: "ftt_time_loop_bonus",
+        label: "Time",
+        actionId: "ftt_time",
+        startdescription: ".",
+        description: ".",
+        warmup: 60,
+		deckeffect: {"tasks": 1, "bonustasks": 1},
+		alternativerecipes:[
+			{id:"ftt_time_loop_expulse", chance:100, additional:true, expulsion: {limit: 2, filter: {task: 1, bonustask: 1}}},
+		],
+		linked: [
+			{id: "ftt_time_loop_bonus", chance: 25},
+			{id: "ftt_time_loop", chance: 50},
+			{id: "ftt_time_loop_social", chance: 100},
+		]
+	},
+	{
+        id: "ftt_time_loop_social",
+        label: "Time",
+        actionId: "ftt_time",
+        startdescription: ".",
+        description: ".",
+        warmup: 60,
+		deckeffect: {"tasks": 1, "socevents": 2},
+		alternativerecipes:[
+			{id:"ftt_time_loop_expulse", chance:100, additional:true, expulsion: {limit: 1, filter: {task: 1}}},
+		],
+		linked: [
+			{id: "ftt_time_loop_social_2", chance: 100},
+		]
+	},
+	{
+        id: "ftt_time_loop_social_2",
+        label: "Time",
+        actionId: "ftt_time",
+        startdescription: ".",
+        description: ".",
+        warmup: 0,
+		effects: {socevent: -2},
+		alternativerecipes:[
+			{id:"ftt_social_friends_start", chance:100, additional:true},
+			{id:"ftt_social_work_start", chance:100, additional:true},
+			{id:"ftt_social_sport_start", chance:100, additional:true},
+			{id:"ftt_social_drunk_start", chance:100, additional:true},
+		],
+		linked: [
+			{id: "ftt_time_loop_bonus", chance: 25},
+			{id: "ftt_time_loop", chance: 50},
+			{id: "ftt_time_loop_social", chance: 100},
+		]
+	},
+	
+	{
+        id: "ftt_time_loop_expulse",
+        label: "New tasks",
+        actionId: "ftt_time2",
+        startdescription: "New tasks have come up.",
+        description: ".",
+        warmup: 1,
+	},
+	
+	
+	{
+        id: "ftt_social_friends_start",
+        label: "Spending time with friends",
+        actionId: "ftt_social_1",
+        startdescription: "This cultist is taking needed time to tend to friends and family. Can't have them thinking you might be part of some secret society that tries to commune with elder gods or something, right?",
+        description: ".",
+		requirements: {socevent_friends: 1},
+		slots: [{
+			id:"follower", label:"Cultist",
+			description: "One of us.",
+			required: {follower: 1},
+			greedy: true
+		}],
+        warmup: 3,
+		linked: [
+			{id: "ftt_social_friends", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_social_friends",
+        label: "Spending time with friends",
+        actionId: "ftt_social_1",
+        startdescription: ".",
+        description: ".",
+		requirements: {follower: 1},
+        warmup: 57,
+	},
+	
+	{
+        id: "ftt_social_work_start",
+        label: "Spending time with work",
+        actionId: "ftt_social_2",
+        startdescription: "This cultist is busy working an ordinary job for an ordinary salary. Even cultists need to eat eventually.",
+        description: ".",
+		requirements: {socevent_work: 1},
+		slots: [{
+			id:"follower", label:"Cultist",
+			description: "One of us.",
+			required: {follower: 1},
+			greedy: true
+		}],
+        warmup: 10,
+		linked: [
+			{id: "ftt_social_work", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_social_work",
+        label: "Spending time with work",
+        actionId: "ftt_social_2",
+        startdescription: ".",
+        description: ".",
+		requirements: {follower: 1},
+        warmup: 50,
+	},
+	
+	{
+        id: "ftt_social_sport_start",
+        label: "Spending time with exercise",
+        actionId: "ftt_social_3",
+        startdescription: "This cultist is going through a physical workout. Exercising their body or just doing sports. They follow the old belief of 'healthy mind in a healthy body'.",
+        description: ".",
+		requirements: {socevent_sport: 1},
+		slots: [{
+			id:"follower", label:"Cultist",
+			description: "One of us.",
+			required: {follower: 1},
+			greedy: true
+		}],
+        warmup: 10,
+		linked: [
+			{id: "ftt_social_sport", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_social_sport",
+        label: "Spending time with exercise",
+        actionId: "ftt_social_3",
+        startdescription: ".",
+        description: ".",
+		requirements: {follower: 1},
+        warmup: 50,
+	},
+	
+	{
+        id: "ftt_social_drunk_start",
+        label: "Spending time with alcohol",
+        actionId: "ftt_social_4",
+        startdescription: "This cultist is currently in a bar drowning themselves in alcohol. Everyone reacts differently when exposed to the deep secrets of the universe. This one probably won't be much use for a while.",
+        description: ".",
+		requirements: {socevent_drunk: 1},
+		slots: [{
+			id:"follower", label:"Cultist",
+			description: "One of us.",
+			required: {follower: 1},
+			greedy: true
+		}],
+        warmup: 10,
+		linked: [
+			{id: "ftt_social_drunk", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_social_drunk",
+        label: "Spending time with alcohol",
+        actionId: "ftt_social_4",
+        startdescription: ".",
+        description: ".",
+		requirements: {follower: 1},
+        warmup: 50,
+	},
+	
+	
+	{
+        id: "ftt_inv_loop",
+        label: "Investigation",
+        actionId: "ftt_investigator",
+        startdescription: "The Suppression Bureau always seems to be one step ahead.",
+        description: ".",
+        warmup: 60,
+		slots: [{
+			id:"evidence", label:"Evidence",
+			description: "Our tracks.",
+			required: {ftt_evidence: 1, ftt_lose: 1, bonus_red_herring: 1},
+			greedy: true
+		}],
+		linked: [
+			{id: "ftt_inv_herring", chance: 100},
+			{id: "ftt_inv_end", chance: 100},
+			{id: "ftt_inv_arrest", chance: 100},
+			{id: "ftt_inv_loop", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_inv_arrest",
+        label: "Investigation",
+        actionId: "ftt_investigator",
+        startdescription: "The Bureau has gathered enough evidence to lock up one of your followers. If this happens too often, your cult will break apart.",
+        description: ".",
+		requirements: {ftt_evidence: 2},
+        warmup: 10,
+		slots: [{
+			id:"cultist", label:"Cultist",
+			description: "One of us.",
+			required: {follower: 1},
+			forbidden: {traitor: 1},
+			greedy: true
+		}],
+		linked: [
+			{id: "ftt_inv_arrest2", chance: 100},
+			{id: "ftt_inv_loop", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_inv_arrest2",
+        label: "Investigation",
+        actionId: "ftt_investigator",
+        startdescription: ".",
+        description: ".",
+		requirements: {follower: 1},
+        warmup: 50,
+		slots: [{
+			id:"bonus", label:"Favor",
+			description: "A favor might save a life here.",
+			required: {bonus_favor: 1},
+			greedy: true
+		}],
+		linked: [
+			{id: "ftt_inv_arrest_favor", chance: 75},
+			{id: "ftt_inv_arrest_complete", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_inv_arrest_complete",
+        label: "Investigation",
+        actionId: "ftt_investigator",
+        startdescription: ".",
+        description: ".",
+		effects: {ftt_evidence: -2, follower: -1, ftt_arrested: 1, bonus_favor: -1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_inv_end", chance: 100},
+			{id: "ftt_inv_loop", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_inv_arrest_favor",
+        label: "Investigation",
+        actionId: "ftt_investigator",
+        startdescription: ".",
+        description: ".",
+		requirements: {bonus_favor: 1},
+		effects: {ftt_evidence: -1, bonus_favor: -1},
+        warmup: 0,
+		alternativerecipes:[
+			{id:"ftt_inv_arrest_favor_expulse", chance:100, additional:true, expulsion: {limit: 1, filter: {follower: 1}}},
+		],
+		linked: [
+			{id: "ftt_inv_loop", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_inv_arrest_favor_expulse",
+        label: "Investigation",
+        actionId: "ftt_investigator2",
+        startdescription: "The favor has pulled through. Your cultist was saved and some evidence disappeared.",
+        description: ".",
+        warmup: 1,
+	},
+	{
+        id: "ftt_inv_herring",
+        label: "Investigation",
+        actionId: "ftt_investigator",
+        startdescription: "They have caught on to our false tracks. This will waste their time for a bit.",
+        description: ".",
+		requirements: {bonus_red_herring: 1},
+		effects: {bonus: -1},
+        warmup: 120,
+		linked: [
+			{id: "ftt_inv_loop", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_inv_end",
+        label: "Investigation",
+        actionId: "ftt_investigator",
+        startdescription: "It is too late. Too much vital information has been leaked to the Bureau. Your shady operations end here.",
+        description: "YOU'VE LOST THE GAME",
+		requirements: {ftt_lose: 3},
+        warmup: 10,
+		ending: "ftt_defeat",
+		signalEndingFlavour: Melancholy
+	},
+	
+]}

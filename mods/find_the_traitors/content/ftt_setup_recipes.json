@@ -1,0 +1,140 @@
+{"recipes":[
+	
+ 	{
+        id: "setup_ftt",
+        label: "Setting up the board",
+        actionId: "accuse",
+        startdescription: "This will assign your 10 cultists and randomly turn 3 of them into traitors.",
+        description: ".",
+		requirements: {ftt_start_card: 1},
+		effects: {ftt_start_card: -1},
+        warmup: 0,
+        craftable: true,
+		maxexecutions: 1,
+		burnimage: "office",
+		deckeffect: {"traitor_cultists_lantern": 1, "traitor_cultists_forge": 1, "traitor_cultists_edge": 1, "traitor_cultists_winter": 1, "traitor_cultists_heart": 1, "traitor_cultists_grail": 1, "traitor_cultists_moth": 1, "traitor_cultists_knock": 1, "traitor_cultists_any": 2, },
+		linked: [
+			{id: "setup_ftt_traitors", chance: 100},
+		] 
+    },
+	
+ 	{
+        id: "setup_ftt_traitors",
+        label: "Setting up the board",
+        actionId: "accuse",
+        startdescription: "The cultists are deciding who wants to betray you.",
+        description: ".",
+        warmup: 1,
+		alternativerecipes:[
+			{id:"setup_ftt_expulse", chance:100, additional:true, expulsion: {limit: 1, filter: {follower: 1}}},
+		],
+		linked: [
+			{id: "setup_ftt_traitors2", chance: 100},
+		] 
+    },
+ 	{
+        id: "setup_ftt_traitors2",
+        label: "Setting up the board",
+        actionId: "accuse",
+        startdescription: ".",
+        description: ".",
+        warmup: 1,
+		linked: [
+			{id: "setup_ftt_end", chance: 100},
+			{id: "setup_ftt_traitors", chance: 100},
+		],
+		comments: "Because requirements of linked recipes are checked before expulsion happens."
+    },
+	
+ 	{
+        id: "setup_ftt_end",
+        label: "Setting up the board",
+        actionId: "accuse",
+        startdescription: ".",
+        description: "You now have all your cultists and soon you will have to deal with your first task. Get ready.",
+		requirements: {follower: -1},
+        warmup: 1,
+		alternativerecipes:[
+			{id:"setup_ftt_tasks", chance:100, additional:true},
+			{id:"setup_ftt_extra_tasks", chance:100, additional:true},
+			{id:"ftt_time_loop", chance:100, additional:true},
+			{id:"ftt_inv_loop", chance:100, additional:true},
+		],
+    },
+	
+ 	{
+        id: "setup_ftt_expulse",
+        label: "Friend or foe?",
+        actionId: "accuse2",
+        startdescription: "Have you seen how much the Suppression Bureau pays for snitches?",
+        description: ".",
+		deckeffect: {"traitor_cards": 1},
+        warmup: 1,
+		linked: [
+			{id: "setup_ftt_expulse_traitor", chance: 100},
+			{id: "setup_ftt_expulse_no_traitor", chance: 100},
+		],
+		comments: "Needs to be at least 1 second long or weird behavior is created."
+    },
+ 	{
+        id: "setup_ftt_expulse_traitor",
+        label: "Friend or foe?",
+        actionId: "accuse2",
+        startdescription: ".",
+        description: ".",
+		requirements: {traitor: 1},
+		effects: {traitor_card2: -1},
+        warmup: 0,
+		mutations: [{filterOnAspectId: follower, mutateAspectId: traitor, mutationLevel: 1},],
+    },
+ 	{
+        id: "setup_ftt_expulse_no_traitor",
+        label: "Friend or foe?",
+        actionId: "accuse2",
+        startdescription: ".",
+        description: ".",
+		effects: {traitor_card1: -1},
+        warmup: 0,
+    },
+	
+ 	{
+        id: "setup_ftt_debug_recipe",
+        label: "Debug mode",
+        actionId: "accuse",
+        startdescription: "This will allow you to cheat and check who the traitors are.",
+        description: ".",
+		requirements: {cheat: 1},
+		effects: {cheat: -1},
+        warmup: 1,
+		craftable: true,
+		alternativerecipes:[
+			{id:"setup_ftt_debug", chance:100, additional:true},
+		],
+	},
+	
+ 	{
+        id: "setup_ftt_debug",
+        label: "Setting up debug tile",
+        actionId: "ftt_debug",
+        startdescription: "Use this to check if someone is a traitor.",
+        description: ".",
+        warmup: 1,
+    },
+ 	{
+        id: "setup_ftt_tasks",
+        label: "Setting up the tasks",
+        actionId: "tasks",
+        startdescription: "Here we will handle our cult business.",
+        description: ".",
+        warmup: 1,
+    },
+ 	{
+        id: "setup_ftt_extra_tasks",
+        label: "Setting up the extra tasks",
+        actionId: "extra_tasks",
+        startdescription: "Here we can complete additional, optional tasks.",
+        description: ".",
+        warmup: 1,
+    },
+	
+]}

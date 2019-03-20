@@ -1,0 +1,506 @@
+{"elements":
+    [
+		{
+			id: "ftt_start_card",
+			label: "The Cult",
+			description: "We are a society of secrecy and depend on mutual trust.",
+			icon:"cultsecrethistories_1",
+		},
+		{
+			id: "ftt_rules",
+			label: "The Rules",
+			description: "You will receive 'task' cards that you will have to deal with by putting them into the verb tile and assigning 4 cultists. Tasks either fail or succeed depending on the following: \n- As long as one follower on a task has an aspect that matches, the task is guaranteed to be successful, unless a traitor sabotages it. \n- If no one has a fitting aspect, the task is likely to succeed, but can still fail. \n- If there is a traitor on a task, it will likely fail, but can still succeed. \n\nImportant tasks will decay to evidence if they aren't dealt with, optional tasks won't. \nYou lose the game once you have lost 3 loyal followers. Find the 3 traitors to win.",
+		},
+		{
+			id: "traitor_card1",
+			label: "Traitor?",
+			aspects:
+			{},
+			description: "Who can say?",
+		},
+		{
+			id: "traitor_card2",
+			label: "Traitor?",
+			aspects:
+			{traitor: 1},
+			description: "Who can say?",
+		},
+		
+		{
+			id: "ftt_evidence",
+			label: "Evidence",
+			description: "The consequences of a botched mission or leaked information. A few of these are enough to warrant an arrest.",
+			aspects:
+			{},
+			lifetime: 120,
+			icon: "evidence",
+		},
+		{
+			id: "ftt_arrested",
+			label: "Arrested Cultist",
+			aspects:
+			{ftt_lose: 1},
+			description: "You won't see this cult member again in a very long time.",
+			icon: "generic_p",
+		},
+		{
+			id: "ftt_bad_judgement",
+			label: "Bad Judgement",
+			aspects:
+			{ftt_lose: 1},
+			description: "You've made a wrong call. Your cult will lose faith in your leadership.",
+			icon: "corpse",
+		},
+		{
+			id: "ftt_dead_traitor",
+			label: "Dead Traitor",
+			aspects:
+			{ftt_win: 1},
+			description: "Snitches get stiches. Place this in the accuse verb to win the game.",
+			icon: "funds",
+			slots: [{
+				id:"traitors", label:"Dead Traitor",
+				actionId: "accuse",
+				description: "We need to find all of the traitors.",
+				required: {ftt_dead_traitor: 1},
+				forbidden: {}
+			},
+			{
+				id:"traitors", label:"Dead Traitor",
+				actionId: "accuse",
+				description: "We need to find all of the traitors.",
+				required: {ftt_dead_traitor: 1},
+				forbidden: {}
+			},
+			]
+		},
+		
+		
+		
+		{
+			id: "task_money",
+			label: "Money Task",
+			aspects:
+			{task: 1},
+			description: "We could really use more money. \n\nHelpful aspects: <sprite name=knock><sprite name=moth>",
+			icon:"reason",
+			lifetime: 80,
+			decayTo: "ftt_evidence",
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist2", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist3", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist4", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			]
+		},
+		{
+			id: "task_cult",
+			label: "Cult Task",
+			aspects:
+			{task: 1},
+			description: "Some management tasks in the internal affairs of the cult need to be handled. \n\nHelpful aspects: <sprite name=grail><sprite name=heart>",
+			icon:"reason",
+			lifetime: 80,
+			decayTo: "ftt_evidence",
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist2", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist3", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist4", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			]
+		},
+		{
+			id: "task_troublemaker",
+			label: "Troublemaker Task",
+			aspects:
+			{task: 1},
+			description: "We need to deal with a troublemaker. \n\nHelpful aspects: <sprite name=edge><sprite name=winter>",
+			icon:"reason",
+			lifetime: 80,
+			decayTo: "ftt_evidence",
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist2", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist3", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist4", label:"Cultist",
+				actionId: "tasks",
+				description: "Someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			]
+		},
+		{
+			id: "task_lore",
+			label: "Lore Task",
+			aspects:
+			{task: 1},
+			description: "We are close to a breakthrough in hidden knowledge. \n\nHelpful aspects: <sprite name=lantern><sprite name=forge>",
+			icon:"reason",
+			lifetime: 80,
+			decayTo: "ftt_evidence",
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "tasks",
+				description: "Hopefully someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist2", label:"Cultist",
+				actionId: "tasks",
+				description: "Hopefully someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist3", label:"Cultist",
+				actionId: "tasks",
+				description: "Hopefully someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist4", label:"Cultist",
+				actionId: "tasks",
+				description: "Hopefully someone we can trust.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			]
+		},
+		
+		{
+			id: "task_bonus_lantern",
+			label: "Extra Task Lantern",
+			aspects:
+			{bonustask: 1},
+			description: "We don't necessarily need to take care of this, but if we do, we might get something useful out of it. Needs <sprite name=lantern>.",
+			icon:"passion",
+			lifetime: 80,
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "extra_tasks",
+				description: "Hopefully someone we can trust.",
+				required: {lantern: 1},
+				forbidden: {}
+			},
+			]
+		},
+		{
+			id: "task_bonus_forge",
+			label: "Extra Task Forge",
+			aspects:
+			{bonustask: 1},
+			description: "We don't necessarily need to take care of this, but if we do, we might get something useful out of it. Needs <sprite name=forge>.",
+			icon:"passion",
+			lifetime: 80,
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "extra_tasks",
+				description: "Hopefully someone we can trust.",
+				required: {forge: 1},
+				forbidden: {}
+			},
+			]
+		},
+		{
+			id: "task_bonus_edge",
+			label: "Extra Task Edge",
+			aspects:
+			{bonustask: 1},
+			description: "We don't necessarily need to take care of this, but if we do, we might get something useful out of it. Needs <sprite name=edge>.",
+			icon:"passion",
+			lifetime: 80,
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "extra_tasks",
+				description: "Hopefully someone we can trust.",
+				required: {edge: 1},
+				forbidden: {}
+			},
+			]
+		},
+		{
+			id: "task_bonus_winter",
+			label: "Extra Task Winter",
+			aspects:
+			{bonustask: 1},
+			description: "We don't necessarily need to take care of this, but if we do, we might get something useful out of it. Needs <sprite name=winter>.",
+			icon:"passion",
+			lifetime: 80,
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "extra_tasks",
+				description: "Hopefully someone we can trust.",
+				required: {winter: 1},
+				forbidden: {}
+			},
+			]
+		},
+		{
+			id: "task_bonus_heart",
+			label: "Extra Task Heart",
+			aspects:
+			{bonustask: 1},
+			description: "We don't necessarily need to take care of this, but if we do, we might get something useful out of it. Needs <sprite name=heart>.",
+			icon:"passion",
+			lifetime: 80,
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "extra_tasks",
+				description: "Hopefully someone we can trust.",
+				required: {heart: 1},
+				forbidden: {}
+			},
+			]
+		},
+		{
+			id: "task_bonus_grail",
+			label: "Extra Task Grail",
+			aspects:
+			{bonustask: 1},
+			description: "We don't necessarily need to take care of this, but if we do, we might get something useful out of it. Needs <sprite name=grail>.",
+			icon:"passion",
+			lifetime: 80,
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "extra_tasks",
+				description: "Hopefully someone we can trust.",
+				required: {grail: 1},
+				forbidden: {}
+			},
+			]
+		},
+		{
+			id: "task_bonus_moth",
+			label: "Extra Task Moth",
+			aspects:
+			{bonustask: 1},
+			description: "We don't necessarily need to take care of this, but if we do, we might get something useful out of it. Needs <sprite name=moth>.",
+			icon:"passion",
+			lifetime: 80,
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "extra_tasks",
+				description: "Hopefully someone we can trust.",
+				required: {moth: 1},
+				forbidden: {}
+			},
+			]
+		},
+		{
+			id: "task_bonus_knock",
+			label: "Extra Task Knock",
+			aspects:
+			{bonustask: 1},
+			description: "We don't necessarily need to take care of this, but if we do, we might get something useful out of it. Needs <sprite name=knock>.",
+			icon:"passion",
+			lifetime: 80,
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "extra_tasks",
+				description: "Hopefully someone we can trust.",
+				required: {knock: 1},
+				forbidden: {}
+			},
+			]
+		},
+		
+		{
+			id: "bonus_red_herring",
+			label: "Red Herring",
+			aspects:
+			{bonus: 1},
+			description: "A cunning deception. If the Bureau catches on to this, they will be running in circles for sure.",
+			icon:"health",
+			lifetime: 160,
+		},
+		{
+			id: "bonus_extra_care",
+			label: "Extra Care",
+			aspects:
+			{bonus: 1},
+			description: "Spending these additional resources on a task will ensure that no evidence is produced, even in a failure.",
+			icon:"health",
+			lifetime: 160,
+		},
+		{
+			id: "bonus_contradiction",
+			label: "Contradicting Statements",
+			aspects:
+			{bonus: 1},
+			description: "A contradiction in the accounts of two cultists? If that is true, one of them has to be a traitor.",
+			icon:"health",
+			slots: [{
+				id:"cultist1", label:"Cultist",
+				actionId: "extra_tasks",
+				description: "Suspicious people.",
+				required: {follower: 1},
+				forbidden: {}
+			},
+			{
+				id:"cultist2", label:"Cultist",
+				actionId: "extra_tasks",
+				description: "Suspicious people.",
+				required: {follower: 1},
+				forbidden: {}
+			}
+			,],
+			lifetime: 160,
+		},
+		{
+			id: "bonus_favor",
+			label: "A Favour from Authority",
+			aspects:
+			{bonus: 1},
+			description: "We've earned a bit of leverage that might help save one of us from the prison cell, though this is not a guarantee",
+			icon:"health",
+			lifetime: 160,
+		},
+		
+		{
+			id: "socevent_friends",
+			label: "Social Event Friends",
+			aspects:
+			{socevent: 1},
+			description: "A social event.",
+		},
+		{
+			id: "socevent_work",
+			label: "Social Event Work",
+			aspects:
+			{socevent: 1},
+			description: "A social event.",
+		},
+		{
+			id: "socevent_sport",
+			label: "Social Event Sport",
+			aspects:
+			{socevent: 1},
+			description: "A social event.",
+		},
+		{
+			id: "socevent_drunk",
+			label: "Social Event Drunk",
+			aspects:
+			{socevent: 1},
+			description: "A social event.",
+		},
+		
+		
+		{
+			id: "cheat",
+			label: "Cheat",
+			description: "Put this in the accuse verb to cheat.",
+		},
+		
+		{
+			id: "traitor",
+			label: "Traitor",
+			description: "This person is obviously not working for you.",
+			isAspect: true,
+			isHidden: true,
+		},
+		{
+			id: "task",
+			label: "Task",
+			description: "This is a problem that you will have to deal with using your cultists.",
+			isAspect: true,
+		},
+		{
+			id: "bonustask",
+			label: "Bonus Task",
+			description: "We don't necessarily need to take care of this, but if we do, we might get something useful out of it.",
+			isAspect: true,
+		},
+		{
+			id: "bonus",
+			label: "Bonus",
+			description: "This might be useful in the future.",
+			isAspect: true,
+		},
+		{
+			id: "socevent",
+			label: "Social Event",
+			description: "An important task for someone else.",
+			isAspect: true,
+		},
+		{
+			id: "ftt_lose",
+			label: "Suppression Points",
+			description: "If the Suppression Bureau gets three of these, you lose.",
+			isAspect: true,
+		},
+		{
+			id: "ftt_win",
+			label: "Victory Points",
+			description: "Collect three of these to win.",
+			isAspect: true,
+		},
+	]
+}
