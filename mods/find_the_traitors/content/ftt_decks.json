@@ -1,0 +1,176 @@
+{"decks":[
+
+{id: "traitor_cards",
+	label:"Traitors?",
+	description:"Someone in here should not be trusted.",
+	spec:
+	[
+	"traitor_card1",
+	"traitor_card1",
+	"traitor_card1",
+	"traitor_card1",
+	"traitor_card1",
+	"traitor_card1",
+	"traitor_card1",
+
+	"traitor_card2",
+	"traitor_card2",
+	"traitor_card2",
+		],
+defaultcard: "mistakenidentity"	
+	},
+	
+{id: "traitor_cultists_any",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"auclair_b",
+		"slee_b",
+		"laidlaw_b",
+		"porter_b",
+		"saliba_b",
+		"rose_b",
+		"leo_b",
+		"enid_b",
+	],
+	defaultcard: "mistakenidentity"	
+	},
+	
+{id: "traitor_cultists_lantern",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"cat_b",
+		"clifton_b",
+	],
+	defaultcard: "mistakenidentity"	
+	},
+{id: "traitor_cultists_forge",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"tristan_b",
+		"valciane_b",
+	],
+	defaultcard: "mistakenidentity"	
+	},
+{id: "traitor_cultists_edge",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"elridge_b",
+		"victor_b",
+	],
+	defaultcard: "mistakenidentity"	
+	},
+{id: "traitor_cultists_winter",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"violet_b",
+	],
+	defaultcard: "mistakenidentity"	
+	},
+{id: "traitor_cultists_heart",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"dorothy_b",
+		"clovette_b",
+	],
+	defaultcard: "mistakenidentity"	
+	},
+{id: "traitor_cultists_grail",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"renira_b",
+	],
+	defaultcard: "mistakenidentity"	
+	},
+{id: "traitor_cultists_moth",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"ysabet_b",
+		"sylvia_b",
+	],
+	defaultcard: "mistakenidentity"	
+	},
+{id: "traitor_cultists_knock",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"neville_b",
+	],
+	defaultcard: "mistakenidentity"	
+	},
+	
+	
+	
+
+{id: "tasks",
+	label:"Tasks",
+	description:"There's a problem coming up.",
+	spec:
+	[
+	"task_money",
+	"task_troublemaker",
+	"task_cult",
+	"task_lore",
+		],
+	resetonexhaustion: true
+	},
+	
+{id: "bonustasks",
+	label:"Bonus Tasks",
+	description:"There's an opportunity coming up.",
+	spec:
+	[
+	"task_bonus_lantern",
+	"task_bonus_forge",
+	"task_bonus_edge",
+	"task_bonus_winter",
+	"task_bonus_heart",
+	"task_bonus_grail",
+	"task_bonus_moth",
+	"task_bonus_knock",
+		],
+	resetonexhaustion: true
+	},
+	
+{id: "boni",
+	label:"Boni",
+	description:"Useful items and tools.",
+	spec:
+	[
+	"bonus_red_herring",
+	"bonus_extra_care",
+	"bonus_contradiction",
+	"bonus_favor",
+		],
+	resetonexhaustion: true
+	},
+
+{id: "socevents",
+	label:"Social Events",
+	description:"Some people will be busy soon.",
+	spec:
+	[
+	"socevent_friends",
+	"socevent_work",
+	"socevent_drunk",
+	"socevent_sport",
+		],
+	resetonexhaustion: true
+	},
+]}

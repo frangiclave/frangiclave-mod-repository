@@ -1,0 +1,18 @@
+{"endings": [
+        {
+            "id": "ftt_victory",
+            "title": "Victory",
+            "description": "The cult has proven impervious to infiltration. The Suppression Bureau will soon forget the existence of your organisation entirely, as will the rest of the uninitiated. No one in the physical world can stand between you and the things you will achieve.",
+            "image": "win",
+            "flavour": "Grand",
+            "anim": "DramaticLightCool"
+        },
+        {
+            "id": "ftt_defeat",
+            "title": "Defeat",
+            "description": "Perhaps you made a few bad calls too many and scared off the rest of your loyal members, perhaps the spies overwhelmed you and you broke under time pressure, or you simply had a string of bad luck. Either way, your cult is no more. The Suppression Bureau's secret intelligence division has proven their worth. \n\n[Make sure to put at least one cultist with a fitting aspect on a mission. If the task fails anyway, then you know that one or more of these four has to be a spy. Finish optional missions when you get the chance. Their rewards are very useful.]",
+            "image": "loss",
+            "flavour": "Melancholy",
+            "anim": "DramaticLightEvil"
+        }
+    ]}

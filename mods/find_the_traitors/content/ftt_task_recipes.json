@@ -1,0 +1,307 @@
+{"recipes":[
+	
+	 {
+        id: "ftt_bonus_task",
+        label: "Extra Task",
+        actionId: "extra_tasks",
+        startdescription: "This extra task will supply you with a useful tool when completed.",
+        description: ".",
+		requirements: {bonustask: 1, follower: 1},
+		deckeffect: {"boni": 1},
+		effects: {bonustask: -1},
+        warmup: 60,
+        craftable: true,
+    },
+	
+	 {
+        id: "ftt_task_money_hint",
+        label: "Task: Obtaining money",
+        actionId: "tasks",
+        startdescription: "The cult is running low on funds. We will have to obtain some. One way or the other. \n\nHelpful aspects: <sprite name=knock><sprite name=moth>",
+        description: ".",
+		requirements: {task_money: 1, follower: -4},
+		hintonly: true,
+    },
+	 {
+        id: "ftt_task_money",
+        label: "Task: Obtaining money",
+        actionId: "tasks",
+        startdescription: "The cult is running low on funds. We will have to obtain some. One way or the other. \n\nHelpful aspects: <sprite name=knock><sprite name=moth>",
+        description: ".",
+		requirements: {task_money: 1, follower: 4},
+        warmup: 60,
+        craftable: true,
+		slots: [{
+			id:"bonus", label:"Bonus",
+			description: "Bonus",
+			required: {bonus_extra_care: 1},
+			forbidden: {}
+		}],
+		linked: [
+			{id: "ftt_task_traitor", chance: 100},
+			{id: "ftt_task_no_traitor_knock", chance: 100},
+			{id: "ftt_task_no_traitor_moth", chance: 100},
+			{id: "ftt_task_no_traitor", chance: 100},
+		] 
+    },
+	 {
+        id: "ftt_task_cult_hint",
+        label: "Task: Cult management",
+        actionId: "tasks",
+        startdescription: "Some management tasks in the internal affairs of the cult need to be handled. \n\nHelpful aspects: <sprite name=grail><sprite name=heart>",
+        description: ".",
+		requirements: {task_cult: 1, follower: -4},
+		hintonly: true,
+    },
+	 {
+        id: "ftt_task_cult",
+        label: "Task: Cult management",
+        actionId: "tasks",
+        startdescription: "Some management tasks in the internal affairs of the cult need to be handled. \n\nHelpful aspects: <sprite name=grail><sprite name=heart>",
+        description: ".",
+		requirements: {task_cult: 1, follower: 4},
+        warmup: 60,
+        craftable: true,
+		slots: [{
+			id:"bonus", label:"Bonus",
+			description: "Bonus",
+			required: {bonus_extra_care: 1},
+			forbidden: {}
+		}],
+		linked: [
+			{id: "ftt_task_traitor", chance: 100},
+			{id: "ftt_task_no_traitor_grail", chance: 100},
+			{id: "ftt_task_no_traitor_heart", chance: 100},
+			{id: "ftt_task_no_traitor", chance: 100},
+		] 
+    },
+	 {
+        id: "ftt_task_troublemaker_hint",
+        label: "Task: Deal with troublemaker",
+        actionId: "tasks",
+        startdescription: "There's a troublemaker we will have to deal with. No way around it. \n\nHelpful aspects: <sprite name=edge><sprite name=winter>",
+        description: ".",
+		requirements: {task_troublemaker: 1, follower: -4},
+		hintonly: true,
+    },
+	 {
+        id: "ftt_task_troublemaker",
+        label: "Task: Deal with troublemaker",
+        actionId: "tasks",
+        startdescription: "There's a troublemaker we will have to deal with. No way around it. \n\nHelpful aspects: <sprite name=edge><sprite name=winter>",
+        description: ".",
+		requirements: {task_troublemaker: 1, follower: 4},
+        warmup: 60,
+        craftable: true,
+		slots: [{
+			id:"bonus", label:"Bonus",
+			description: "Bonus",
+			required: {bonus_extra_care: 1},
+			forbidden: {}
+		}],
+		linked: [
+			{id: "ftt_task_traitor", chance: 100},
+			{id: "ftt_task_no_traitor_edge", chance: 100},
+			{id: "ftt_task_no_traitor_winter", chance: 100},
+			{id: "ftt_task_no_traitor", chance: 100},
+		] 
+    },
+	 {
+        id: "ftt_task_lore_hint",
+        label: "Task: Breakthrough in occult knowledge",
+        actionId: "tasks",
+        startdescription: "We are very close to a big discovery in our ancient texts. \n\nHelpful aspects: <sprite name=lantern><sprite name=forge>",
+        description: ".",
+		requirements: {task_lore: 1, follower: -4},
+		hintonly: true,
+    },
+	 {
+        id: "ftt_task_lore",
+        label: "Task: Breakthrough in occult knowledge",
+        actionId: "tasks",
+        startdescription: "We are very close to a big discovery in our ancient texts. \n\nHelpful aspects: <sprite name=lantern><sprite name=forge>",
+        description: ".",
+		requirements: {task_lore: 1, follower: 4},
+        warmup: 60,
+        craftable: true,
+		slots: [{
+			id:"bonus", label:"Bonus",
+			description: "Bonus",
+			required: {bonus_extra_care: 1},
+			forbidden: {}
+		}],
+		linked: [
+			{id: "ftt_task_traitor", chance: 100},
+			{id: "ftt_task_no_traitor_lantern", chance: 100},
+			{id: "ftt_task_no_traitor_forge", chance: 100},
+			{id: "ftt_task_no_traitor", chance: 100},
+		] 
+    },
+	
+	
+	
+	{
+        id: "ftt_task_traitor",
+        label: ".",
+        actionId: "tasks",
+        startdescription: ".",
+        description: ".",
+		requirements: {traitor: 1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_unsuccessful", chance: 75},
+			{id: "ftt_task_successful", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_task_no_traitor",
+        label: ".",
+        actionId: "tasks",
+        startdescription: ".",
+        description: ".",
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_successful", chance: 75},
+			{id: "ftt_task_unsuccessful", chance: 100},
+		] 
+    },
+	{
+        id: "ftt_task_no_traitor_knock",
+        label: ".",
+        actionId: "tasks",
+        startdescription: ".",
+        description: ".",
+		requirements: {knock: 1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_successful", chance: 100},
+			{id: "ftt_task_unsuccessful", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_task_no_traitor_moth",
+        label: ".",
+        actionId: "tasks",
+        startdescription: ".",
+        description: ".",
+		requirements: {moth: 1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_successful", chance: 100},
+			{id: "ftt_task_unsuccessful", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_task_no_traitor_heart",
+        label: ".",
+        actionId: "tasks",
+        startdescription: ".",
+        description: ".",
+		requirements: {heart: 1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_successful", chance: 100},
+			{id: "ftt_task_unsuccessful", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_task_no_traitor_grail",
+        label: ".",
+        actionId: "tasks",
+        startdescription: ".",
+        description: ".",
+		requirements: {grail: 1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_successful", chance: 100},
+			{id: "ftt_task_unsuccessful", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_task_no_traitor_edge",
+        label: ".",
+        actionId: "tasks",
+        startdescription: ".",
+        description: ".",
+		requirements: {edge: 1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_successful", chance: 100},
+			{id: "ftt_task_unsuccessful", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_task_no_traitor_winter",
+        label: ".",
+        actionId: "tasks",
+        startdescription: ".",
+        description: ".",
+		requirements: {winter: 1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_successful", chance: 100},
+			{id: "ftt_task_unsuccessful", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_task_no_traitor_lantern",
+        label: ".",
+        actionId: "tasks",
+        startdescription: ".",
+        description: ".",
+		requirements: {lantern: 1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_successful", chance: 100},
+			{id: "ftt_task_unsuccessful", chance: 100},
+		] 
+	},
+	{
+        id: "ftt_task_no_traitor_forge",
+        label: ".",
+        actionId: "tasks",
+        startdescription: ".",
+        description: ".",
+		requirements: {forge: 1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_successful", chance: 100},
+			{id: "ftt_task_unsuccessful", chance: 100},
+		] 
+	},
+	
+	
+	
+	 {
+        id: "ftt_task_successful",
+        label: "Success",
+        actionId: "tasks",
+        startdescription: ".",
+        description: "The mission was completed without problems!",
+		effects: {task: -1, bonus: -1},
+        warmup: 0,
+    },
+	 {
+        id: "ftt_task_unsuccessful",
+        label: "Failure",
+        actionId: "tasks",
+        startdescription: ".",
+        description: "The mission has failed! Was there sabotage or was it a genuine mistake?",
+		effects: {ftt_evidence : 1, task: -1},
+        warmup: 0,
+		linked: [
+			{id: "ftt_task_unsuccessful_extra_care", chance: 100},
+		] 
+    },
+	 {
+        id: "ftt_task_unsuccessful_extra_care",
+        label: "Failure",
+        actionId: "tasks",
+        startdescription: ".",
+        description: "The mission was a failure, but thanks to our extra resources, we were able to clean up all evidence before it could reach the public.",
+		requirements: {bonus_extra_care: 1},
+		effects: {ftt_evidence : -1, bonus: -1},
+        warmup: 0,
+    },
+	
+]}

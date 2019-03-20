@@ -1,0 +1,15 @@
+{"legacies":[
+
+	{
+		id: "traitor_hunter",
+		label: "Traitor Hunter",
+		description: "Who can you trust?",
+		startdescription: "You're running a fairly well established cult, but recently you've developed suspicions that some of your followers are secretly working with the Suppression Bureau. Can you find the traitors?",
+		effects: {ftt_start_card: 1, ftt_rules: 1},
+		image: "traitor_hunter",
+		startingVerbId: "accuse",
+		fromEnding:"ftt_defeat",
+		availableWithoutEndingMatch:true,
+	},
+
+]}
