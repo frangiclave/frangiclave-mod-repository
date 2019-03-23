@@ -292,7 +292,7 @@
         startdescription: ".",
         description: "Fruitless. This person is not worth my attention after all.",
 		requirements: {passion: -1, rumour: 1},
-		effects: {mistakenidentity:1},
+		effects: {mistakenidentity: 1, rumour: -1},
         warmup: 0
     },
 
