@@ -1,0 +1,96 @@
+{"decks":[
+	
+{id: "cultists_lantern",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"cat_a",
+		"clifton_a",
+		"slee_a",
+		"generic_a_lantern",
+	],
+	defaultcard: "rumour"	
+	},
+{id: "cultists_forge",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"tristan_a",
+		"valciane_a",
+		"laidlaw_a",
+		"generic_a_forge",
+	],
+	defaultcard: "rumour"	
+	},
+{id: "cultists_edge",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"elridge_a",
+		"victor_a",
+		"rose_a",
+		"generic_a_edge",
+	],
+	defaultcard: "rumour"	
+	},
+{id: "cultists_winter",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"violet_a",
+		"auclair_a",
+		"generic_a_winter",
+	],
+	defaultcard: "rumour"	
+	},
+{id: "cultists_heart",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"dorothy_a",
+		"clovette_a",
+		"leo_a",
+		"generic_a_heart",
+	],
+	defaultcard: "rumour"	
+	},
+{id: "cultists_grail",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"saliba_a",
+		"renira_a",
+		"generic_a_grail",
+	],
+	defaultcard: "rumour"	
+	},
+{id: "cultists_moth",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"ysabet_a",
+		"sylvia_a",
+		"porter_a",
+		"generic_a_moth",
+	],
+	defaultcard: "rumour"	
+	},
+{id: "cultists_knock",
+	label:"Cultists",
+	description:"So many people in the world, and so few worth knowing.",
+	spec:
+	[
+		"neville_a",
+		"enid_a",
+		"generic_a_knock",
+	],
+	defaultcard: "rumour"	
+	},
+]}
