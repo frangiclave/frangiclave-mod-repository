@@ -1,5 +1,32 @@
 {"elements":
     [
+	
+		{
+        id: "base_safehouse",
+            label: "Cult Safehouse",
+            aspects:{base: 1},
+			description: "A secure location we can use as a hideout to stache weaponry and plan nefarious deeds.",
+			unique:true,
+			icon:"generichq"
+        },
+		{
+        id: "base_lounge",
+            label: "Cult Lounge",
+            aspects:{base: 1},
+			description: "Fancy furniture, classy ambience. The perfect place to schmooze, lie and seduce.",
+			unique:true,
+			icon:"generichq"
+        },
+		{
+        id: "base_laboratorium",
+            label: "Cult Laboratorium",
+            aspects:{base: 1},
+			description: "An arcane laboratory for our forges to burn bright and our mystics to delve between the layers of existence.",
+			unique:true,
+			icon:"generichq"
+        },
+	
+	
 		{
         id: "hq.bookshop",
             label: "Rooms Behind a Bookshop",
@@ -17,10 +44,11 @@
 					actionId: "explore",
 					required: {funds:1, compensationvalue: 4},
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
+					required: {disciple: 1},
+					forbidden: {independent: 1}
 				}],
 			xtriggers:{movehq:hq.abandoned},
 			unique:true
@@ -43,10 +71,11 @@
 					actionId: "explore",
 					required: {funds:1, compensationvalue: 4},
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
+					required: {disciple: 1},
+					forbidden: {independent: 1}
 				}],
 			xtriggers:{movehq:hq.abandoned},
 			unique:true
@@ -55,7 +84,7 @@
         id: "hq.church",
             label: "Heterodox Church",
             aspects:{hq: 1,location:1,sanctuary:1, base_potential: 1},
-			description: "Even on Sunday morning, there are quirks in the order of service, but most outsiders don't notice. Outsiders are not invited to the ceremonies we hold at chillier hours",
+			description: "Even on Sunday morning, there are quirks in the order of service, but most outsiders don't notice. Outsiders are not invited to the ceremonies we hold at chillier hours.",
 			slots: [{id:"Vestry",
 					description: "Lock a Follower in here to convert them, permanently, into a Prisoner.",
 					actionId: "talk",
@@ -68,10 +97,11 @@
 					actionId: "explore",
 					required: {funds:1, compensationvalue: 4},
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
+					required: {disciple: 1},
+					forbidden: {independent: 1}
 				}],
 			xtriggers:{movehq:hq.abandoned},
 			unique:true
@@ -80,7 +110,7 @@
 		{
         id: "hq.mithraeum",
             label: "Candle-lit Mithraeum",
-            aspects:{hq: 1,location:1,pit:1,secret:1, base_potential: 1},
+            aspects:{hq: 1,location:1,sanctuary:1,secret:1, base_potential: 1},
 			description: "Initiates have celebrated the Mysteries here for almost two thousand years. The words change, the gods change, but always, eventually, there is blood.",
 			slots: [{id:"Chains",
 					description: "Place a Follower in here to convert them, permanently, into a Prisoner.",
@@ -94,10 +124,11 @@
 					actionId: "explore",
 					required: {funds:1, compensationvalue: 4},
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
+					required: {disciple: 1},
+					forbidden: {independent: 1}
 				}],
 			xtriggers:{movehq:hq.abandoned},
 			unique:true
@@ -120,10 +151,11 @@
 					actionId: "explore",
 					required: {funds:1, compensationvalue: 4},
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
+					required: {disciple: 1},
+					forbidden: {independent: 1}
 				}],
 			xtriggers:{movehq:hq.abandoned},
 			unique:true
@@ -146,10 +178,11 @@
 					actionId: "explore",
 					required: {funds:1, compensationvalue: 4},
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
+					required: {disciple: 1},
+					forbidden: {independent: 1}
 				}],
 			xtriggers:{movehq:hq.abandoned},
 			unique:true
@@ -171,10 +204,11 @@
 					actionId: "explore",
 					required: {compensationvalue: 4}
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
+					required: {disciple: 1},
+					forbidden: {independent: 1}
 				}],
 			unique:true,
 			xtriggers:{movehq:hq.bookshop}
@@ -194,10 +228,11 @@
 					actionId: "explore",
 					required: {compensationvalue: 4}
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
+					required: {disciple: 1},
+					forbidden: {independent: 1}
 				}],
 			unique:true,
 			xtriggers:{movehq:hq.church},
@@ -219,10 +254,11 @@
 					actionId: "explore",
 					required: {compensationvalue: 4}
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
+					required: {disciple: 1},
+					forbidden: {independent: 1}
 				}],
 			unique:true,
 			xtriggers:{movehq:hq.mithraeum},
@@ -244,10 +280,11 @@
 					actionId: "explore",
 					required: {compensationvalue: 4}
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
+					required: {disciple: 1},
+					forbidden: {independent: 1}
 				}],
 			unique:true,
 			xtriggers:{movehq:hq.hospital},
@@ -268,12 +305,12 @@
 					actionId: "explore",
 					required: {compensationvalue: 4}
 				},
-					{id:"Cult",
-					description: "Place your cult here if you want to establish a base.",
+					{id:"Disciple",
+					description: "Place a follower with enough skill of a certain lore type here to be able to establish a base.",
 					actionId: "explore",
-					required: {society: 1}
-				}
-				],
+					required: {disciple: 1},
+					forbidden: {independent: 1}
+				}],
 			unique:true,
 			xtriggers:{movehq:hq.warehouse},
 			icon:"hq.warehouse"
@@ -284,6 +321,12 @@
             id: "base_potential",
             label: "Potential Base of Operations",
 			description: "This place can potentially be turned into a separate base of operations for our cult.",
+            isAspect: true
+        },
+		{
+            id: "base",
+            label: "Base of Operations",
+			description: "We are using this location for various cult business activities. Just don't let the Suppression Bureau find it.",
             isAspect: true
         },
 		

@@ -1,12 +1,35 @@
 {"verbs":[
 		{
-            "id": "cult_talk",
-            "label": "Cult Business",
-            "description": "Sometimes you can't get around a little dirty work. \n\nYou can tell <sprite name=forge>, <sprite name=moth>, <sprite name=knock> cult members to go on missions here.",
+            "id": "cult_talk_safehouse",
+            "label": "Cult Business: Safehouse",
+            "description": "Sometimes you can't get around a little dirty work. \n\nYou can tell <sprite name=edge>, <sprite name=winter> and <sprite name=knock> cult members to go on missions here.",
 			"atStart": false,
 			slots: [{id:"follower",label:"Follower",
-				description: "One of us.",
-				required:{follower: 1},
+				description: "Edge, Winter or Knock.",
+				required:{edge: 1, winter: 1, knock: 1},
+				forbidden:{follower_wound: 1, summoned: 1, influence: 1, ingredient: 1, tool: 1},
+				}]
+        },
+		{
+            "id": "cult_talk_lounge",
+            "label": "Cult Business: Lounge",
+            "description": "Welcome to the lounge, a place where the public can come to marvel at our high class. \n\nYou can tell <sprite name=heart>, <sprite name=grail> and <sprite name=moth> cult members to go on missions here.",
+			"atStart": false,
+			slots: [{id:"follower",label:"Follower",
+				description: "Heart, Grail or Moth.",
+				required:{heart: 1, grail: 1, moth: 1},
+				forbidden:{follower_wound: 1, summoned: 1, influence: 1, ingredient: 1, tool: 1},
+				}]
+        },
+		{
+            "id": "cult_talk_laboratorium",
+            "label": "Cult Business: Laboratorium",
+            "description": "We will unravel the mysteries of time and space. \n\nYou can tell <sprite name=forge>, <sprite name=lantern> cult members as well as <sprite=7> summonings to go on missions here.",
+			"atStart": false,
+			slots: [{id:"follower",label:"Follower",
+				description: "Forge or Lantern.",
+				required:{forge: 1, lantern: 1, summoned: 1},
+				forbidden:{follower_wound: 1, influence: 1, ingredient: 1, tool: 1},
 				}]
         },
 ]}
