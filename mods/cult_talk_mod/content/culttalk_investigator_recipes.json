@@ -1,0 +1,228 @@
+{"recipes":
+[
+
+	{
+        id: "suspicion",
+        label: "The Wrong Kind of Attention",
+        actionId: "suspicion",
+        requirements: {seasonsuspicion:1},
+		slots: [{id:"Suspicion", label:"An Adversary?", required: {hunter: 1}, greedy: true}],
+        startdescription: "The city is rife with journalists and detectives and other meddlers. How long will they leave me in peace?",
+        description: "I'm safe for now. The meddlers' attention must be elsewhere. A relief.",
+        warmup: 10,
+        craftable: false,
+		linked: [
+			{id: "razzia_verb_spawn",chance: 100},
+			{id: "suspiciongrabreputation",chance: 100},		
+			{id:"suspiciontrycreatehunter",chance:70}]
+	},
+	
+	
+	{
+		id:"razzia_verb_spawn",
+		label: "Searching for Clues...: Stronger Presence",
+		actionId:"suspicion",
+		startdescription: "Adversaries are conspiring and asking searching questions about my activities.",
+		description: "",
+		requirements:{hunter:1},
+		extantreqs: {base: 2},
+
+		slots: [{id:"Clues",required: {reputation: 1}, greedy: true}], 
+		warmup:30,
+		alternativerecipes:[
+			{id:"razzia_start", chance:100, additional: true, expulsion: {limit: 1, filter: {reputation: 2}}}],
+		linked: [
+			{id:"suspicion_searchlongerforevidence_culttalk", chance:100},
+			{id:"suspiciongrabreputation", chance:100}]
+	},
+
+	{
+		id:"suspicion_searchlongerforevidence_culttalk",
+		actionId:"suspicion",
+		label: "The Perils of Renown: Stronger Presence",
+		startdescription: "My Mystique has attracted this hunter's attention. They can prove nothing yet, but they'll keep looking for longer, now.",
+		requirements:{mystique:1},
+		effects:{mystique:-1},
+		slots: [{id:"Clues",required: {reputation: 1}, greedy: true}], 
+		warmup:60,
+		linked: [
+			{id:"suspicion_searchlongerforevidence_culttalk2",chance:100},]
+	},
+	{
+		id:"suspicion_searchlongerforevidence_culttalk2",
+		actionId:"suspicion",
+		label: "The Perils of Renown",
+		startdescription: ".",
+		warmup:0,
+		alternativerecipes:[
+			{id:"razzia_start", chance:100, additional: true, expulsion: {limit: 1, filter: {reputation: 2}}}],
+		linked: [
+			{id:"suspicion_searchlongerforevidence_culttalk",chance:100},
+			{id:"suspiciongrabreputation",chance:100}],
+		comments: "Without this, the verb would spawn with 2 mystique.",
+	},
+
+
+	{
+        id: "razzia_start",
+        label: "The Wrong Kind of Attention",
+        actionId: "suspicion_culttalk",
+        startdescription: "The Suppression Bureau has recognised your stronger presence in the area and is putting additional effort into their investigations.",
+        description: ".",
+		requirements: {reputation: 2},
+
+		slots: [{id:"Suspicion", label:"An Adversary?", required: {hunter: 1}, greedy: true}],
+
+        warmup: 10,
+		linked: [
+			{id: "suspiciongrabevidence_culttalk",chance: 100},		
+			{id:"suspicioncreatehunter_culttalk",chance:100}]
+	},
+	
+	{
+		id:"suspicioncreatehunter_culttalk",
+		actionId:"suspicion_culttalk",
+		label: "An Adversary!",
+		startdescription: "Someone is meddling.",
+		description:"The Suppression Bureau has recognised your stronger presence in the area and is putting additional effort into their investigations.",
+		deckeffect: {"hunters":1},
+		warmup:0
+	},
+	
+	{
+		id:"suspiciongrabevidence_culttalk",
+		actionId:"suspicion_culttalk",
+		label:"Considering the Evidence...",
+		startdescription: "The agents are plotting their next move. They might try to gather more evidence or they might enact a raid to obtain something more concrete.",
+		description: ".",
+		requirements:{hunter:1},
+		slots: [{id:"Evidence",required: {evidenceb:1,evidence: 1}, greedy: true}],
+		warmup:30,
+		linked:[
+			{id:"razzia_pre_culttalk",chance:50},
+			{id:"suspicionerratic_alwaysfail",chance:10},
+			{id:"suspicioncreateevidencemeticulous",chance:100},
+			{id:"suspicioncreateevidence",chance:70},
+			{id:"suspicionerratic_alwayssucceed",chance:10}]
+	},
+	
+	{
+		id:"razzia_pre_culttalk",
+		actionId:"suspicion_culttalk",
+		label:"Considering the Evidence...",
+		startdescription: "The Suppression Bureau is planning a razzia on one of your business locations.",
+		description: ".",
+		requirements: {evidencelevel: 1},
+		slots: [{id:"Location",required: {base:1}, greedy: true}],
+		warmup:30,
+		linked:[{id:"razzia_culttalk",chance:100}]
+	},
+	{
+		id:"razzia_culttalk",
+		actionId:"suspicion_culttalk",
+		label:"Razzia!",
+		startdescription: "Policemen bash through the doors of your building. Arrests or the closure of the location might follow.",
+		description: ".",
+		requirements: {base: 1},
+		warmup:30,
+		linked:[
+			{id:"razzia_questionfollower",chance:75},
+			{id:"razzia_location",chance:100}]
+	},
+	
+	
+	
+	
+	{
+        id: "razzia_questionfollower",
+        label: "A Trial!",
+        actionId: "suspicion_culttalk",
+        startdescription: "The Bureau's agents caught one of my followers in the act. Soon they will be put to trial.",
+        description: ".",
+		slots: [{id:"Suspect",required: {follower:1}, forbidden:{summoned:1}, description: "The Bureau thirsts for suspects.",greedy:true}],
+		linked:[
+			{chance:100,id:"suspicion_attemptmitigation_follower"},],
+		warmup: 30,
+		comments: "Works on hirelings, but not on rivals."
+    },
+	
+	{
+		id:"razzia_location",
+		actionId:"suspicion_culttalk",
+		label:"Razzia!",
+		startdescription: "The raid turned out successful for the Bureau. They are now deploying agents to guard the place and keep it shut for the time being.",
+		description: ".",
+		aspects: {},
+		warmup: 30,
+		linked:[{id:"razzia_attemptmitigation_location",chance:100}]
+	},
+	
+	{
+		id:"razzia_attemptmitigation_location",
+		label: "The Suppression Bureau intents to close your base!",
+		actionId:"suspicion_culttalk",
+		startdescription:"There are crimes the state does not openly recognise. This location has been implicated in harbouring these activities. The Suppression Bureau holds its trials in closed court, and they are not merciful. Unless I can take advantage of a connection, this location may be gone forever... ",
+		description:".",
+		slots:[{id:"favour",label:"A Favour",required:{favour:1}}],
+		linked:[
+			{chance:100, id: "razzia_favourused_location"},
+			{chance:70, id: "razzia_location_closed"},
+			{chance:100, id: "razzia_location_exonerated"}],
+		warmup:60,
+	},
+	
+	
+	{
+		id:"razzia_favourused_location",
+		actionId:"suspicion_culttalk",
+		label:"An Ally in the Shadows",
+		startdescription:"I have called in a favour with a person of note. It'll probably shield me, but nothing is certain.",
+		description:".",
+		requirements:{favour:1},
+		effects:{favour:-1},
+		warmup:30,
+		linked:[
+			{chance:70,id:"razzia_location_exonerated"},
+			{chance:100,id:"razzia_favourused_failure_location"}],
+	},
+	
+	{
+		id:"razzia_favourused_failure_location",
+		actionId:"suspicion_culttalk",
+		label:"Not Enough!",
+		startdescription: "I've pulled all the strings I can, and it wasn't enough. The Bureau is remorseless. If I have another connection, I might be able to use that. Otherwise, we'll have to take our chances in the trial.",
+		description:".",
+		warmup:30,
+		linked:[
+			{chance:100,id:"razzia_attemptmitigation_location"}],
+	},
+	
+	
+	{
+		id:"razzia_location_closed",
+		actionId:"suspicion_culttalk",
+		label:"A Victory for the Bureau",
+		description:"The location has been permanently seized by the Bureau. The Bureau's appetite is satisfied for the moment; but what have they learnt?",
+		aspects:{investigatingsetback:1},
+		effects: {base: -1}
+	},
+	
+	
+	
+	{
+		id:"razzia_location_exonerated",
+		actionId:"suspicion_culttalk",
+		label:"The Bureau's Fury",
+		startdescription:"The evidence was not sufficiently compelling to warrant the closure of this location. We are free to continue operating from there, but we should be more careful. The Bureau has been stymied for the moment.",
+		aspects:{investigatingsetback:1},
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+]
+}

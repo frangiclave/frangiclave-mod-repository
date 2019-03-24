@@ -1,0 +1,10 @@
+{
+    "name": "Follower Recruitment Mod",
+    "author": "Destragon",
+    "version": "1.0.0",
+
+    "description": "Makes it easier to find followers that correspond with the lore used.",
+    "description_long": "[**Steam discussion thread**](https://steamcommunity.com/app/718670/discussions/0/1842440600617712246/) \n\nWhen you try to find new followers with this mod using a lore fragment, you will have a 50% chance of finding someone who matches that lore aspect and a 25% chance each to find one who matches one of the two adjacent lore types. Secret Histories and Knock are able to find cultists from all lore types, as are rumours. Also adds a little hint sentence to the end of the recipe, letting you know what the person's aspect is. \n\n*Mod compatibility: Overwrites core recipe 'talkfindacquaintance' and 'explorerumour'.* \n\n*Last game version tested on: 2019.2.d.1*",
+	 
+    "dependencies": []
+}

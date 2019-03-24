@@ -1,76 +1,78 @@
  {"recipes":
  [
- 	{
-        id: "cult_talk_setup",
-        label: "Setting up cult business",
-        actionId: "cult_talk",
-        startdescription: "We're busy setting up this new location for our future plans.",
-        description: "We are set up and can begin work immediately.",
-        warmup: 60,
-    },
-	
 	{
-		id: "expand_cult",
-		label:"Expand the cult infrastructure",
-		actionId: "explore",
-		startdescription: "We could manifest a stronger base of operations here, but this would permanently dedicate this location to that purpose and it will require at least a Bronze Spintria. [This can only be done once.]",
-		description: ".",
-		requirements: {base_potential: 1, society: 1, hq.temporary: -1, compensationvalue: 4},
-		effects: {compensationvalue: -1},
-		alternativerecipes:[
-			{id:"cult_talk_setup", chance:100, additional:true},
-		],
-		warmup: 60,
-		craftable: true,
-		maxexecutions: 1,
-		linked: [
-			{id:"expand_cult_hq", chance:100},
-			{id:"expand_cult_potential", chance:100}
-		],
-	},
-	{
-		id: "expand_cult_hq",
-		label:"Expand the cult infrastructure",
-		actionId: "explore",
-		startdescription: ".",
-		description: "We have started establishing a base of operations here. Naturally the leadership will have to move to a new, safer location.",
-		requirements: {hq: 1},
-		effects: {hq: -1, hq.temporary: 1},
-		warmup: 0,
-	},
-	{
-		id: "expand_cult_potential",
-		label:"Expand the cult infrastructure",
-		actionId: "explore",
-		startdescription: ".",
-		description: "We have started establishing a base of operations at the location.",
-		requirements: {hq.potential: 1},
-		effects: {hq.potential: -1},
-		warmup: 0,
-	},
-	
-	
-	
-	{
-		id: "talktofollower_cult_talk",
+		id: "talktofollower_safehouse",
 		label:"Discuss occult business with a Follower",
-		actionId: "cult_talk",
-		startdescription: "Significant conversations in a smoky meeting-room. [Currently only for forges, moths, and knocks.]",
+		actionId: "cult_talk_safehouse",
+		startdescription: "Significant conversations in a smoky meeting-room. [<sprite name=edge> <sprite name=winter> <sprite name=knock>]",
 		description: ".",
 		requirements: {follower: 1},
+		extantreqs: {base_safehouse: 1},
 		alternativerecipes:[
 		
-			{id:"followeraction_craftworkhighforge_culttalk",chance:100},
-			{id:"followeraction_hoodwinkhighmoth_culttalk",chance:100},
+			{id:"followeraction_abducthighedge_culttalk",chance:100},
+			{id:"followeraction_murderhighwinter_culttalk",chance:100},
 			{id:"followeraction_burglehighknock_culttalk",chance:100},
 
-			{id:"followeraction_craftworkmidforge_culttalk",chance:100},
-			{id:"followeraction_hoodwinkmidmoth_culttalk",chance:100},
+			{id:"followeraction_abductmidedge_culttalk",chance:100},
+			{id:"followeraction_murdermidwinter_culttalk",chance:100},
 			{id:"followeraction_burglemidknock_culttalk",chance:100},
 
-			{id:"followeraction_craftworklowforge_culttalk",chance:100},
-			{id:"followeraction_hoodwinklowmoth_culttalk",chance:100},
+			{id:"followeraction_abductlowedge_culttalk",chance:100},
+			{id:"followeraction_murderlowwinter_culttalk",chance:100},
 			{id:"followeraction_burglelowknock_culttalk",chance:100},
+
+		],
+		warmup: 60,
+		craftable: true
+	},
+	
+	{
+		id: "talktofollower_lounge",
+		label:"Discuss occult business with a Follower",
+		actionId: "cult_talk_lounge",
+		startdescription: "Significant conversations in a smoky meeting-room. [<sprite name=heart> <sprite name=grail> <sprite name=moth>]",
+		description: ".",
+		requirements: {follower: 1},
+		extantreqs: {base_lounge: 1},
+		alternativerecipes:[
+		
+			{id:"followeraction_seducehighgrail_culttalk",chance:100},
+			{id:"followeraction_charmhighheart_culttalk",chance:100},
+			{id:"followeraction_hoodwinkhighmoth_culttalk",chance:100},
+
+			{id:"followeraction_seducemidgrail_culttalk",chance:100},
+			{id:"followeraction_charmmidheart_culttalk",chance:100},
+			{id:"followeraction_hoodwinkmidmoth_culttalk",chance:100},
+
+			{id:"followeraction_seducelowgrail_culttalk",chance:100},
+			{id:"followeraction_charmlowheart_culttalk",chance:100},
+			{id:"followeraction_hoodwinklowmoth_culttalk",chance:100},
+
+		],
+		warmup: 60,
+		craftable: true
+	},
+	
+	{
+		id: "talktofollower_laboratorium",
+		label:"Discuss occult business with a Follower",
+		actionId: "cult_talk_laboratorium",
+		startdescription: "Significant conversations in a smoky meeting-room. [<sprite name=forge> <sprite name=lantern> <sprite=7>]",
+		description: ".",
+		requirements: {follower: 1},
+		extantreqs: {base_laboratorium: 1},
+		alternativerecipes:[
+		
+			{id:"followeraction_spirit_culttalk",chance:100},
+			{id:"followeraction_craftworkhighforge_culttalk",chance:100},
+			{id:"followeraction_auguryhighlantern_culttalk",chance:100},
+
+			{id:"followeraction_craftworkmidforge_culttalk",chance:100},
+			{id:"followeraction_augurymidlantern_culttalk",chance:100},
+
+			{id:"followeraction_craftworklowforge_culttalk",chance:100},
+			{id:"followeraction_augurylowlantern_culttalk",chance:100},
 
 		],
 		warmup: 60,
@@ -78,11 +80,223 @@
 	},
 
 
+	{id: "followeraction_spirit_culttalk",
+		label: "Cult Business: Sending a Spirit",
+		actionId:"cult_talk_laboratorium",
+		startdescription:"Tonight we shall let lose a summoned spirit into the streets. Their loyalty is vague, who can truly be sure with what they will return? One thing is for sure though: It will spread perilous rumours through town.",
+		description:".",
+		requirements: {summoned: 1},
+		effects: {notoriety: 1},
+		warmup: 0,
+		linked: [
+			{id:"followeraction_spirit_culttalk_success",chance:75},
+			{id:"followeraction_spirit_culttalk_failure",chance:100}
+		]
+	},
+	{id: "followeraction_spirit_culttalk_success",
+		label: "Cult Business: Sending a Spirit",
+		actionId:"cult_talk_laboratorium",
+		startdescription:"I await a sign...",
+		description:".",
+		warmup: 30,
+		linked: [
+			{id:"followeraction_spirit_culttalk_success_corpse",chance:50},
+			{id:"followeraction_spirit_culttalk_success_prisoner",chance:100}
+		]
+	},
+	{id: "followeraction_spirit_culttalk_success_corpse",
+		label: "Cult Business: Sending a Spirit",
+		actionId:"cult_talk_laboratorium",
+		startdescription:".",
+		description:"The spirit has returned. Whatever it has done to this person, it hasn't left us with much.",
+		effects: {corpse: 1},
+	},
+	{id: "followeraction_spirit_culttalk_success_prisoner",
+		label: "Cult Business: Sending a Spirit",
+		actionId:"cult_talk_laboratorium",
+		startdescription:".",
+		description:"The spirit has returned and brought along someone entirely within its control.",
+		deckeffect: {"randomvictim": 1},
+	},
+	{id: "followeraction_spirit_culttalk_failure",
+		label: "Cult Business: Sending a Spirit",
+		actionId:"cult_talk_laboratorium",
+		startdescription:"I await a sign...",
+		description:".",
+		warmup: 30,
+		linked: [
+			{id:"followeraction_spirit_culttalk_failure",chance:50},
+			{id:"followeraction_spirit_culttalk_failure_major",chance:100}
+		]
+	},
+	{id: "followeraction_spirit_culttalk_failure",
+		label: "Cult Business: Sending a Spirit",
+		actionId:"cult_talk_laboratorium",
+		startdescription:".",
+		description:"The spirit has returned, but eternally silent about what transpired during its travels.",
+	},
+	{id: "followeraction_spirit_culttalk_failure_major",
+		label: "Cult Business: Sending a Spirit",
+		actionId:"cult_talk_laboratorium",
+		startdescription:".",
+		description:"The spirit did not return. All that remains is a whisper hanging in the air.",
+		aspects: {killsummoned: 1},
+	},
 
+	
+	{id: "followeraction_abducthighedge_culttalk",
+		label: "Cult Business: Abduct a Stranger",
+		actionId:"cult_talk_safehouse",
+		startdescription:"An Assassin can snatch a victim off the streets with ease.",
+		description:".",
+		requirements: {edge:10,follower:1},
+		linked: [{id:"followeraction_abductsuccess",chance:90},
+		{id:"followeraction_abductfailure",chance:100}
+		]
+		},
+		{id: "followeraction_abductmidedge_culttalk",
+		label: "Cult Business: Abduct a Stranger",
+		actionId:"cult_talk_safehouse",
+		startdescription:"A skilled Disciple can probably abduct an unwary victim.",
+		requirements: {edge:5,follower:1},
+		linked: [{id:"followeraction_abductsuccess",chance:70},
+		{id:"followeraction_abductfailure",chance:100}
+		]
+		},
+		{id: "followeraction_abductlowedge_culttalk",
+		label: "Cult Business: Abduct a Stranger",
+		actionId:"cult_talk_safehouse",
+		startdescription:"My Believer will struggle to abduct a victim, but they may be lucky.",
+		requirements: {edge:1,follower:1},
+		linked: [{id:"followeraction_abductsuccess",chance:30},
+		{id:"followeraction_abductfailure",chance:100}
+		]
+	},
+	
+	{id: "followeraction_murderhighwinter_culttalk",
+		label: "Cult Business: Murder a Stranger",
+		actionId:"cult_talk_safehouse",
+		startdescription:"This one nearly always returns with a death in their pocket.",
+		description:".",
+		requirements: {winter:10,follower:1},
+		linked: [{id:"followeraction_murdersuccess",chance:90},
+		{id:"followeraction_murderfailure",chance:100}
+		]
+		},
+		{id: "followeraction_murdermidwinter_culttalk",
+		label: "Cult Business: Murder a Stranger",
+		actionId:"cult_talk_safehouse",
+		startdescription:"A skilled Disciple can probably bring back a fresh corpse.",
+		requirements: {winter:5,follower:1},
+		linked: [{id:"followeraction_murdersuccess",chance:70},
+		{id:"followeraction_murderfailure",chance:100}
+		]
+		},
+		{id: "followeraction_murderlowwinter_culttalk",
+		label: "Cult Business: Murder a Stranger",
+		actionId:"cult_talk_safehouse",
+		startdescription:"My Believer may very easily fail.",
+		requirements: {winter:1,follower:1},
+		linked: [{id:"followeraction_murdersuccess",chance:30},
+		{id:"followeraction_murderfailure",chance:100}
+		]
+	},
+	
+	{
+		id: "followeraction_burglehighknock_culttalk",
+		label: "Cult Business: Burglary",
+		actionId:"cult_talk_safehouse",
+		startdescription:"My Key should be capable of defeating any lock in this city.",
+		description:".",
+		requirements: {knock:10,follower:1},
+		linked: [{id:"followeraction_burglesuccess",chance:90},
+		{id:"followeraction_burglefailure",chance:100}
+		]
+		},
+		{id: "followeraction_burglemidknock_culttalk",
+		label: "Cult Business: Burglary",
+		actionId:"cult_talk_safehouse",
+		startdescription:"My Disciple can probably use their talents to harvest treasures from the unsuspecting.",
+		requirements: {knock:5,follower:1},
+		linked: [{id:"followeraction_burglesuccess",chance:70},
+		{id:"followeraction_burglefailure",chance:100}
+		]
+		},
+		{id: "followeraction_burglelowknock_culttalk",
+		label: "Cult Business: Burglary",
+		actionId:"cult_talk_safehouse",
+		startdescription:"My Believer might be able to harvest treasures from the unsuspecting... if they're lucky.",
+		requirements: {knock:1,follower:1},
+		linked: [{id:"followeraction_burglesuccess",chance:30},
+		{id:"followeraction_burglefailure",chance:100}
+		]
+	},
+	
+	
+	
+	{id: "followeraction_charmhighheart_culttalk",
+		label: "Cult Business: Charm",
+		actionId:"cult_talk_lounge",
+		startdescription:"Not everyone is sympathetic to our aims, but my Tarantellist is popular everywhere. If we have problems with our reputation, they can almost certainly smooth them over.",
+		description:".",
+		requirements: {heart:10,follower:1},
+		linked: [{id:"followeraction_charmsuccess",chance:90},
+		{id:"followeraction_charmfailure",chance:100}
+		]
+		},
+
+		{id: "followeraction_charmmidheart_culttalk",
+		label: "Cult Business: Charm",
+		actionId:"cult_talk_lounge",
+		startdescription:"Not everyone is sympathetic to our aims, but if we have problems with our reputation, our Disciple can probably smooth them over.",
+		requirements: {heart:5,follower:1},
+		linked: [{id:"followeraction_charmsuccess",chance:70},
+		{id:"followeraction_charmfailure",chance:100}
+		]
+		},
+		{id: "followeraction_charmlowheart_culttalk",
+		label: "Cult Business: Charm",
+		actionId:"cult_talk_lounge",
+		startdescription:"Not everyone is sympathetic to our aims, but if we have problems with our reputation, our Believer might be able to smooth them over. ",
+		requirements: {heart:1,follower:1},
+		linked: [{id:"followeraction_charmsuccess",chance:30},
+		{id:"followeraction_charmfailure",chance:100}
+		]
+	},
+	
+	{id: "followeraction_seducehighgrail_culttalk",
+		label: "Cult Business: Seduce a Stranger",
+		actionId:"cult_talk_lounge",
+		startdescription:"No-one refuses a Cyprian. Almost no-one.",
+		description:".",
+		requirements: {grail:10,follower:1},
+		linked: [{id:"followeraction_seducesuccess",chance:90},
+		{id:"followeraction_seducefailure",chance:100}
+		]
+		},
+
+		{id: "followeraction_seducemidgrail_culttalk",
+		label: "Cult Business: Seduce a Stranger",
+		actionId:"cult_talk_lounge",
+		startdescription:"A sufficiently persuasive Disciple can probably lure a susceptible companion back to us.",
+		requirements: {grail:5,follower:1},
+		linked: [{id:"followeraction_seducesuccess",chance:70},
+		{id:"followeraction_seducefailure",chance:100}
+		]
+		},
+		{id: "followeraction_seducelowgrail_culttalk",
+		label: "Cult Business: Seduce a Stranger",
+		actionId:"cult_talk_lounge",
+		startdescription:"My Believer might be able to lure a victim back to us.",
+		requirements: {grail:1,follower:1},
+		linked: [{id:"followeraction_seducesuccess",chance:30},
+		{id:"followeraction_seducefailure",chance:100}]
+	},
+	
 	{
 		id: "followeraction_hoodwinkhighmoth_culttalk",
 		label: "Cult Business: Hoodwink",
-		actionId:"cult_talk",
+		actionId:"cult_talk_lounge",
 		startdescription:"My Skintwister's cunning is enough to part fools from their treasure as easily as picking pears in an orchard. (Although even a pear orchard has the occasional hazard. Wasps, perhaps.)",
 		description:".",
 		requirements: {moth:10,follower:1},
@@ -94,7 +308,7 @@
 	{
 		id: "followeraction_hoodwinkmidmoth_culttalk",
 		label: "Cult Business: Hoodwink",
-		actionId:"cult_talk",
+		actionId:"cult_talk_lounge",
 		startdescription:"My Disciple can probably use their talents to part fools from their treasures.",
 		requirements: {moth:5,follower:1},
 		linked: [{id:"followeraction_hoodwinksuccess",chance:70},
@@ -104,7 +318,7 @@
 	{
 		id: "followeraction_hoodwinklowmoth_culttalk",
 		label: "Cult Business: Hoodwink",
-		actionId:"cult_talk",
+		actionId:"cult_talk_lounge",
 		startdescription:"My Believer might be able to part fools from their treasures... if they're lucky.",
 		requirements: {moth:1,follower:1},
 		linked: [{id:"followeraction_hoodwinksuccess",chance:30},
@@ -112,41 +326,13 @@
 		]
 	},
 	
-	{
-		id: "followeraction_burglehighknock_culttalk",
-		label: "Cult Business: Burglary",
-		actionId:"cult_talk",
-		startdescription:"My Key should be capable of defeating any lock in this city.",
-		description:".",
-		requirements: {knock:10,follower:1},
-		linked: [{id:"followeraction_burglesuccess",chance:90},
-		{id:"followeraction_burglefailure",chance:100}
-		]
-		},
-
-		   {id: "followeraction_burglemidknock_culttalk",
-		   label: "Cult Business: Burglary",
-		actionId:"cult_talk",
-		startdescription:"My Disciple can probably use their talents to harvest treasures from the unsuspecting.",
-		requirements: {knock:5,follower:1},
-		linked: [{id:"followeraction_burglesuccess",chance:70},
-		{id:"followeraction_burglefailure",chance:100}
-		]
-		},
-			   {id: "followeraction_burglelowknock_culttalk",
-		   label: "Cult Business: Burglary",
-		actionId:"cult_talk",
-		startdescription:"My Believer might be able to harvest treasures from the unsuspecting... if they're lucky.",
-		requirements: {knock:1,follower:1},
-		linked: [{id:"followeraction_burglesuccess",chance:30},
-		{id:"followeraction_burglefailure",chance:100}
-		]
-	},
+	
+	
 	
    {
 		id: "followeraction_craftworkhighforge_culttalk",
 		label: "Cult Business: Craftsmanship",
-		actionId:"cult_talk",
+		actionId:"cult_talk_laboratorium",
 		startdescription:"My Reshaper can earn funds in illegal laboratories and shadowy manufactories. Occasionally, something may go awry.",
 		description:".",
 		requirements: {forge:10,follower:1},
@@ -157,7 +343,7 @@
 
 		{id: "followeraction_craftworkmidforge_culttalk",
 		label: "Cult Business: Craftsmanship",
-		actionId:"cult_talk",
+		actionId:"cult_talk_laboratorium",
 		startdescription:"My Disciple can probably earn funds in illegal laboratories and shadowy manufactories - but there is a risk of accidents.",
 		requirements: {forge:5,follower:1},
 		linked: [{id:"followeraction_craftworksuccess",chance:70},
@@ -166,7 +352,7 @@
 		},
 		   {id: "followeraction_craftworklowforge_culttalk",
 		label: "Cult Business: Craftsmanship",
-		actionId:"cult_talk",
+		actionId:"cult_talk_laboratorium",
 		startdescription:"My Believer might be able to earn funds in illegal laboratories and shadowy manufactories... if they're lucky.",
 		requirements: {forge:1,follower:1},
 		linked: [{id:"followeraction_craftworksuccess",chance:30},
@@ -174,7 +360,35 @@
 		]
 	},
 	
-	
+	{id: "followeraction_auguryhighlantern_culttalk",
+		label: "Cult Business: Augury",
+		actionId:"cult_talk_laboratorium",
+		startdescription:"My Seer can determine times and places where power will be available for our uses. There is a small risk.",
+		description:".",
+		requirements: {lantern:10,follower:1},
+		linked: [{id:"followeraction_augurysuccess",chance:90},
+		{id:"followeraction_auguryfailure",chance:100}
+		]
+		},
+
+		{id: "followeraction_augurymidlantern_culttalk",
+		label: "Cult Business: Augury",
+		actionId:"cult_talk_laboratorium",
+		startdescription:"My Disciple can probably determine times and places where power will be available for our uses: but in matters of the Mansus, there is always danger.",
+		requirements: {lantern:5,follower:1},
+		linked: [{id:"followeraction_augurysuccess",chance:70},
+		{id:"followeraction_auguryfailure",chance:100}
+		]
+		},
+		{id: "followeraction_augurylowlantern_culttalk",
+		label: "Cult Business: Augury",
+		actionId:"cult_talk_laboratorium",
+		startdescription:"My Believer might be able to determine times and places where power will be available for our uses: but in matters of the Mansus, there is always danger.",
+		requirements: {lantern:1,follower:1},
+		linked: [{id:"followeraction_augurysuccess",chance:30},
+		{id:"followeraction_auguryfailure",chance:100}
+		]
+	},
 	
 ]
 }

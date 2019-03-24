@@ -1,0 +1,206 @@
+ {"recipes":
+ [
+ 	{
+        id: "cult_talk_setup_safehouse",
+        label: "Setting up cult business: Safehouse",
+        actionId: "cult_talk_safehouse",
+        startdescription: "We're busy setting up this new location for our future plans.",
+        description: "Secret supply caches. Hiding spots for the dead and the living. We are set up and can begin work immediately.",
+        warmup: 60,
+    },
+ 	{
+        id: "cult_talk_setup_lounge",
+        label: "Setting up cult business: Lounge",
+        actionId: "cult_talk_lounge",
+        startdescription: "It will take a lot of work and funds to renovate this place, but once we're done, we will catch the high society like fish in a barrel.",
+        description: "Had you seen this building just a week ago, you would not be able to recognise it. Soon it will be all the talk in the more exclusive circles.",
+        warmup: 60,
+    },
+ 	{
+        id: "cult_talk_setup_laboratorium",
+        label: "Setting up cult business: Laboratorium",
+        actionId: "cult_talk_laboratorium",
+        startdescription: "We're collecting equipment and preparing this location's transition to a hub of spiritual power.",
+        description: "The highest technological standard in apparatuses and devices. We are ready to research and shape.",
+        warmup: 60,
+    },
+	
+	{
+		id: "expand_cult_safehouse_edge",
+		label:"Expand the cult infrastructure: Safehouse",
+		actionId: "explore",
+		startdescription: "We could create a safehouse for our darker operations here, but this would permanently dedicate this location to that purpose and it will require at least a Bronze Spintria. \n\n[Each type of base can exist once. Having multiple bases will increase the pressure by the Suppression Bureau.]",
+		description: ".",
+		requirements: {base_potential: 1, disciple: 1, edge: 5,  hq.temporary: -1, compensationvalue: 4},
+		extantreqs: {base_safehouse: -1},
+		effects: {base_safehouse: 1, compensationvalue: -1},
+		alternativerecipes:[
+			{id:"cult_talk_setup_safehouse", chance:100, additional:true},
+		],
+		warmup: 60,
+		craftable: true,
+		linked: [
+			{id:"expand_cult_hq", chance:100},
+			{id:"expand_cult_potential", chance:100}
+		],
+	},
+	{
+		id: "expand_cult_safehouse_winter",
+		label:"Expand the cult infrastructure: Safehouse",
+		actionId: "explore",
+		startdescription: "We could create a safehouse for our darker operations here, but this would permanently dedicate this location to that purpose and it will require at least a Bronze Spintria. \n\n[Each type of base can only exist once. Having multiple bases will increase the pressure by the Suppression Bureau.]",
+		description: ".",
+		requirements: {base_potential: 1, disciple: 1, winter: 5,  hq.temporary: -1, compensationvalue: 4},
+		extantreqs: {base_safehouse: -1},
+		effects: {base_safehouse: 1, compensationvalue: -1},
+		alternativerecipes:[
+			{id:"cult_talk_setup_safehouse", chance:100, additional:true},
+		],
+		warmup: 60,
+		craftable: true,
+		linked: [
+			{id:"expand_cult_hq", chance:100},
+			{id:"expand_cult_potential", chance:100}
+		],
+	},
+	{
+		id: "expand_cult_safehouse_knock",
+		label:"Expand the cult infrastructure: Safehouse",
+		actionId: "explore",
+		startdescription: "We could create a safehouse for our darker operations here, but this would permanently dedicate this location to that purpose and it will require at least a Bronze Spintria. \n\n[Each type of base can only exist once. Having multiple bases will increase the pressure by the Suppression Bureau.]",
+		description: ".",
+		requirements: {base_potential: 1, disciple: 1, knock: 5,  hq.temporary: -1, compensationvalue: 4},
+		extantreqs: {base_safehouse: -1},
+		effects: {base_safehouse: 1, compensationvalue: -1},
+		alternativerecipes:[
+			{id:"cult_talk_setup_safehouse", chance:100, additional:true},
+		],
+		warmup: 60,
+		craftable: true,
+		linked: [
+			{id:"expand_cult_hq", chance:100},
+			{id:"expand_cult_potential", chance:100}
+		],
+	},
+	
+	{
+		id: "expand_cult_lounge_heart",
+		label:"Expand the cult infrastructure: Lounge",
+		actionId: "explore",
+		startdescription: "We could turn this place into an esteemed etablissement to hide in plain sight, but this would permanently dedicate this location to that purpose and it will require at least a Bronze Spintria. \n\n[Each type of base can only be created once. Having multiple bases will increase the pressure of the Suppression Bureau.]",
+		description: ".",
+		requirements: {base_potential: 1, disciple: 1, heart: 5,  hq.temporary: -1, compensationvalue: 4},
+		extantreqs: {base_lounge: -1},
+		effects: {base_lounge: 1, compensationvalue: -1},
+		alternativerecipes:[
+			{id:"cult_talk_setup_lounge", chance:100, additional:true},
+		],
+		warmup: 60,
+		craftable: true,
+		linked: [
+			{id:"expand_cult_hq", chance:100},
+			{id:"expand_cult_potential", chance:100}
+		],
+	},
+	{
+		id: "expand_cult_lounge_grail",
+		label:"Expand the cult infrastructure: Lounge",
+		actionId: "explore",
+		startdescription: "We could turn this place into an esteemed etablissement to hide in plain sight, but this would permanently dedicate this location to that purpose and it will require at least a Bronze Spintria. \n\n[Each type of base can only be created once. Having multiple bases will increase the pressure of the Suppression Bureau.]",
+		description: ".",
+		requirements: {base_potential: 1, disciple: 1, grail: 5,  hq.temporary: -1, compensationvalue: 4},
+		extantreqs: {base_lounge: -1},
+		effects: {base_lounge: 1, compensationvalue: -1},
+		alternativerecipes:[
+			{id:"cult_talk_setup_lounge", chance:100, additional:true},
+		],
+		warmup: 60,
+		craftable: true,
+		linked: [
+			{id:"expand_cult_hq", chance:100},
+			{id:"expand_cult_potential", chance:100}
+		],
+	},
+	{
+		id: "expand_cult_lounge_moth",
+		label:"Expand the cult infrastructure: Lounge",
+		actionId: "explore",
+		startdescription: "We could turn this place into an esteemed etablissement to hide in plain sight, but this would permanently dedicate this location to that purpose and it will require at least a Bronze Spintria. \n\n[Each type of base can only be created once. Having multiple bases will increase the pressure of the Suppression Bureau.]",
+		description: ".",
+		requirements: {base_potential: 1, disciple: 1, moth: 5,  hq.temporary: -1, compensationvalue: 4},
+		extantreqs: {base_lounge: -1},
+		effects: {base_lounge: 1, compensationvalue: -1},
+		alternativerecipes:[
+			{id:"cult_talk_setup_lounge", chance:100, additional:true},
+		],
+		warmup: 60,
+		craftable: true,
+		linked: [
+			{id:"expand_cult_hq", chance:100},
+			{id:"expand_cult_potential", chance:100}
+		],
+	},
+	
+	{
+		id: "expand_cult_laboratorium_forge",
+		label:"Expand the cult infrastructure: Laboratorium",
+		actionId: "explore",
+		startdescription: "We could set up a laboratory for our arcane research and forges here, but this would permanently dedicate this location to that purpose and it will require at least a Bronze Spintria. \n\n[Each type of base can only be created once. Having multiple bases will increase the pressure of the Suppression Bureau.]",
+		description: ".",
+		requirements: {base_potential: 1, disciple: 1, forge: 5,  hq.temporary: -1, compensationvalue: 4},
+		extantreqs: {base_laboratorium: -1},
+		effects: {base_laboratorium: 1, compensationvalue: -1},
+		alternativerecipes:[
+			{id:"cult_talk_setup_laboratorium", chance:100, additional:true},
+		],
+		warmup: 60,
+		craftable: true,
+		linked: [
+			{id:"expand_cult_hq", chance:100},
+			{id:"expand_cult_potential", chance:100}
+		],
+	},
+	{
+		id: "expand_cult_laboratorium_lantern",
+		label:"Expand the cult infrastructure: Laboratorium",
+		actionId: "explore",
+		startdescription: "We could set up a laboratory for our arcane research and forges here, but this would permanently dedicate this location to that purpose and it will require at least a Bronze Spintria. \n\n[Each type of base can only be created once. Having multiple bases will increase the pressure of the Suppression Bureau.]",
+		description: ".",
+		requirements: {base_potential: 1, disciple: 1, lantern: 5,  hq.temporary: -1, compensationvalue: 4},
+		extantreqs: {base_laboratorium: -1},
+		effects: {base_laboratorium: 1, compensationvalue: -1},
+		alternativerecipes:[
+			{id:"cult_talk_setup_laboratorium", chance:100, additional:true},
+		],
+		warmup: 60,
+		craftable: true,
+		linked: [
+			{id:"expand_cult_hq", chance:100},
+			{id:"expand_cult_potential", chance:100}
+		],
+	},
+	
+	
+	
+	{
+		id: "expand_cult_hq",
+		label:"Expand the cult infrastructure",
+		actionId: "explore",
+		startdescription: ".",
+		description: "We have started manifesting a stronger base of operations here. Naturally the leadership will have to move to a new, safer location.",
+		requirements: {hq: 1},
+		effects: {hq: -1, hq.temporary: 1},
+		warmup: 0,
+	},
+	{
+		id: "expand_cult_potential",
+		label:"Expand the cult infrastructure",
+		actionId: "explore",
+		startdescription: ".",
+		description: "We have started manifesting a strong base of operations at the location.",
+		requirements: {hq.potential: 1},
+		effects: {hq.potential: -1},
+		warmup: 0,
+	},
+]
+}

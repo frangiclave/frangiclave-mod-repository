@@ -1,10 +1,10 @@
 {
-    "name": "Additional Cult Talk Verb Mod",
+    "name": "Cult Expansion Mod",
     "author": "Destragon",
-    "version": "1.2.0",
+    "version": "2.0.0",
 
-    "description": "Gives you a way to expand your cult and create a new verb to do cult business with.",
-    "description_long": "**Steam discussion thread:** https://steamcommunity.com/app/718670/discussions/0/1842440600617712246/\n\nTo unlock the verb tile, you first need to find a new HQ, then you can explore that HQ together with your cult card and some Spintria to expand your cult and create the new verb tile (it doesn't matter if it's your current HQ or just a potential HQ card). This will only work once.\n\nThe mod gives you another reason to explore more HQs, gives some of your idle cultists another thing to do and gives you more opportunity to scar your cultists, if that's your thing.\n\nThe new verb tile currently only lets you do forge, moth, knock missions.",
+    "description": "Gives you a way to expand your cult infrastructure and create new verbs to do cult business with.",
+    "description_long": "[**Steam discussion thread**](https://steamcommunity.com/app/718670/discussions/0/1842440600617712246/) \n\nTo expand your cult, you first need to find a new HQ or potential HQ locations, then you can explore those together with a disciple and some Spintria to create special bases of operation for your cult, which come with their own verb tiles. \n\nThere are three different types of bases you can create: A savehouse for edge, winter and knock missions, a lounge for heart, grail and moth missions and a laboratory for lantern and forge missions as well as a new mission type for summoned creatures. \n\nBeware though! Once you have two bases setup, the Suppression Bureau will take note of your increased activity and put you under additional pressure. They will be able to launch raids on your bases, potentially arresting cultists or closing down a location for good. You better have some spare favours lying around or are ready to get rid of some detectives. If you don't want additional pressure from the Suppression Bureau then simply don't found more than one base. \n\nThe mod gives you another reason to explore more HQs, gives some of your idle cultists another thing to do and gives you more opportunity to scar your cultists, if that's your thing. \n\n*Mod compatibility: Overwrites core game elements for HQs and potential HQs, and the recipe 'suspicion'.* \n\n*Last game version tested on: 2019.2.d.1*",
 
     "dependencies": []
 }
