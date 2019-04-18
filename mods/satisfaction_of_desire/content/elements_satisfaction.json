@@ -1,0 +1,27 @@
+{"elements":
+    [
+
+		{
+        id: "locationpub",
+            label: "The Salty Spitoon",
+            aspects:{location:1,edge:1,grail:1},
+            description: "A seaside pub of ill repute, but simple pleasures.",
+			slots:[{id:"Entry", actionId: "explore", required:{ingredient:1},}],
+			xtriggers:{locationpub:locationpubclosed},
+			unique:true,
+			uniquenessgroup:uqpub
+        },
+		
+		{
+        id: "locationpubclosed",
+            label: "The Salty Spitoon [Closed]",
+            description: "A seaside pub of ill repute, but simple pleasures. It is closed, or the barkeeper is having a nap.",
+			unique:true,
+			lifetime:30,
+			decayTo: locationpub,
+			uniquenessgroup:uqpub,
+			resaturate: true
+        },
+		
+	]
+};
