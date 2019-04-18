@@ -1,0 +1,33 @@
+{"decks":
+    
+	[
+	
+    {
+        "id": "citysecrets",
+        "extends": ["citysecrets"],
+        "spec$append": ["locationpub"]
+    },
+	
+	{id: "pubevents",
+		label:"An Evening at the Salty Spitoon",
+	description:"Each evening brings different perils, and we will relish all of them.",
+	spec:
+	["contentment",
+	"contentment",
+	"contentment",
+		"thugedge",
+		"thugedgeminor",
+		"locationstreetsstrange",
+		"glimmering",
+		"vitality",
+		"notoriety",
+		"influencegrailc",
+		"corpse",
+		"influenceedgec"],
+defaultcard: "contentment",
+resetonexhaustion:true	
+	},
+	
+
+	]
+}
