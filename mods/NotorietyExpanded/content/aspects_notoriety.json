@@ -1,0 +1,33 @@
+{"elements":
+    [
+
+		{
+            id: "hunter_legalese",
+            label: "Survivor of Bureaucratic Debacles",
+			description: "This hunter has survived a legal encounter with the Baldomerian intact. They won't be fooled a second time.",
+            isAspect: true
+        },
+		
+		{
+            id: "easpect_whispers",
+            label: "Whispers",
+			description: "Conspiracy committed inside dreams.",
+            isAspect: true
+        },
+		
+		{
+            id: "easpect_witness",
+            label: "Witness",
+			description: "An observer to your deeds.",
+            isAspect: true
+        },
+		
+		{
+            id: "easpect_paper",
+            label: "Paper",
+			description: "Secrets written on paper. None of them in your favor.",
+            isAspect: true
+        },
+
+]
+};

@@ -1,0 +1,474 @@
+ {"recipes":
+ [
+
+{id: "talktofollower",
+label:"Discuss occult business with a Follower",
+actionId: "talk",
+requirements: {society:-1,follower: 1,summoned:-1},
+slots: [{id:"Subject",label:"Subject",description:"Our cult, for cult business; a target; or another topic.",required: {society:1,evidencelevel:1,hunter:1,independent:1,tool:1,ingredient:1,annoyance:1,location:1}}],
+comments: "We have clues upstream for recruitment/promotion, and we don't want this to override them, hence the society limitation.",
+alternativerecipes:[
+
+{id:"talktohireling_rehire",chance:100},
+{id:"talktodevotee_refire",chance:100},
+{id:"A_talktofollower_givetool_router",chance:100},
+{id:"A_talktofollower_cantgivetool",chance:100},
+
+{id:"A_talktofollower_locationcabaret_lustsensation",chance:100},
+{id:"A_talktofollower_locationcabaret_lustchange",chance:100},
+{id:"A_talktofollower_locationstreetsstrange_lustenlightenment",chance:100},
+{id:"A_talktofollower_locationauctionhouse_lustpower",chance:100},
+
+{id:"A_talktofollower_locationcabaret_notinterested",chance:100},
+{id:"A_talktofollower_locationstreetsstrange_notinterested",chance:100},
+{id:"A_talktofollower_locationauctionhouse_notinterested",chance:100},
+
+
+{id:"followeraction_repairtoollanternbcracked",chance:100},
+{id:"followeraction_repairtoollanterndcracked",chance:100},
+{id:"followeraction_repairtoollanternfcracked",chance:100},
+{id:"followeraction.repair.greatwork.sabotaged"},
+
+{id:"A_follower_settrap_independent",chance:100},
+{id:"A_follower_settrap_vault",chance:100},
+
+
+{id:"followeraction_murderhighwinter",chance:100},
+{id:"followeraction_craftworkhighforge",chance:100},
+{id:"followeraction_seducehighgrail",chance:100},
+{id:"followeraction_burglehighknock",chance:100},
+{id:"followeraction_charmhighheart",chance:100},
+{id:"followeraction_auguryhighlantern",chance:100},
+{id:"followeraction_hoodwinkhighmoth",chance:100},
+{id:"followeraction_abducthighedge",chance:100},
+{id:"followeraction_murdermidwinter",chance:100},
+{id:"followeraction_craftworkmidforge",chance:100},
+{id:"followeraction_seducemidgrail",chance:100},
+{id:"followeraction_burglemidknock",chance:100},
+{id:"followeraction_charmmidheart",chance:100},
+{id:"followeraction_augurymidlantern",chance:100},
+{id:"followeraction_hoodwinkmidmoth",chance:100},
+{id:"followeraction_abductmidedge",chance:100},
+{id:"followeraction_murderlowwinter",chance:100},
+
+{id:"followeraction_craftworklowforge",chance:100},
+{id:"followeraction_seducelowgrail",chance:100},
+{id:"followeraction_burglelowknock",chance:100},
+{id:"followeraction_charmlowheart",chance:100},
+{id:"followeraction_augurylowlantern",chance:100},
+{id:"followeraction_hoodwinklowmoth",chance:100},
+{id:"followeraction_abductlowedge",chance:100},
+
+{id:"hunterattackhighedge",chance:100},
+{id:"hunterattackmidedge",chance:100},
+{id:"hunterattacklowedge",chance:100},
+{id:"hunterattackhighwinter",chance:100},
+{id:"hunterattackmidwinter",chance:100},
+{id:"hunterattacklowwinter",chance:100},
+{id:"hunterattacknoedge",chance:100},
+
+
+{id:"annoyanceseducehighgrail",chance:100},
+{id:"annoyanceattackhighedge",chance:100},
+{id:"annoyanceseducemidgrail",chance:100},
+{id:"annoyanceattackmidedge",chance:100},
+{id:"annoyancederangemidmoth",chance:100},
+{id:"annoyanceseducelowgrail",chance:100},
+{id:"annoyanceattacklowedge",chance:100},
+{id:"annoyancederangelowmoth",chance:100},
+{id:"annoyanceattacknoedge",chance:100},
+
+{id: "evidencestealmidknock",chance:100},
+{id: "evidencedestroymidmoth",chance:100},
+{id: "evidencedestroylowmoth",chance:100},
+{id: "evidencesteallowknock",chance:100},
+{id: "evidencedestroynomoth",chance:100},
+
+{id: "witnessmurdermidedge",chance:100},
+{id: "witnessseducemidgrail",chance:100},
+{id: "witnessmurdermidwinter",chance:100},
+{id: "witnessmurderlowedge",chance:100},
+{id: "witnessseducelowgrail",chance:100},
+{id: "witnessmurderlowwinter",chance:100},
+{id: "witnessmurdernoaspect",chance:100},
+
+{id: "whispersenlightenmidlantern",chance:100},
+{id: "whispersmisguidemidmoth",chance:100},
+{id: "whispersenlightenlowlantern",chance:100},
+{id: "whispersmisguidelowmoth",chance:100},
+{id: "whispersnoaspect",chance:100},
+
+],
+startdescription: "Significant conversations in a smoky meeting-room. What do I need from my follower? [Add your cult, to send them out on cult business; send them after enemies; or raise another matter.]",
+description: "Nothing, then.",
+warmup: 60,
+craftable: true
+},
+ 
+	  	   {id: "evidencestealmidknock",
+	   label: "Send an Unstoppable Minion to steal Evidence",
+	  actionId:"talk",
+	  startdescription:"My minion is strong in Knock, and will likely acquire the Evidence unhindered. There is always a chance that something will go awry.",
+	  description:".",
+	  requirements: {follower:1,knock:5,easpect_paper:1},
+	  linked: [{id:"evidencestealsuccess",chance:70},
+	    {id:"evidencedestroyfailure_mortalfollower",chance:100},
+	  {id:"evidencedestroyfailure",chance:100}
+	  ]},
+	  
+	  {id: "evidencesteallowknock",
+	   label: "Send a Minion to steal Evidence",
+	  actionId:"talk",
+	  startdescription:"My minion has little talent for the arts of opening. They will likely fail.",
+	  description:".",
+	  requirements: {follower:1,knock:1,easpect_paper:1},
+	  linked: [{id:"evidencestealsuccess",chance:30},
+	    {id:"evidencedestroyfailure_mortalfollower",chance:100},
+	  {id:"evidencedestroyfailure",chance:100}
+	  ]
+	  },
+	  
+	  	   {id: "evidencedestroymidmoth",
+	   label: "Send a Devious Minion to destroy Evidence",
+	  actionId:"talk",
+	  startdescription:"My scheme will most likely succeed. There is always a chance that something will go awry.",
+	  description:".",
+	  requirements: {follower:1,moth:5,easpect_paper:1},
+	  linked: [{id:"evidencedestroysuccess",chance:70},
+	    {id:"evidencedestroyfailure_mortalfollower",chance:100},
+	  {id:"evidencedestroyfailure",chance:100}
+	  ]},
+	  
+	  	  	   {id: "evidencedestroylowmoth",
+	   label: "Send a Minion to destroy Evidence",
+	  actionId:"talk",
+	  startdescription:"My minion's talent for deceit is limited, and this is a difficult task. They will likely fail.",
+	  description:".",
+	  requirements: {follower:1,moth:1,easpect_paper:1},
+	  linked: [{id:"evidencedestroysuccess",chance:30},
+	    {id:"evidencedestroyfailure_mortalfollower",chance:100},
+	  {id:"evidencedestroyfailure",chance:100}
+	  ]},
+	  
+	   {id: "evidencedestroynomoth",
+	   label: "Send Someone Unsuitable to Destroy Evidence",
+	  actionId:"talk",
+	  startdescription:"My minion lacks the Moth or Knock aspect, and will be out of their depth. There's a small chance they might succeed.",
+	  description:".",
+	  requirements: {easpect_paper:1},
+	  linked: [{id:"evidencedestroysuccess",chance:10},
+	    {id:"evidencedestroyfailure_mortalfollower",chance:100},
+	  {id:"evidencedestroyfailure",chance:100}
+	  ]},
+	  
+	  {id: "evidencestealsuccess",
+	   label: "Tampering with Records...",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description:"My minion has returned. The evidence is safely in my hands, and quickly disposed of. I am a little safer, and my minion has pilfered something from my pursuer.",
+	  effects: {evidencelevel:-1,funds:2},
+	  warmup:10	  
+	  },
+	  
+	  	   {id: "witnessmurdermidedge",
+	   label: "Send a Ruthless Minion to remove a Witness",
+	  actionId:"talk",
+	  startdescription:"Desperate times require ruthless individuals. I've plenty of either. There is always a chance that something will go awry.",
+	  description:".",
+	  requirements: {follower:1,edge:5,easpect_witness:1},
+	  linked: [{id:"witnessmurdersuccess",chance:70},
+	    {id:"witnessmurderfailure_mortalfollower",chance:100},
+	  {id:"witnessmurderfailure",chance:100}
+	  ]},
+	  
+	  	  	   {id: "witnessmurderlowedge",
+	   label: "Send a Minion to remove a Witness",
+	  actionId:"talk",
+	  startdescription:"My minion has little talent for ambushes. The element of surprise might let them prevail, though they will likely fail.",
+	  description:".",
+	  requirements: {follower:1,edge:1,easpect_witness:1},
+	  linked: [{id:"witnessmurdersuccess",chance:30},
+	    {id:"witnessmurderfailure_mortalfollower",chance:100},
+	  {id:"witnessmurderfailure",chance:100}
+	  ]
+	  },
+	  
+	  	   {id: "witnessmurdermidwinter",
+	   label: "Send a Silent Minion to intimidate a Witness",
+	  actionId:"talk",
+	  startdescription:"My minion is silent like the night, and will stalk the target like a second shadow. There is always a chance that something will go awry.",
+	  description:".",
+	  requirements: {follower:1,winter:5,easpect_witness:1},
+	  linked: [{id:"witnessmurdersuccess",chance:70},
+	    {id:"witnessmurderfailure_mortalfollower",chance:100},
+	  {id:"witnessmurderfailure",chance:100}
+	  ]
+	  },
+	  	  	   {id: "witnessmurderlowwinter",
+	   label: "Send a Minion to intimidate a Witness",
+	  actionId:"talk",
+	  startdescription:"Pressuring a Witness is a matter of patience, a quality that this minion lacks. They will likely fail.",
+	  description:".",
+	  requirements: {follower:1,winter:1,easpect_witness:1},
+	  linked: [{id:"witnessmurdersuccess",chance:30},
+	    {id:"witnessmurderfailure_mortalfollower",chance:100},
+	  {id:"witnessmurderfailure",chance:100}
+	  ]
+	  },
+	  
+	   {id: "witnessmurdernoaspect",
+	   label: "Send Someone Unsuitable to take care of a Witness",
+	  actionId:"talk",
+	  startdescription:"My minion lacks all capabilities to deal with a Witness. There's a small chance they might succeed, though it won't be pretty.",
+	  description:".",
+	  requirements: {easpect_witness:1},
+	  linked: [{id:"witnessmurdersuccesssloppy",chance:10},
+	    {id:"witnessmurderfailure_mortalfollower",chance:100},
+	  {id:"witnessmurderfailure",chance:100}
+	  ]
+	  },
+	  
+	  {id: "witnessmurdersuccess",
+	   label: "Dealing with Witnesses..",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description:"My minion has returned. The Witness has been taken care of. I am a little safer.",
+	  effects: {evidencelevel:-1},
+	  warmup:10	  
+	  },
+	  
+	  {id: "witnessmurdersuccesssloppy",
+	   label: "Dealing with Witnesses..",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description:"My minion has returned. Though the Witness has been taken care of, the mess is considerable.",
+	  effects: {evidencelevel:-1,notoriety:1},
+	  warmup:10	  
+	  },	  
+	  
+	  {id: "witnessmurderfailure",
+	   label: "Dealing with Witnesses...",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description:"My minion has not returned. They have failed, and their blundering may have attracted attention...",
+	  effects: {follower:-1,notoriety:1},
+	  warmup:10	  
+	  },
+	  
+	  {id: "witnessmurderfailure_mortalfollower",
+	   label: "Dealing with Witnesses...",
+	  actionId:"talk",
+	  requirements:{summoned:-1},
+	  startdescription: "I await word....",
+	  description:"My minion has returned, clumsily bandaged, with cuts and bruises in inconvenient places. Failure. [Heal a fallen Follower with Talk.]",
+	  effects: {notoriety:1},
+	  	mutations:[{filterOnAspectId:mortal,mutateAspectId:follower_wound,mutationLevel:1,additive:false},
+	{filterOnAspectId:mortal,mutateAspectId:follower,mutationLevel:-1,additive:false}],
+	  warmup:10	  
+	  },
+	  
+	  	   {id: "witnessseducemidgrail",
+	   label: "Send an Irresistible Minion to silence a Witness",
+	  actionId:"talk",
+	  startdescription:"My minion will visit the Witness and render them speechless. There is always a chance that something will go awry.",
+	  description:".",
+	  requirements: {follower:1,grail:5,easpect_witness:1},
+	  linked: [{id:"witnessseducesuccess",chance:70},
+	    {id:"witnessseducefailure_backfire",chance:10},
+	  {id:"witnessseducefailure",chance:100}
+	  ],
+	  	  comments: "We don't want a 100% chance because there's no downside. This could easily change later."
+	  },
+	  	  	   {id: "witnessseducelowgrail",
+	   label: "Send a Minion to seduce a Witness",
+	  actionId:"talk",
+	  startdescription:"My victim is untrained in the lore of the Grail. The Witness is desperate, though their seduction will likely fail.",
+	  description:".",
+	  requirements: {follower:1,grail:1,easpect_witness:1,summoned:-1},
+	  linked: [{id:"witnessseducesuccess",chance:30},
+	    {id:"witnessseducefailure_backfire",chance:10},
+	  {id:"witnessseducefailure",chance:100}
+	  ]
+	  },
+	  
+	  {id: "witnessseducesuccess",
+	   label: "Seducing a Witness..",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description:"My minion has returned. The Witness has agreed to stay silent, in return for the sating of certain unsavory cravings.",
+	  effects: {evidencelevel:-1},
+	  warmup:10	  
+	  },
+	  
+	  {id: "witnessseducefailure",
+	   label: "Seducing a Witness...",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description:"My minion has returned. Their attempt at seduction was rebuffed in a spectacular manner. While only their pride is hurt, word of the incident will surely spread.",
+	  effects: {notoriety:1},
+	  warmup:10	  
+	  },
+	  
+	  {id: "witnessseducefailure_backfire",
+	   label: "Seducing a Witness",
+	  actionId:"talk",
+	  requirements:{summoned:-1},
+	  startdescription: "I await word....",
+	  description:"My minion has returned, with flushed cheeks and a dreamy look in their eyes. The Witness won't be a bother, they claim. There's something they are not telling me. ",
+	  effects: {evidencelevel:-1,influenceheart:1},
+	  mutations:[{filterOnAspectId:mortal,mutateAspectId:resentment,mutationLevel:1,additive:true}],
+	  warmup:10	  
+	  },
+	  
+	  	   {id: "whispersenlightenmidlantern",
+	   label: "Send an Unmerciful Minion into the Mansus",
+	  actionId:"talk",
+	  startdescription: "They will observe and untangle the plots against me. There is always a chance that something will go awry.",
+	  description:".",
+	  requirements: {follower:1,lantern:5,easpect_whispers:1},
+	  linked: [{id:"whispersenlightensuccesscritical",chance:10},
+		{id:"whispersenlightensuccess",chance:70},
+		{id:"whispersenlightenfailure_mortalfollower",chance:100},
+	  {id:"whispersenlightenfailure",chance:100}
+	  ]},
+	  
+
+	  	  	   {id: "whispersenlightenlowlantern",
+	   label: "Send a Minion into the Mansus",
+	  actionId:"talk",
+	  startdescription: "My minion knows little of light found only in dreams. They will likely fail in detecting my foes.",
+	  description:".",
+	  requirements: {follower:1,lantern:1,easpect_whispers:1},
+	  linked: [{id:"whispersenlightensuccesscritical",chance:10},
+		{id:"whispersenlightensuccess",chance:30},
+		{id:"whispersenlightenfailure_mortalfollower",chance:100},
+	  {id:"whispersenlightenfailure",chance:100}
+	  ]
+	  },
+	  
+	  	   {id: "whispersmisguidemidmoth",
+	   label: "Send a Confusing Minion into the Mansus",
+	  actionId:"talk",
+	  startdescription: "My minion will lay false trails throughout the Woods, and shield my dreams from detection. There is always a chance that something will go awry.",
+	  description:".",
+	  requirements: {follower:1,moth:5,easpect_whispers:1},
+	  linked: [{id:"whispersmisguidesuccesscritical",chance:10},
+		{id:"whispersmisguidesuccess",chance:70},
+		{id:"whispersmisguidefailure_mortalfollower",chance:100},
+	  {id:"whispersmisguidefailure",chance:100}
+	  ]
+	  },
+	  	  	   {id: "whispersmisguidelowmoth",
+	   label: "Send a Minion to into the Mansus",
+	  actionId:"talk",
+	  startdescription: "They will try to draw attention away from me, there in the Mansus. They will likely fail.",
+	  description:".",
+	  requirements: {follower:1,moth:1,easpect_whispers:1},
+	  linked: [{id:"whispersmisguidesuccesscritical",chance:10},
+		{id:"whispersmisguidesuccess",chance:30},
+		{id:"whispersmisguidefailure_mortalfollower",chance:100},
+	  {id:"whispersmisguidefailure",chance:100}
+	  ]
+	  },
+	  
+	   {id: "whispersnoaspect",
+	   label: "Send Someone Unsuitable into the Mansus",
+	  actionId:"talk",
+	  startdescription: "There's no better way to put it: Sending them into the Mansus is a death sentence, maybe even worse. But perhaps, their demise will draw attention away from my own dreams.",
+	  description:".",
+	  requirements: {easpect_whispers:1},
+	  linked: [{id:"whispersmaniac",chance:10},
+	    {id:"witnessmurderfailure_mortalfollower",chance:100},
+	  {id:"witnessmurderfailure",chance:100}
+	  ]
+	  },
+	  
+	  {id: "whispersenlightensuccess",
+	   label: "Dealing with Dreams..",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description:"My minion has returned. They have identified the dream-spies on my tail, and they have dispersed like shadows. I will be safe, for now.",
+	  effects: {evidencelevel:-1},
+	  warmup:10	  
+	  },
+	  
+	  {id: "whispersmisguidesuccess",
+	   label: "Dealing with Dreams..",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description:"My minion has returned. My pursuers have fallen prey to eachothers paranoia, chasing shadows were there are none. I will be free from their attention, for now.",
+	  effects: {evidencelevel:-1},
+	  warmup:10	  
+	  },
+	  
+	  {id: "whispersenlightenfailure",
+	   label: "Dealing with Witnesses..",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description: "My minion has returned. They have failed to identify the agents that hound my dreams, and I fear that my minions deeds have drawn even more attention.",
+	  effects: {notoriety:1,follower:-1},
+	  warmup:10	  
+	  },	  
+	  
+	  {id: "whispersmisguidefailure",
+	   label: "Dealing with Witnesses...",
+	  actionId: "talk",
+	  startdescription: "I await word....",
+	  description: "My minion has returned. They were smart, but their guile was nothing compared to that of my pursuers, who will remain a presence in my dreams.",
+	  effects: {follower:-1,notoriety:1},
+	  warmup:10	  
+	  },
+	  
+	  {id: "whispersenlightenfailure_mortalfollower",
+	   label: "Dealing with Dreams...",
+	  actionId: "talk",
+	  requirements:{summoned:-1},
+	  startdescription: "I await word....",
+	  description: "My minion has returned from their journey into my dreams. They braved the Woods, but the Ascent of Knives proved too great an obstacle. [Heal a fallen Follower with Talk.]",
+	  effects: {notoriety:1},
+	  mutations:[{filterOnAspectId:mortal,mutateAspectId:follower_wound,mutationLevel:1,additive:false},
+	{filterOnAspectId:mortal,mutateAspectId:follower,mutationLevel:-1,additive:false}],
+	  warmup:10	  
+	  },
+	  
+	  {id: "whispersmisguidefailure_mortalfollower",
+	   label: "Dealing with Dreams...",
+	  actionId: "talk",
+	  requirements:{summoned:-1},
+	  startdescription: "I await word....",
+	  description:"My minion has returned from their journey into my dreams. They braved the Woods, but the Ascent of Knives proved too great an obstacle. [Heal a fallen Follower with Talk.]",
+	  effects: {notoriety:1},
+	  mutations:[{filterOnAspectId:mortal,mutateAspectId:follower_wound,mutationLevel:1,additive:false},
+	{filterOnAspectId:mortal,mutateAspectId:follower,mutationLevel:-1,additive:false}],
+	  warmup:10	  
+	  },
+	  
+	  {id: "whispersenlightensuccesscritical",
+	   label: "Dealing with Dreams..",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description: "My minion has returned, and told my pursuers everything they wanted to know. Everything. Their death was unmerciful, as they clawed out their eyes to escape the radiance of truth.",
+	  effects: {evidencelevel:-1,fascination:1},
+	  warmup:10	  
+	  },
+	  
+	  {id: "whispersmaniac",
+	   label: "Dealing with Dreams..",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description: "My minion hasn't returned. Not really. The body sits on the mat, and hasn't stopped screaming for hours. But oh, their eyes burn, and THEY SPEAK SUCH DELECTABLE SECRETS.",
+	  effects: {evidencelevel:-1,fascination:1,dread:1,follower:-1,riteconsumetoolingredientfollowerinfluence:1},
+	  warmup:10	  
+	  },
+	  
+	  {id: "whispersmisguidesuccesscritical",
+	   label: "Dealing with Dreams..",
+	  actionId:"talk",
+	  startdescription: "I await word....",
+	  description: "My minion has returned, and led my pursuers in a wild chase throughout the Woods. 'They will never escape,' my minion says. 'The Wood has them now.' Their bodies, bereft of their minds, will soon expire.",
+	  effects: {evidencelevel:-1,dread:1},
+	  warmup:10	  
+	  },
+ 
+]
+};

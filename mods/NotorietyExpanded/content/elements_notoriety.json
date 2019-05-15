@@ -1,0 +1,62 @@
+{"elements":
+    [
+
+		{
+            id: "evidence",
+			aspects:{evidencelevel:1,easpect_paper:1},
+            label: "Incriminating Paperwork",
+            description: "A jumble of reports, photographs, and angry letters, strewn around a desk. Useful for bureaucrats and paper enthusiasts only, though it could lead to more. [Hunters with Evidence of occult activities become more dangerous. Evidence may survive the death of the Hunter who created it.]",
+						xtriggers:{investigatingsuccess:evidence_ironclad,investigatingsetback:notoriety},
+						lifetime: 600
+        },
+		
+		{
+            id: "evidence_ironclad",
+			aspects:{evidencelevel:2,easpect_paper:1},
+            label: "An Account of Atrocities",
+            description: "Every crime accounted for, every accusation proven in triplicate. If this reaches the hands of the Bureau, this may prove to be the dagger in my back. [With this, the Suppression Bureau will be able to convict you. Evidence may survive the death of the Hunter who created it.]",
+			xtriggers:{investigatingsetback:evidence},
+			lifetime: 600,
+			decayTo: "evidence"
+        },
+		
+		{
+            id: "evidence_witness",
+			aspects:{evidencelevel:1,easpect_witness:1},
+            label: "Inconvenient Witness",
+            description: " This one has seen too much to be oblivious, and yet little enough to be a danger to our secrecy. [Hunters with Evidence of occult activities become more dangerous. Evidence may survive the death of the Hunter who created it.]",
+						xtriggers:{investigatingsuccess:evidence_witnessprotected,investigatingsetback:notoriety},
+						lifetime: 600
+        },
+		
+		{
+            id: "evidence_witnessprotected",
+			aspects:{evidencelevel:2,easpect_witness:1},
+            label: "A Well-Guarded Witness",
+            description: "The Witness has attracted attention from the Bureau. Precautions have been taken to ensure their safety. [With the help of the Witness, the Suppression Bureau will be able to convict you. Evidence may survive the death of the Hunter who created it.]",
+			xtriggers:{investigatingsetback:evidence_witness},
+			lifetime: 600,
+			decayTo: "evidence_witness"
+        },
+		
+		{
+            id: "evidence_whispers",
+			aspects:{evidencelevel:1,easpect_whispers:1},
+            label: "Whispered Secrets",
+            description: "The Bureau, paradoxically, employs agents in the Mansus. Some of them have found evidence of crimes that were committed only in dreams, and reported them to their masters. [Hunters with Evidence of occult activities become more dangerous. Evidence may survive the death of the Hunter who created it.]",
+			xtriggers:{investigatingsuccess:evidence_conspiracy,investigatingsetback:notoriety},
+			lifetime: 600
+        },
+		
+		{
+            id: "evidence_conspiracy",
+			aspects:{evidencelevel:2,easpect_whispers:1},
+            label: "Hushed Conspiracies",
+            description: "Certain elements of influence in the Mansus have conspired against me, whether to protect themselves from the law, or to sabotage my work. Either way, the Bureau has acquired plentiful information. [With this, the Suppression Bureau will be able to convict you. Evidence may survive the death of the Hunter who created it.]",
+			xtriggers:{investigatingsetback:evidence_whispers},
+			lifetime: 600,
+			decayTo: "evidence_whispers"
+        },
+		
+	]
+};
