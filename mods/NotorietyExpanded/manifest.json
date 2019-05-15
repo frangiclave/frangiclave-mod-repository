@@ -1,0 +1,10 @@
+{
+    "name": "Notoriety Expanded",
+    "author": "Hawtcrab",
+    "version": "1.0.0",
+
+    "description": "Expands the Notoriety system to improve variety and your roleplaying experience.",
+    "description_long": "Expands Evidence and Notoriety, allowing you to use different means to take care of different types of evidence. In addition, opens up more Notoriety-related actions and hunter interactions.",
+
+    "dependencies": []
+}

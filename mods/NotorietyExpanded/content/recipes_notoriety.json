@@ -1,0 +1,211 @@
+ {"recipes":
+ [
+		{id:"suspiciongrabevidence",
+		actionId:"suspicion",
+		label:"Considering the Evidence...",
+		startdescription: "If a Hunter has found Notoriety, they will try to use it to create or upgrade Evidence. If they're Meticulous, they'll always succeed. If they're Erratic, they're more likely to fail... but they can occasionally create Evidence even without Notoriety.",
+		description: "I am safe, for now. My adversary has not enough evidence to bring a case against me, and they've found no new clues.",
+		slots: [{id:"Evidence",label:"Evidence",required: {evidence_ironclad:1,evidence:1,evidence_witness:1,evidence_witnessprotected:1,evidence_whispers:1,evidence_conspiracy:1}, greedy: true}],
+		alternativerecipes:[{id:"suspicionpretrial",chance:100},
+		{id:"suspicionerratic_alwaysfail",chance:10},
+		{id:"suspicionpromoteevidencemeticulous",chance:100},
+		{id:"suspicionpromoteevidence",chance:70},
+		{id:"suspicionpromoteevidencemeticulouswitness",chance:100},
+		{id:"suspicionpromoteevidencewitness",chance:70},
+		{id:"suspicionpromoteevidencemeticulouswhispers",chance:100},
+		{id:"suspicionpromoteevidencewhispers",chance:70},
+		{id:"suspicioncreateevidencemeticulous",chance:100},
+		{id:"suspicioncreateevidence",chance:70}],
+		warmup:30,
+		linked:[{id:"suspicionerratic_alwayssucceed",chance:10}]
+		},
+		
+		{id:"suspicionpromoteevidence",
+		actionId:"suspicion",
+		requirements:{evidence:1,reputation:1},
+		label: "Creating Ironclad Evidence",
+		startdescription: "This hunter is putting the finishing touches to their investigation.",
+		description:"If this ever reaches trial, I will be in serious danger. Even if this hunter is disposed of, another may find their notes.",
+		effects:{evidence:-1,evidence_ironclad:1,reputation:-1},
+		warmup:30},
+		
+		{id:"suspicionerratic_alwayssucceed",
+		actionId:"suspicion",
+		label:"Bewildering Successes",
+		requirements:{erratic:1,reputation:-1},
+		effects:{notoriety:1},
+		startdescription:"A rumour claims my adversary has taken to casting oracles with the I Ching. Another claims they seek answers in dreams. Yet another, that they select which questions to ask by rolling dice. They've found evidence where there should be no evidence to find. [This happens only occasionally.]",
+	linked:[{id:"suspicionpromoteevidence",chance:100},
+			{id:"suspicionpromoteevidencewhispers",chance:100},
+			{id:"suspicionpromoteevidencewitness",chance:100},
+		{id:"suspicioncreateevidence",chance:100}],
+		warmup:30
+		},
+		
+				{id:"suspicionpromoteevidencemeticulouswitness",
+		actionId:"suspicion",
+		label: "Protecting Witness...",
+		requirements:{evidence_witness:1,notoriety:1,meticulous:1},
+		linked:[{id:"suspicionpromoteevidencewitness",chance:100}],
+		warmup:10
+		},
+		
+		
+		{id:"suspicionpromoteevidencewitness",
+		actionId:"suspicion",
+		requirements:{evidence_witness:1,notoriety:1},
+		label: "Protecting Witness...",
+		startdescription: "This hunter is putting the finishing touches to their investigation.",
+		description:"If this witness ever reaches trial, I will be in serious danger. Even if this hunter is disposed of, the witness will persist.",
+		effects:{evidence_witness:-1,evidence_witnessprotected:1,notoriety:-1},
+		warmup:30
+		},
+		
+		
+				{id:"suspicionpromoteevidencemeticulouswhispers",
+		actionId:"suspicion",
+		label: "Conspiring against You",
+		requirements:{evidence_whispers:1,notoriety:1,meticulous:1},
+		linked:[{id:"suspicionpromoteevidence",chance:100}]
+		},
+		
+		
+		{id:"suspicionpromoteevidencewhispers",
+		actionId:"suspicion",
+		requirements:{evidence_whispers:1,notoriety:1},
+		label: "Conspiring against You",
+		startdescription: "This hunter is putting the finishing touches to their investigation.",
+		description:"Though prophetic dreams are not usually admitted as evidence, there are exceptions in special cases. Even if this hunter is disposed of, another may find their notes.",
+		effects:{evidence_whispers:-1,evidence_conspiracy:1,notoriety:-1},
+		warmup:30
+		},
+		
+		{id:"suspicioncreateevidence",
+		actionId:"suspicion",
+		requirements:{notoriety:1,easpect_whispers:-1,easpect_witness:-1,easpect_paper:-1},
+		label: "Converting Clues to Evidence",
+		startdescription: "Rumour squats on rooftops and flutters in gutters. This hunter is making progress in their investigation.",
+		effects:{notoriety:-1},
+		linked:[{id:"suspicioncreatewitness",chance:45},
+				{id:"suspicioncreatepaperwork",chance:45},
+				{id:"suspicioncreatewhispers",chance:100}],
+		warmup:30
+		},
+		
+		{id:"suspicioncreatepaperwork",
+		actionId:"suspicion",
+		label: "Converting Clues to Evidence",
+		description:"I am certain that my adversary has lodged a copy of their notes elsewhere - with their solicitor, with their superior, or even with a contact in the press. This is troubling.",
+		effects:{evidence:1},
+		warmup:10
+		},
+		
+		{id:"suspicioncreatewitness",
+		actionId:"suspicion",
+		label: "Interrogating a Witness",
+		startdescription: "A person of little importance has come forward, claiming to have laid eyes on my misdeeds. True or not, my adversary will surely use them against me.",
+		description:"My adversary has taken up frequent contact with their witness. If I act too brazenly, they might be placed under protection.",
+		effects:{evidence_witness:1},
+		warmup:10
+		},
+		
+		{id:"suspicioncreatewhispers",
+		actionId:"suspicion",
+		label: "Converting Clues to Evidence",
+		startdescription: "As the phenomenal world reflects the Mansus, so too are the conflicts of mortals continued in the House without Walls.",
+		description:"My adversary has gained clues from a most unlikely source: Their dreams. It seems that the Bureau employs agents even in the Mansus.",
+		effects:{evidence_whispers:1},
+		warmup:10
+		},
+		
+		    {
+        id: "suspicionpretrial",
+        label: "The Bureau Considers My Case",
+        actionId: "suspicion",
+        requirements: {evidencelevel:2},
+		startdescription: "My adversary has convinced the Suppression Bureau to consider my case. The Bureau is charged with punishment of the less usual type of criminal - the criminal whose crimes may exist only in dreams.",
+        description: ".",
+        warmup: 30,
+        craftable: false,
+		linked:[{id:"suspicion_attemptmitigation_me",chance:30},{id:"suspicion_questionfollower",chance:100}],
+		burnimage:"beforetrial"
+    },
+	
+	{
+	id:"suspicion_attemptmitigation_me",
+	actionId:"suspicion",
+	label: "The Suppression Bureau is bringing me to trial!",
+	startdescription:"There are crimes the state does not openly recognise. I stand accused of one of these. The Suppression Bureau holds its trials in closed court, and they are not merciful. Unless I can take advantage of a connection, I risk imprisonment!",
+	description:".",
+	slots:[{id:"favour",label:"A Favour",required:{favour:1,spirit_lanterne_secret:1}}],
+	linked:[{chance:100,id:"suspicion_favourusedbaldomerian"},
+	{chance:100,id:"suspicion_favourused"},
+	{chance:70,id:"suspicion_meimprisoned"},
+	{chance:100,id:"suspicion_meexonerated"}],
+	warmup:60
+	},
+	
+	{
+	id:"suspicion_attemptmitigation_follower",
+	label: "The Suppression Bureau is bringing an associate to trial!",
+	actionId:"suspicion",
+	requirements: {follower:1},
+	startdescription:"There are crimes the state does not openly recognise. My associate has been implicated in one of these. The Suppression Bureau holds its trials in closed court, and they are not merciful. Unless I can take advantage of a connection, my associate may be gone forever... ",
+	description:".",
+	slots:[{id:"favour",label:"A Favour",required:{favour:1,spirit_lanterne_secret:1}}],
+		linked:[{chance:100,id:"suspicion_favourusedbaldomerian"},
+	{chance:100,id:"suspicion_favourused"},
+	{chance:70,id:"suspicion_followerimprisoned"},
+	{chance:100,id:"suspicion_followerexonerated"}],
+	warmup:60,
+	},
+	
+	{
+	id:"suspicion_attemptmitigation_rival",
+	label: "The Suppression Bureau is bringing a Rival to trial!",
+	actionId:"suspicion",
+	requirements: {independent:1},
+	startdescription:"There are crimes the state does not openly recognise. My rival has been implicated in one of these. The Suppression Bureau holds its trials in closed court, and they are not merciful. This may be the end for my rival... although I could try to intervene.",
+	description:".",
+	slots:[{id:"favour",label:"A Favour",required:{favour:1,spirit_lanterne_secret:1}}],
+		linked:[{chance:100,id:"suspicion_favourusedbaldomerian"},
+	{chance:100,id:"suspicion_favourused"},	
+	{chance:70,id:"suspicion_rivalimprisoned"},
+	{chance:100,id:"suspicion_rivalexonerated"}],
+	warmup:60
+	},
+	
+		{
+	id:"suspicion_favourusedbaldomerian",
+	actionId:"suspicion",
+	label:"Hell Hath No Fury",
+	requirements:{spirit_lanterne_secret:1,hunter_legalese:-1},
+	mutations:[{filterOnAspectId:hunter,mutateAspectId:hunter_legalese,mutationLevel:1,additive:true}],
+	startdescription:"'The Bureau, you say? Very well, I will assist you in this predicament. I still have not forgiven them for Christopher, and I always enjoy a challenge.'",
+	escription:".",
+	warmup:30,
+	linked:[{chance:100,id:"suspicion_followerexonerated_baldomerian"},
+	{chance:100,id:"suspicion_meexonerated_baldomerian"}]
+	},
+	
+	{
+	id:"suspicion_followerexonerated_baldomerian",
+	actionId:"suspicion",
+	requirements:{follower:1},
+	label:"The Bureau's Folly",
+	startdescription:"The Baldomerian steps up to the pulpit, and soon, she begins her fiery speech. She quotes ancient lawbooks, and lists cases of precedence that have never occured in this History. One of the court attendants attempts to keep track, but soon excuses himself to evict the contents of his stomach. My associate is free to go, though this won't work a second time.",
+	aspects:{investigatingsetback:1},
+	mutations:[{filterOnAspectId:follower,mutateAspectId:resentment,mutationLevel:1,additional:true}]	
+	},
+	
+	{
+	id:"suspicion_meexonerated_baldomerian",
+	actionId:"suspicion",
+	label:"The Bureau's Fury",
+	startdescription: "The Baldomerian steps up to the pulpit, and soon, she begins her fiery speech. She quotes ancient lawbooks, and lists cases of precedence that have never occured in this History. One of the court attendants attempts to keep track, but soon excuses himself to evict the contents of his stomach. I am free to go, though this won't work a second time.",
+	requirements:{follower:-1},
+	aspects:{evidencelevel:-1}
+	},	
+
+]
+};
